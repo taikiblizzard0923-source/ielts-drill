@@ -952,8 +952,116 @@ window.DRILL.days["2026-11-23"] = {
      "task": 1,
      "minWords": 150,
      "prompt": "The bar chart below shows the percentage of students at one university who travelled to campus by bicycle and by bus in 2005, 2010, 2015 and 2020.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
-     "model": "The bar chart compares the proportion of students at a university who travelled to campus by bicycle and by bus in four different years between 2005 and 2020.\n\nOverall, cycling became increasingly popular over the period, while the use of buses fell steadily. By 2020, the bicycle had overtaken the bus as the more common of the two ways of getting to campus.\n\nIn 2005, 40% of students took the bus, which was more than three times the figure for those who cycled (12%). Over the following decade, the percentage of bus users declined gradually, to 36% in 2010 and 30% in 2015. It then dropped further to just 24% in 2020, a fall of 16 percentage points in total.\n\nBy contrast, the proportion of cyclists rose consistently. It increased to 18% in 2010 and reached a quarter of all students in 2015. In 2020, the figure stood at 31%, more than two and a half times the 2005 level. As a result, the two methods of transport swapped positions, with cycling exceeding bus travel by 7 percentage points in the final year.",
-     "modelJa": "この棒グラフは、2005年から2020年までの4つの年に、ある大学の学生のうち自転車とバスでキャンパスに通っていた人の割合を比較している。\n\n全体として、期間中に自転車通学はますます人気になり、一方でバスの利用は着実に減った。2020年までに、自転車はバスを抜いて2つの通学手段のうちより一般的なものになった。\n\n2005年には学生の40％がバスを利用しており、これは自転車通学者の数字（12％）の3倍を超えていた。その後の10年間で、バス利用者の割合は2010年に36％、2015年に30％と徐々に減少した。そして2020年にはさらに24％まで下がり、合計で16ポイントの減少となった。\n\n対照的に、自転車通学者の割合は一貫して上昇した。2010年には18％に増え、2015年には全学生の4分の1に達した。2020年には31％となり、2005年の2.5倍を超えた。その結果、2つの交通手段の順位が入れ替わり、最終年には自転車がバスを7ポイント上回った。",
+     "model": "The bar chart gives information about the percentage of students at a university who used a bicycle or a bus to get to campus in four different years between 2005 and 2020.\n\nOverall, the percentage of students who went to campus by bicycle increased, while the percentage of bus users decreased. In 2020, cycling was more popular than taking the bus.\n\nIn 2005, the bus was much more popular than the bicycle, and 40% of students used it. After that, this figure decreased steadily. It fell to 36% in 2010 and then to 30% in 2015. In 2020, it was only 24%, which was 16 percentage points lower than in 2005.\n\nOn the other hand, only 12% of students went to campus by bicycle in 2005. However, this percentage grew in each of the following years. It rose to 18% in 2010 and reached 25% in 2015. In 2020, it was 31%, so the figure for cycling was 7 percentage points higher than the figure for the bus.",
+     "modelJa": "この棒グラフは、2005年から2020年までの4つの年に、ある大学で自転車またはバスを使ってキャンパスに通った学生の割合についての情報を示している。\n\n全体として、自転車でキャンパスに通う学生の割合は増え、一方でバス利用者の割合は減った。2020年には、自転車通学の方がバス通学より人気があった。\n\n2005年には、バスは自転車よりずっと人気があり、学生の40％が利用していた。その後、この数字は着実に減少した。2010年には36％、2015年には30％に下がった。2020年にはわずか24％で、2005年より16ポイント低かった。\n\n一方、2005年に自転車でキャンパスに通った学生はわずか12％だった。しかし、この割合はその後の年ごとに増えた。2010年には18％に上がり、2015年には25％に達した。2020年には31％となり、自転車の数字はバスの数字より7ポイント高かった。",
+     "modelParts": [
+      {
+       "label": "Introduction（導入）",
+       "en": "The bar chart gives information about the percentage of students at a university who used a bicycle or a bus to get to campus in four different years between 2005 and 2020.",
+       "ja": "この棒グラフは、2005年から2020年までの4つの年に、ある大学で自転車またはバスを使ってキャンパスに通った学生の割合についての情報を示している。",
+       "point": "問題文の shows を gives information about、travelled to campus by bicycle and by bus を used a bicycle or a bus to get to campus、2005, 2010, 2015 and 2020 を in four different years between 2005 and 2020 と言い換えている。「何の図か・何の割合か・いつか」を1文で書けば導入は完成。"
+      },
+      {
+       "label": "Overview（全体の傾向）",
+       "en": "Overall, the percentage of students who went to campus by bicycle increased, while the percentage of bus users decreased. In 2020, cycling was more popular than taking the bus.",
+       "ja": "全体として、自転車でキャンパスに通う学生の割合は増え、一方でバス利用者の割合は減った。2020年には、自転車通学の方がバス通学より人気があった。",
+       "point": "Overall, で始め、数字は使わずに「自転車は増加・バスは減少」「2020年には自転車が上」の2点だけを書く。while を使うと反対の2つの動きを1文にまとめられる。この段落があるだけで Task Achievement の評価が安定する。"
+      },
+      {
+       "label": "Body 1（バスの推移）",
+       "en": "In 2005, the bus was much more popular than the bicycle, and 40% of students used it. After that, this figure decreased steadily. It fell to 36% in 2010 and then to 30% in 2015. In 2020, it was only 24%, which was 16 percentage points lower than in 2005.",
+       "ja": "2005年には、バスは自転車よりずっと人気があり、学生の40％が利用していた。その後、この数字は着実に減少した。2010年には36％、2015年には30％に下がった。2020年にはわずか24％で、2005年より16ポイント低かった。",
+       "point": "最初の年で2つを比べて（much more popular than）から、バスの数字を年の順に追っている。decreased → fell → was only と動詞を変えて繰り返しを避け、最後に , which was … で最初の年との差（40−24＝16）を付け足している。"
+      },
+      {
+       "label": "Body 2（自転車の推移と比較）",
+       "en": "On the other hand, only 12% of students went to campus by bicycle in 2005. However, this percentage grew in each of the following years. It rose to 18% in 2010 and reached 25% in 2015. In 2020, it was 31%, so the figure for cycling was 7 percentage points higher than the figure for the bus.",
+       "ja": "一方、2005年に自転車でキャンパスに通った学生はわずか12％だった。しかし、この割合はその後の年ごとに増えた。2010年には18％に上がり、2015年には25％に達した。2020年には31％となり、自転車の数字はバスの数字より7ポイント高かった。",
+       "point": "On the other hand, で Body 1 と反対の動きを書き始める合図にしている。grew → rose → reached と増加の動詞を変え、最後に so で2020年の2つの差（31−24＝7）を比べて締める。% の差は percentage points と書くのが正確。"
+      }
+     ],
+     "keyLanguage": [
+      [
+       "gives information about …",
+       "〜についての情報を示している",
+       "問題文の shows の言い換え。Introduction の書き出しに使える"
+      ],
+      [
+       "the percentage of students who …",
+       "〜する学生の割合",
+       "who 以下で「どんな学生か」を説明する。数字の主語を作る基本形"
+      ],
+      [
+       "in four different years between 2005 and 2020",
+       "2005年から2020年までの4つの年に",
+       "年を全部並べずにまとめて言い換える"
+      ],
+      [
+       "Overall, …",
+       "全体として",
+       "Overview の段落は必ずこの語で始める"
+      ],
+      [
+       "A increased, while B decreased",
+       "Aは増え、一方Bは減った",
+       "反対の2つの動きを1文で書く。Overview の定番"
+      ],
+      [
+       "much more popular than …",
+       "〜よりずっと人気がある",
+       "much で比較級を強める。差が大きいときに使う"
+      ],
+      [
+       "decrease steadily / fall to 36%",
+       "着実に減る／36％に下がる",
+       "減少の動詞を変えて繰り返しを避ける。to＋数字は「〜まで」"
+      ],
+      [
+       "rise to 18% / reach 25%",
+       "18％に上がる／25％に達する",
+       "増加の動詞。reach は「〜に達する」で前置詞は不要"
+      ],
+      [
+       "…, which was 16 percentage points lower than in 2005",
+       "それは2005年より16ポイント低かった",
+       ", which で前の数字に説明を足す。% 同士の差は percentage points"
+      ],
+      [
+       "On the other hand, …",
+       "一方",
+       "2つ目のデータ（反対の動き）を書き始める合図"
+      ],
+      [
+       "the figure for A was 7 percentage points higher than the figure for B",
+       "Aの数字はBの数字より7ポイント高かった",
+       "最後の年の2つを比べて締める比較表現"
+      ]
+     ],
+     "tips": [
+      "【Task Achievement】Overview を必ず独立した段落で書く。Overall, で始め、数字なしで「増えたもの・減ったもの」「最後にどちらが上か」の2点を書けば 5.5 の条件を満たせる。",
+      "【Task Achievement】数字は図表と1つずつ照らし合わせて写す（自転車 12→18→25→31％、バス 40→36→30→24％）。1つでも間違えると内容の正確さで減点される。",
+      "【Coherence and Cohesion】「導入・Overview・バス・自転車」の4段落に分け、段落の頭に Overall, / In 2005, / On the other hand, を置く。段落を分けるだけで構成点が安定する。",
+      "【Lexical Resource】increase / rise / grow / reach、decrease / fall のように同じ動きを2〜3語で言い換える。難しい語は不要で、知っている語の使い分けで十分。",
+      "【Grammatical Range and Accuracy】過去の年なので過去形で統一する。比較級（more popular than / higher than）と , which を1回ずつ入れれば文の形に変化が出る。"
+     ],
+     "pitfalls": [
+      [
+       "Overview を書かない、または最後に In conclusion として書く",
+       "Introduction のすぐ後に Overall, で始まる2文の段落を置く。結論段落は不要。"
+      ],
+      [
+       "年ごとの数字を全部、同じ形の文で並べる",
+       "最初の年と最後の年を必ず入れ、差（16 percentage points）や比較（higher than）で特徴を示す。"
+      ],
+      [
+       "「環境意識が高まったから」など理由や意見を書く",
+       "Task1 は図に描かれた事実だけを書く。原因の推測は書かない。"
+      ],
+      [
+       "現在形で書いてしまう（The percentage increases …）",
+       "2005〜2020年は過去なので increased / fell / was と過去形で書く。"
+      ]
+     ],
      "plan": [
       "Introduction（1〜2文）：問題文を言い換える。shows → compares、percentage → proportion、travelled to campus → got to university などで、問題文の丸写しを避ける。",
       "Overview（2文）：数字を使わずに全体の傾向を書く。①自転車は増加・バスは減少 ②最後に順位が逆転。これが無いと Task Achievement が 5 点台に下がりやすい。",
@@ -1013,14 +1121,14 @@ window.DRILL.days["2026-11-23"] = {
       ]
      ],
      "checklist": [
-      "【課題への対応】Overview（全体の傾向）を数字なしで書いた",
-      "【課題への対応】最初と最後の年、最大の変化など主要な数字を正確に入れた",
+      "【課題への対応】Overview（全体の傾向）を数字なしで2文書いた",
+      "【課題への対応】最初と最後の年、最大の変化など主要な数字を図と照らし合わせて正確に入れた",
       "【課題への対応】自分の意見や推測の理由を書いていない",
-      "【一貫性とまとまり】Introduction / Overview / Body 2つの段落構成にした",
+      "【一貫性とまとまり】Introduction / Overview / Body 2つの4段落構成にした",
       "【一貫性とまとまり】By contrast, while, As a result などでつないだ",
-      "【語彙】increase / rise / grow など同じ語の繰り返しを避けた",
+      "【語彙】increase / rise / reach / stand at など同じ語の繰り返しを避けた",
       "【文法】過去の年なので過去形で書いた。% と percentage points を正しく使った",
-      "【語数】150語以上（目安160〜190語）"
+      "【語数】150語以上（目安170〜190語）"
      ]
     }
    ]
@@ -1471,8 +1579,140 @@ window.DRILL.days["2026-11-24"] = {
       "Did you have the same hobbies when you were a child?",
       "Do you prefer spending your free time alone or with other people?"
      ],
-     "model": "1. I live in a house with my parents and my younger brother. It's not very big, but it has a small garden where my mother grows vegetables.\n2. I'd say the best thing is that it's quiet and close to nature. There's a river near my house, so I often go for a walk there after school, which really helps me relax.\n3. Yes, I wish public transport were better. The buses only come once an hour, so it's quite inconvenient, especially for students like me who can't drive yet.\n4. I'm a student. I'm in my second year of high school, and I'm preparing to study abroad, so I'm working hard on my English at the moment.\n5. I enjoy biology the most, because I find it fascinating to learn how living things work. For example, last month we studied the human heart, and it was really interesting.\n6. Well, I usually listen to music or play badminton with my friends. On weekends, I sometimes watch English films with subtitles, which is good practice for me.\n7. Not exactly. When I was a child, I spent most of my free time playing video games. I still play sometimes, but I'm much more interested in sport now.\n8. It depends on my mood, to be honest. When I'm tired, I like being alone, but generally I prefer being with friends because it's more fun and we can talk about anything.",
-     "modelJa": "1. 両親と弟と一戸建てに住んでいます。あまり大きくありませんが、小さな庭があって母が野菜を育てています。\n2. 一番いいところは静かで自然が近いことだと思います。家の近くに川があるので、放課後よく散歩に行きます。本当にリラックスできます。\n3. はい、公共交通機関がもっと良くなればいいと思います。バスが1時間に1本しか来ないので、特に私のようにまだ運転できない学生にはかなり不便です。\n4. 学生です。高校2年生で、留学の準備をしているので、今は英語を一生懸命勉強しています。\n5. 生物が一番好きです。生き物の仕組みを学ぶのがとても面白いからです。例えば先月は人間の心臓について勉強して、本当に興味深かったです。\n6. たいてい音楽を聴いたり、友達とバドミントンをしたりします。週末には字幕付きで英語の映画を見ることもあり、いい練習になっています。\n7. 少し違います。子どもの頃は暇な時間のほとんどをテレビゲームに使っていました。今もたまにやりますが、今はスポーツの方にずっと興味があります。\n8. 正直に言うと気分によります。疲れているときは一人が好きですが、普段は友達と一緒の方が好きです。もっと楽しいし、何でも話せるからです。",
+     "model": "Q: Let's talk about where you live. Do you live in a house or an apartment?\nI live in a house with my parents and my younger brother. It's not very big, but it has a small garden, and my mother grows vegetables there.\n\nQ: What do you like most about your hometown?\nI like the nature in my hometown the most. There is a river near my house, so I often walk along it after school. It helps me relax.\n\nQ: Is there anything you would like to change about your hometown?\nYes, I'd like to have more buses. Now the buses only come once an hour, so it's very inconvenient for students like me.\n\nQ: Do you work or are you a student?\nI'm a student. I'm in my second year of high school, and I'm studying English hard because I want to study abroad.\n\nQ: What subject do you enjoy studying the most? Why?\nI enjoy biology the most because it's interesting to learn how our bodies work. For example, last month we learned about the heart, and I really enjoyed the class.\n\nQ: What do you usually do in your free time?\nI usually listen to music or play badminton with my friends. On weekends, I sometimes watch English movies with subtitles. It's good practice for my listening.\n\nQ: Did you have the same hobbies when you were a child?\nNo, not really. When I was a child, I played video games almost every day. Now I'm more interested in sports like badminton.\n\nQ: Do you prefer spending your free time alone or with other people?\nI prefer spending time with other people. When I'm with my friends, we can talk and laugh together, so it's more fun than being alone. But when I'm tired, I sometimes like to stay at home alone.",
+     "modelJa": "Q: 住んでいる所について話しましょう。一戸建てとアパートのどちらに住んでいますか？\n両親と弟と一緒に一戸建てに住んでいます。あまり大きくありませんが、小さな庭があって、母がそこで野菜を育てています。\n\nQ: 地元の一番好きなところは何ですか？\n地元の自然が一番好きです。家の近くに川があるので、放課後によく川沿いを歩きます。リラックスできます。\n\nQ: 地元について変えたいことはありますか？\nはい、バスをもっと増やしてほしいです。今はバスが1時間に1本しか来ないので、私のような学生にはとても不便です。\n\nQ: お仕事をしていますか、それとも学生ですか？\n学生です。高校2年生で、留学したいので英語を一生懸命勉強しています。\n\nQ: 一番好きな科目は何ですか？それはなぜですか？\n生物が一番好きです。体の仕組みを学ぶのが面白いからです。例えば、先月は心臓について学んで、その授業はとても楽しかったです。\n\nQ: 自由な時間にはたいてい何をしますか？\nたいてい音楽を聴いたり、友達とバドミントンをしたりします。週末には字幕付きで英語の映画を見ることもあります。リスニングのいい練習になります。\n\nQ: 子どもの頃も同じ趣味でしたか？\nいいえ、あまり同じではありません。子どもの頃はほとんど毎日テレビゲームをしていました。今はバドミントンのようなスポーツの方に興味があります。\n\nQ: 自由な時間は一人で過ごすのと他の人と過ごすのとどちらが好きですか？\n他の人と過ごす方が好きです。友達と一緒だと話したり笑ったりできるので、一人でいるより楽しいです。でも疲れているときは、家で一人で過ごしたいこともあります。",
+     "modelParts": [
+      {
+       "label": "Q1 住まい",
+       "en": "Q: Let's talk about where you live. Do you live in a house or an apartment?\nI live in a house with my parents and my younger brother. It's not very big, but it has a small garden, and my mother grows vegetables there.",
+       "ja": "Q: 住んでいる所について話しましょう。一戸建てとアパートのどちらに住んでいますか？\n両親と弟と一緒に一戸建てに住んでいます。あまり大きくありませんが、小さな庭があって、母がそこで野菜を育てています。",
+       "point": "1文目で質問に直接答え（a house）、2文目で家の様子を足している。but で「大きくない→でも庭がある」とつなぐと自然に2文目が作れる。一語（A house.）で終わらせないのが Part1 の基本。"
+      },
+      {
+       "label": "Q2 地元の好きなところ",
+       "en": "Q: What do you like most about your hometown?\nI like the nature in my hometown the most. There is a river near my house, so I often walk along it after school. It helps me relax.",
+       "ja": "Q: 地元の一番好きなところは何ですか？\n地元の自然が一番好きです。家の近くに川があるので、放課後によく川沿いを歩きます。リラックスできます。",
+       "point": "質問の like most をそのまま使って I like … the most と答えると、すぐに話し始められる。2文目で具体例（川・散歩）を so でつなぎ、3文目で短く気持ちを足している。「答え→例→気持ち」の型。"
+      },
+      {
+       "label": "Q3 地元で変えたいこと",
+       "en": "Q: Is there anything you would like to change about your hometown?\nYes, I'd like to have more buses. Now the buses only come once an hour, so it's very inconvenient for students like me.",
+       "ja": "Q: 地元について変えたいことはありますか？\nはい、バスをもっと増やしてほしいです。今はバスが1時間に1本しか来ないので、私のような学生にはとても不便です。",
+       "point": "Yes, で答えてから I'd like to have … で変えたいことを言う。理由は once an hour と数字で具体的にし、so → for students like me と自分の立場に結びつけている。"
+      },
+      {
+       "label": "Q4 仕事か学生か",
+       "en": "Q: Do you work or are you a student?\nI'm a student. I'm in my second year of high school, and I'm studying English hard because I want to study abroad.",
+       "ja": "Q: お仕事をしていますか、それとも学生ですか？\n学生です。高校2年生で、留学したいので英語を一生懸命勉強しています。",
+       "point": "I'm a student. と短く答えた後、学年と今していることを足している。現在進行形（I'm studying）で「今取り組んでいること」を表し、because で理由を加えている。"
+      },
+      {
+       "label": "Q5 好きな科目",
+       "en": "Q: What subject do you enjoy studying the most? Why?\nI enjoy biology the most because it's interesting to learn how our bodies work. For example, last month we learned about the heart, and I really enjoyed the class.",
+       "ja": "Q: 一番好きな科目は何ですか？それはなぜですか？\n生物が一番好きです。体の仕組みを学ぶのが面白いからです。例えば、先月は心臓について学んで、その授業はとても楽しかったです。",
+       "point": "「答え→理由（because）→例（For example）」の型どおり。Why? と聞かれているので because を必ず入れる。例の部分は last month なので過去形（learned / enjoyed）に切り替えている。"
+      },
+      {
+       "label": "Q6 自由時間",
+       "en": "Q: What do you usually do in your free time?\nI usually listen to music or play badminton with my friends. On weekends, I sometimes watch English movies with subtitles. It's good practice for my listening.",
+       "ja": "Q: 自由な時間にはたいてい何をしますか？\nたいてい音楽を聴いたり、友達とバドミントンをしたりします。週末には字幕付きで英語の映画を見ることもあります。リスニングのいい練習になります。",
+       "point": "usually / sometimes、On weekends のように頻度や時を表す語を入れると、習慣の話が具体的になる。最後に It's good practice for … と短い感想を足して3文にしている。"
+      },
+      {
+       "label": "Q7 子どもの頃の趣味",
+       "en": "Q: Did you have the same hobbies when you were a child?\nNo, not really. When I was a child, I played video games almost every day. Now I'm more interested in sports like badminton.",
+       "ja": "Q: 子どもの頃も同じ趣味でしたか？\nいいえ、あまり同じではありません。子どもの頃はほとんど毎日テレビゲームをしていました。今はバドミントンのようなスポーツの方に興味があります。",
+       "point": "Did で聞かれているので過去形（played）で答え、Now … で今と比べている。過去形と現在形の使い分け、比較級（more interested in）を自然に入れられる型。"
+      },
+      {
+       "label": "Q8 一人か誰かと",
+       "en": "Q: Do you prefer spending your free time alone or with other people?\nI prefer spending time with other people. When I'm with my friends, we can talk and laugh together, so it's more fun than being alone. But when I'm tired, I sometimes like to stay at home alone.",
+       "ja": "Q: 自由な時間は一人で過ごすのと他の人と過ごすのとどちらが好きですか？\n他の人と過ごす方が好きです。友達と一緒だと話したり笑ったりできるので、一人でいるより楽しいです。でも疲れているときは、家で一人で過ごしたいこともあります。",
+       "point": "質問の prefer をそのまま使って答えを先に言う。When … で場面を示し、so … more fun than … で理由と比較を1文にまとめている。最後に But when … で反対の場合を少し足すと答えに幅が出る。"
+      }
+     ],
+     "keyLanguage": [
+      [
+       "It's not very big, but …",
+       "あまり大きくないが〜",
+       "マイナス→プラスの順で話すと自然に2文目が作れる"
+      ],
+      [
+       "I like … the most",
+       "〜が一番好きです",
+       "What do you like most …? に質問の語を使ってすぐ答える"
+      ],
+      [
+       "It helps me relax.",
+       "リラックスできます",
+       "答えの最後に短い気持ちを足す"
+      ],
+      [
+       "I'd like to have more …",
+       "〜がもっとあればいいと思う",
+       "変えたいことを聞かれたときの答え方"
+      ],
+      [
+       "only once an hour",
+       "1時間に1本だけ",
+       "数字を入れると理由が具体的になる"
+      ],
+      [
+       "for students like me",
+       "私のような学生にとって",
+       "理由を自分の立場に結びつける"
+      ],
+      [
+       "I'm in my second year of high school",
+       "高校2年生です",
+       "学年の言い方。second-year student とも言える"
+      ],
+      [
+       "For example, last month …",
+       "例えば先月〜",
+       "例の部分は過去形に切り替える"
+      ],
+      [
+       "On weekends, I sometimes …",
+       "週末には時々〜",
+       "時と頻度の語で習慣を具体的にする"
+      ],
+      [
+       "No, not really.",
+       "いいえ、あまり",
+       "No だけより自然でやわらかい答え始め"
+      ],
+      [
+       "more fun than being alone",
+       "一人でいるより楽しい",
+       "比較級で理由を言う。than の後は動名詞"
+      ]
+     ],
+     "tips": [
+      "【Fluency and Coherence】どの質問も「答え→理由（because / so）→例か気持ち」の2〜3文で答える。短すぎる答えも長すぎる答えも不要。",
+      "【Fluency and Coherence】すぐに言葉が出ないときは Well, / Let me think. でつなぎ、長い沈黙を作らない。",
+      "【Lexical Resource】質問の語（like most / prefer / enjoy）を答えの1文目にそのまま使うと、すぐ話し始められて言い間違いも減る。",
+      "【Grammar】質問の時制に合わせる（Did … → 過去形、Do you usually … → 現在形）。これだけで文法のミスが大きく減る。",
+      "【Pronunciation】文の最後まではっきり言い切る。I'm / It's / I'd などの短縮形を使うと自然なリズムになる。"
+     ],
+     "pitfalls": [
+      [
+       "Yes. / A house. の一語で答えて終わる",
+       "答えの後に必ず理由か具体例を1文足す（It's not very big, but …）。"
+      ],
+      [
+       "I think を毎回文頭に付ける",
+       "I like … / I prefer … / I usually … と質問の語で答え始める。"
+      ],
+      [
+       "過去を聞かれても現在形で答える（Q7 で I play video games.）",
+       "質問の Did / were を聞き取り、過去形で答えてから Now … と今を比べる。"
+      ],
+      [
+       "暗記した長い答えを棒読みする",
+       "キーワード（川・散歩・リラックス）だけ覚えておき、その場で文を作って話す。"
+      ]
+     ],
      "phrases": [
       [
        "I'd say (that) …",
@@ -1783,8 +2023,116 @@ window.DRILL.days["2026-11-25"] = {
      "task": 2,
      "minWords": 250,
      "prompt": "Write about the following topic:\n\nSome people believe that all secondary school students should be required to do unpaid community work as part of their education.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
-     "model": "In some countries, teenagers are expected to spend part of their school time volunteering in their local community, for example by helping in hospitals or cleaning parks. Although this policy has some drawbacks, I strongly agree that unpaid community work should be a compulsory part of secondary education.\n\nThe main reason for my view is that community work teaches skills that are difficult to learn in a classroom. When students help at a care home or organise an event for local children, they have to communicate with people of different ages, solve unexpected problems and work as part of a team. These abilities are highly valued by universities and employers, yet traditional lessons rarely give young people the chance to practise them.\n\nAnother benefit is that volunteering can make students more responsible members of society. Many teenagers know little about the problems in their own neighbourhoods, such as loneliness among elderly residents or a lack of clean public spaces. By experiencing these issues directly, they are more likely to understand their importance and to continue helping others as adults.\n\nAdmittedly, some people argue that students are already too busy with exams and that community work would take valuable time away from academic study. This concern is understandable. However, the problem can be solved if schools organise the programme carefully, for instance by limiting it to two hours a week or arranging it during the holidays. In this way, students can gain practical experience without their grades suffering.\n\nIn conclusion, although compulsory community work must be planned sensibly, I believe its advantages clearly outweigh its disadvantages. It helps young people develop practical skills and a stronger sense of responsibility, both of which are as important as academic knowledge.",
-     "modelJa": "国によっては、10代の若者は学校の時間の一部を地域でのボランティア活動、例えば病院の手伝いや公園の清掃に使うことが求められている。この方針にはいくつかの欠点もあるが、私は無償の地域奉仕活動を中等教育の必修の一部にすべきだという意見に強く賛成する。\n\n私がそう考える主な理由は、地域奉仕活動が教室では学びにくい技能を教えてくれることだ。生徒が介護施設を手伝ったり、地域の子ども向けのイベントを企画したりするとき、さまざまな年齢の人と意思疎通をし、予想外の問題を解決し、チームの一員として働かなければならない。こうした能力は大学や雇用主から高く評価されるが、従来の授業ではそれを練習する機会がほとんどない。\n\nもう一つの利点は、ボランティア活動によって生徒がより責任感のある社会の一員になれることだ。多くの10代は、高齢の住民の孤独や清潔な公共空間の不足など、自分の住む地域の問題をほとんど知らない。こうした問題を直接経験することで、その重要性を理解し、大人になっても人を助け続ける可能性が高くなる。\n\n確かに、生徒はすでに試験で忙しすぎ、地域奉仕活動は学業から貴重な時間を奪うと主張する人もいる。この懸念は理解できる。しかし、例えば週2時間までに制限したり休暇中に実施したりするなど、学校がプログラムを注意深く計画すればこの問題は解決できる。そうすれば、生徒は成績を落とさずに実践的な経験を積むことができる。\n\n結論として、必修の地域奉仕活動は賢明に計画されなければならないが、その利点は欠点を明らかに上回ると私は考える。それは若者が実践的な技能とより強い責任感を身につける助けとなり、そのどちらも学問的な知識と同じくらい重要である。",
+     "model": "Some people think that every student at secondary school should do community work without pay as a part of their school education. I agree with this idea because this kind of work can teach students useful skills and help them understand their local area.\n\nFirstly, community work gives students a chance to learn important skills which they cannot easily learn in the classroom. For example, if students help at a care home for elderly people, they have to talk with people of different ages and work together with other volunteers. These communication and teamwork skills will be very useful when they go to university or start working in the future. At my school, some students cleaned a local park last year, and they said that they learned how to plan their work as a team.\n\nSecondly, community work can help young people understand the problems in their local area. Many teenagers spend most of their time at school or at home, so they do not know much about the people who live around them. However, when they help elderly people or clean the streets, they can see these problems with their own eyes. As a result, they may become more interested in their community and want to help other people even after they leave school.\n\nIn conclusion, I agree that secondary school students should do unpaid community work. Although some people say that students are too busy with their studies, a few hours a week will not cause serious problems. This work can teach students useful skills and make them more caring members of society.",
+     "modelJa": "中等学校のすべての生徒が、学校教育の一部として無償で地域奉仕活動をするべきだと考える人がいる。この種の活動は生徒に役立つスキルを教え、自分の住む地域を理解する助けになるので、私はこの考えに賛成する。\n\n第一に、地域奉仕活動は、教室では簡単に学べない大切なスキルを学ぶ機会を生徒に与える。例えば、生徒が高齢者の介護施設を手伝う場合、さまざまな年齢の人と話し、ほかのボランティアと協力して働かなければならない。こうしたコミュニケーション能力やチームワークの力は、大学に進んだり将来働き始めたりするときにとても役立つだろう。私の学校では、昨年何人かの生徒が地域の公園を清掃し、チームとして作業を計画する方法を学んだと話していた。\n\n第二に、地域奉仕活動は若者が自分の地域の問題を理解する助けになる。多くの10代は時間のほとんどを学校か家で過ごすので、周りに住んでいる人たちのことをあまり知らない。しかし、高齢者を手伝ったり道を掃除したりすると、こうした問題を自分の目で見ることができる。その結果、地域にもっと関心を持ち、学校を卒業した後も他の人を助けたいと思うようになるかもしれない。\n\n結論として、私は中等学校の生徒が無償の地域奉仕活動をするべきだという考えに賛成する。生徒は勉強で忙しすぎると言う人もいるが、週に数時間なら大きな問題にはならないだろう。この活動は生徒に役立つスキルを教え、より思いやりのある社会の一員にしてくれる。",
+     "modelParts": [
+      {
+       "label": "Introduction（言い換え＋意見）",
+       "en": "Some people think that every student at secondary school should do community work without pay as a part of their school education. I agree with this idea because this kind of work can teach students useful skills and help them understand their local area.",
+       "ja": "中等学校のすべての生徒が、学校教育の一部として無償で地域奉仕活動をするべきだと考える人がいる。この種の活動は生徒に役立つスキルを教え、自分の住む地域を理解する助けになるので、私はこの考えに賛成する。",
+       "point": "1文目で問題文を言い換える（all secondary school students → every student at secondary school、unpaid → without pay）。2文目で I agree with this idea と立場をはっきり書き、because の後に Body で書く理由2つを予告している。こうすると読み手が全体の流れをすぐにつかめる。"
+      },
+      {
+       "label": "Body 1（理由1：教室で学べないスキル）",
+       "en": "Firstly, community work gives students a chance to learn important skills which they cannot easily learn in the classroom. For example, if students help at a care home for elderly people, they have to talk with people of different ages and work together with other volunteers. These communication and teamwork skills will be very useful when they go to university or start working in the future. At my school, some students cleaned a local park last year, and they said that they learned how to plan their work as a team.",
+       "ja": "第一に、地域奉仕活動は、教室では簡単に学べない大切なスキルを学ぶ機会を生徒に与える。例えば、生徒が高齢者の介護施設を手伝う場合、さまざまな年齢の人と話し、ほかのボランティアと協力して働かなければならない。こうしたコミュニケーション能力やチームワークの力は、大学に進んだり将来働き始めたりするときにとても役立つだろう。私の学校では、昨年何人かの生徒が地域の公園を清掃し、チームとして作業を計画する方法を学んだと話していた。",
+       "point": "Firstly, で始め、1文目（Topic sentence）だけで段落の要点がわかるようにしている。For example, if … で具体的な場面を出し、These … skills で前の文を受けて「将来役立つ」と説明する。最後に自分の学校の体験を1文入れると、例がより具体的になる。"
+      },
+      {
+       "label": "Body 2（理由2：地域を理解する）",
+       "en": "Secondly, community work can help young people understand the problems in their local area. Many teenagers spend most of their time at school or at home, so they do not know much about the people who live around them. However, when they help elderly people or clean the streets, they can see these problems with their own eyes. As a result, they may become more interested in their community and want to help other people even after they leave school.",
+       "ja": "第二に、地域奉仕活動は若者が自分の地域の問題を理解する助けになる。多くの10代は時間のほとんどを学校か家で過ごすので、周りに住んでいる人たちのことをあまり知らない。しかし、高齢者を手伝ったり道を掃除したりすると、こうした問題を自分の目で見ることができる。その結果、地域にもっと関心を持ち、学校を卒業した後も他の人を助けたいと思うようになるかもしれない。",
+       "point": "Secondly, で2つ目の理由に移る。Body 1 は「スキル」、Body 2 は「地域への理解」と観点を分けているので内容が重ならない。so → However → As a result とつなぎ言葉で「問題→変化→結果」の流れを作っている。"
+      },
+      {
+       "label": "Conclusion（結論）",
+       "en": "In conclusion, I agree that secondary school students should do unpaid community work. Although some people say that students are too busy with their studies, a few hours a week will not cause serious problems. This work can teach students useful skills and make them more caring members of society.",
+       "ja": "結論として、私は中等学校の生徒が無償の地域奉仕活動をするべきだという考えに賛成する。生徒は勉強で忙しすぎると言う人もいるが、週に数時間なら大きな問題にはならないだろう。この活動は生徒に役立つスキルを教え、より思いやりのある社会の一員にしてくれる。",
+       "point": "In conclusion, で始め、Introduction と同じ立場（I agree）をもう一度書く。Although … で反対意見に短く触れて答え、最後の文で Body 1・Body 2 の理由を1文にまとめている。新しい理由や例は書かない。"
+      }
+     ],
+     "keyLanguage": [
+      [
+       "Some people think that …",
+       "〜と考える人がいる",
+       "Introduction の1文目で話題を紹介する定番の形"
+      ],
+      [
+       "without pay",
+       "無償で、給料なしで",
+       "問題文の unpaid の言い換え"
+      ],
+      [
+       "I agree with this idea because …",
+       "〜なので、私はこの考えに賛成する",
+       "立場と理由を1文で示す。Body の内容を予告できる"
+      ],
+      [
+       "Firstly, … / Secondly, …",
+       "第一に／第二に",
+       "Body の段落の頭に置いて理由の順番を示す"
+      ],
+      [
+       "give students a chance to …",
+       "生徒に〜する機会を与える",
+       "メリットを説明するときに使いやすい"
+      ],
+      [
+       "skills which they cannot easily learn in the classroom",
+       "教室では簡単に学べないスキル",
+       "関係代名詞 which で名詞に説明を加える"
+      ],
+      [
+       "For example, if students …, they have to …",
+       "例えば、生徒が〜すると…しなければならない",
+       "if を使って具体的な場面を作る例の出し方"
+      ],
+      [
+       "with their own eyes",
+       "自分の目で",
+       "体験の大切さを伝える表現"
+      ],
+      [
+       "As a result, …",
+       "その結果",
+       "原因から結果へ話を進める"
+      ],
+      [
+       "In conclusion, …",
+       "結論として",
+       "Conclusion の書き出し。Introduction と同じ立場を繰り返す"
+      ],
+      [
+       "Although some people say that …, …",
+       "〜と言う人もいるが",
+       "反対意見に短く触れてから自分の意見に戻る"
+      ]
+     ],
+     "tips": [
+      "【Task Response】Introduction と Conclusion の両方に I agree と同じ立場を書き、途中で変えない。立場がはっきりしているだけで 5.5 の土台になる。",
+      "【Task Response】理由は2つで十分。それぞれに For example, … や自分の学校の体験など具体例を1つ入れる。例がないと理由が弱く見える。",
+      "【Coherence and Cohesion】4段落（Introduction / Body 1 / Body 2 / Conclusion）で書き、Firstly, / Secondly, / In conclusion, を段落の頭に置く。各 Body の1文目で段落の要点を言う。",
+      "【Lexical Resource】問題文の語をそのまま写さず、unpaid → without pay、all … students → every student のように簡単な言い換えをする。",
+      "【Grammatical Range and Accuracy】because / if / when / although / which を使った文を各段落に1つ入れる。見直しで三単現の s、複数形、a / the を必ず確認する。"
+     ],
+     "pitfalls": [
+      [
+       "立場があいまい（Introduction で agree と disagree の両方を書く）",
+       "I agree with this idea のように1文で立場を明言し、Conclusion でも同じことを繰り返す。"
+      ],
+      [
+       "I think を各文の頭に付ける",
+       "意見の文だけに使い、それ以外は Firstly, / For example, / As a result, などで始める。"
+      ],
+      [
+       "理由1と理由2が同じ内容（どちらも「将来役立つ」）",
+       "「自分のスキル」と「地域への理解」のように観点を分けて理由を決める。"
+      ],
+      [
+       "Conclusion で新しい理由を書く",
+       "Conclusion は立場の繰り返しと理由のまとめだけ。新しい情報は Body に入れる。"
+      ]
+     ],
      "plan": [
       "【0. 準備5分】問題文の主張（全中高生に無償の地域奉仕を義務づける）に「強く賛成／部分的に賛成／反対」のどれかを決める。迷ったら理由を2つ書きやすい側を選ぶ。",
       "【1. Introduction（2文・約40語）】1文目：問題文を言い換えて話題を紹介（required → compulsory / expected、unpaid community work → volunteering）。2文目：自分の立場をはっきり書く（I strongly agree that … / I partly agree that …）。",
@@ -1847,11 +2195,12 @@ window.DRILL.days["2026-11-25"] = {
      "checklist": [
       "【課題への対応】Introduction と Conclusion で立場（agree / disagree の程度）を明確に書いた",
       "【課題への対応】理由ごとに具体例・説明を入れ、問題文のテーマから外れなかった",
+      "【課題への対応】反対意見を1つ紹介し、それに答えた（Admittedly … However …）",
       "【一貫性とまとまり】4〜5段落構成で、各 Body の1文目がその段落の要点になっている",
       "【一貫性とまとまり】Another / However / In this way などのつなぎ語を適切に使った（使いすぎない）",
       "【語彙】問題文の語を言い換えた（required → compulsory など）。同じ語を何度も繰り返していない",
       "【文法】複文（although, if, which など）を数回使い、時制と主語・動詞の一致に誤りがない",
-      "【語数】250語以上（目安260〜300語）を40分以内で書いた"
+      "【語数】250語以上（目安270〜300語）を40分以内で書いた"
      ]
     }
    ]
@@ -2283,8 +2632,128 @@ window.DRILL.days["2026-11-26"] = {
       "Now, I'd like you to talk about a place in your town or city that you enjoy visiting. You have one minute to prepare, and then you should speak for one to two minutes.",
       "Do your friends also like going to this place?"
      ],
-     "model": "I'd like to talk about a small public library near my house. It's about ten minutes from my home by bicycle, on the second floor of a community centre next to the station.\n\nI go there quite often, probably two or three times a week, especially before exams. On weekdays I usually go after school and stay until it closes at seven, and on Sundays I sometimes spend the whole afternoon there.\n\nMost of the time, I go there to study. There's a study area by the windows with large desks, and it's much easier to concentrate there than at home, where my little brother is always making noise. When I need a break, I look at the magazines or borrow novels. Recently I've started reading easy English books from the foreign language section, which I think is helping my reading speed.\n\nThere are a few reasons why I enjoy going there. First of all, it's very peaceful. Everyone is quietly reading or studying, so I feel motivated to work hard too. Another reason is that the staff are really friendly. One librarian often recommends books to me, and some of them have become my favourites. Finally, I like the view. From the window, you can see the trains coming in and out of the station, and in the evening the lights look really beautiful.\n\nSo for me, the library is not just a place to study. It's somewhere I can relax and feel calm, and I think I'll keep going there even after I finish high school.\n\n(Follow-up) Yes, some of them do. A couple of my classmates often come with me before tests, although others prefer studying in cafés because they can talk.",
-     "modelJa": "家の近くの小さな公立図書館について話したいと思います。家から自転車で10分ほど、駅の隣にあるコミュニティセンターの2階にあります。\n\nかなり頻繁に、たぶん週に2〜3回、特に試験の前に行きます。平日はたいてい放課後に行って7時の閉館までいて、日曜日には午後ずっと過ごすこともあります。\n\nほとんどの場合、勉強しに行きます。窓際に大きな机のある自習スペースがあって、弟がいつも騒いでいる家よりずっと集中しやすいです。休憩したいときは雑誌を見たり小説を借りたりします。最近は外国語コーナーにあるやさしい英語の本を読み始めていて、読むスピードを上げるのに役立っていると思います。\n\nそこに行くのが好きな理由はいくつかあります。まず、とても静かなことです。みんな静かに本を読んだり勉強したりしているので、自分も頑張ろうという気持ちになります。もう一つの理由は、職員の方がとても親切なことです。ある司書の方がよく本を勧めてくれて、そのうちの何冊かは私のお気に入りになりました。最後に、景色が好きです。窓から駅を出入りする電車が見えて、夕方には明かりがとてもきれいです。\n\nだから私にとって、図書館は単に勉強する場所ではありません。リラックスして落ち着ける場所で、高校を卒業した後も通い続けると思います。\n\n（追加質問）はい、何人かは好きです。クラスメートの2人はテスト前によく一緒に来ますが、話ができるのでカフェで勉強する方が好きな友達もいます。",
+     "model": "I'd like to talk about a public library near my house. It's about ten minutes from my house by bike, and it's next to the station. It's on the second floor of a small community centre.\n\nI go there two or three times a week. I usually go after school on weekdays, and I sometimes stay there all afternoon on Sundays, especially before exams.\n\nI usually go there to study. There are large desks by the windows, and it's easier to study there than at home because my little brother is often noisy. When I get tired, I read magazines or borrow novels to read at home. Recently, I've also started reading easy English books there.\n\nThere are three reasons why I enjoy visiting this library. First, it's very quiet. Everyone is studying or reading, so I want to study hard too. Second, the staff are very kind. One librarian often tells me about good books, and I've read many of them. Third, I like the view from the window. I can see trains coming in and out of the station, and the lights look beautiful in the evening.\n\nSo, for me, the library is not just a place to study. It's a place where I can relax, and I want to keep going there after I finish high school.\n\nQ: Do your friends also like going to this place?\nYes, some of them do. A few of my classmates often come with me before tests, but some friends prefer studying at cafés because they can talk there.",
+     "modelJa": "家の近くの公立図書館について話したいと思います。家から自転車で10分くらいで、駅の隣にあります。小さなコミュニティセンターの2階にあります。\n\n週に2〜3回行きます。平日はたいてい放課後に行き、日曜日には、特に試験の前に、午後ずっとそこにいることもあります。\n\nたいていは勉強しに行きます。窓際に大きな机があって、弟がよくうるさくするので、家より図書館の方が勉強しやすいです。疲れたら雑誌を読んだり、家で読む小説を借りたりします。最近は、そこでやさしい英語の本も読み始めました。\n\nこの図書館に行くのが好きな理由は3つあります。まず、とても静かです。みんな勉強したり本を読んだりしているので、自分も頑張って勉強しようと思えます。次に、職員の方がとても親切です。ある司書の方がよくいい本を教えてくれて、その多くを読みました。3つ目に、窓からの景色が好きです。駅を出入りする電車が見えて、夕方には明かりがきれいです。\n\nだから私にとって、図書館は単に勉強する場所ではありません。リラックスできる場所で、高校を卒業した後も通い続けたいです。\n\nQ: あなたの友達もこの場所に行くのが好きですか？\nはい、何人かは好きです。クラスメートの何人かはテスト前によく一緒に来ますが、話ができるのでカフェで勉強する方が好きな友達もいます。",
+     "modelParts": [
+      {
+       "label": "導入：where it is（場所）",
+       "en": "I'd like to talk about a public library near my house. It's about ten minutes from my house by bike, and it's next to the station. It's on the second floor of a small community centre.",
+       "ja": "家の近くの公立図書館について話したいと思います。家から自転車で10分くらいで、駅の隣にあります。小さなコミュニティセンターの2階にあります。",
+       "point": "I'd like to talk about … で何の話かを最初に言う。場所は「家からの距離（ten minutes by bike）」と「目印（next to the station）」「建物（community centre の2階）」で説明すれば十分。"
+      },
+      {
+       "label": "how often you go there（頻度）",
+       "en": "I go there two or three times a week. I usually go after school on weekdays, and I sometimes stay there all afternoon on Sundays, especially before exams.",
+       "ja": "週に2〜3回行きます。平日はたいてい放課後に行き、日曜日には、特に試験の前に、午後ずっとそこにいることもあります。",
+       "point": "頻度は two or three times a week と数字で答える。on weekdays / on Sundays で平日と休日を分け、usually / sometimes を使うと、このポイントだけで15秒ほど話せる。"
+      },
+      {
+       "label": "what you do there（そこですること）",
+       "en": "I usually go there to study. There are large desks by the windows, and it's easier to study there than at home because my little brother is often noisy. When I get tired, I read magazines or borrow novels to read at home. Recently, I've also started reading easy English books there.",
+       "ja": "たいていは勉強しに行きます。窓際に大きな机があって、弟がよくうるさくするので、家より図書館の方が勉強しやすいです。疲れたら雑誌を読んだり、家で読む小説を借りたりします。最近は、そこでやさしい英語の本も読み始めました。",
+       "point": "主な活動（勉強）→理由（家より勉強しやすい）→ほかの活動（雑誌・小説）の順で話している。easier … than at home で比較、Recently, I've started …ing で現在完了も自然に入っている。"
+      },
+      {
+       "label": "explain why you enjoy it（理由）",
+       "en": "There are three reasons why I enjoy visiting this library. First, it's very quiet. Everyone is studying or reading, so I want to study hard too. Second, the staff are very kind. One librarian often tells me about good books, and I've read many of them. Third, I like the view from the window. I can see trains coming in and out of the station, and the lights look beautiful in the evening.",
+       "ja": "この図書館に行くのが好きな理由は3つあります。まず、とても静かです。みんな勉強したり本を読んだりしているので、自分も頑張って勉強しようと思えます。次に、職員の方がとても親切です。ある司書の方がよくいい本を教えてくれて、その多くを読みました。3つ目に、窓からの景色が好きです。駅を出入りする電車が見えて、夕方には明かりがきれいです。",
+       "point": "一番長く話すべき最後のポイント。There are three reasons why … と数を予告し、First / Second / Third で整理している。各理由の後に1文ずつ具体例を足すので、迷わずに長く話せる。"
+      },
+      {
+       "label": "まとめ",
+       "en": "So, for me, the library is not just a place to study. It's a place where I can relax, and I want to keep going there after I finish high school.",
+       "ja": "だから私にとって、図書館は単に勉強する場所ではありません。リラックスできる場所で、高校を卒業した後も通い続けたいです。",
+       "point": "So, for me, … で話をまとめ、自分にとっての意味を伝える。最後に未来のこと（I want to keep going）を言うと自然に話が終わる。"
+      },
+      {
+       "label": "追加質問（Follow-up）",
+       "en": "Q: Do your friends also like going to this place?\nYes, some of them do. A few of my classmates often come with me before tests, but some friends prefer studying at cafés because they can talk there.",
+       "ja": "Q: あなたの友達もこの場所に行くのが好きですか？\nはい、何人かは好きです。クラスメートの何人かはテスト前によく一緒に来ますが、話ができるのでカフェで勉強する方が好きな友達もいます。",
+       "point": "Part2 の後の短い質問には1〜2文でよい。Yes, some of them do. と短く答えてから、but で「そうでない友達」を紹介し、because で理由を足している。"
+      }
+     ],
+     "keyLanguage": [
+      [
+       "I'd like to talk about …",
+       "〜について話したいと思います",
+       "Part2 の最初の一言。テーマを最初に言う"
+      ],
+      [
+       "It's about ten minutes from my house by bike",
+       "家から自転車で約10分です",
+       "場所を「距離＋手段」で説明する"
+      ],
+      [
+       "next to the station",
+       "駅の隣に",
+       "目印を使うと場所の説明が具体的になる"
+      ],
+      [
+       "two or three times a week",
+       "週に2〜3回",
+       "頻度は数字で答える"
+      ],
+      [
+       "especially before exams",
+       "特に試験の前に",
+       "文の最後に付けて情報を足す"
+      ],
+      [
+       "it's easier to study there than at home",
+       "家よりそこの方が勉強しやすい",
+       "比較級でほかの場所と比べると説明が長くなる"
+      ],
+      [
+       "Recently, I've started …ing",
+       "最近〜し始めた",
+       "現在完了で最近の変化を表す"
+      ],
+      [
+       "There are three reasons why …",
+       "〜の理由は3つある",
+       "explain why の部分の予告。数を言うと構成が伝わる"
+      ],
+      [
+       "First, … / Second, … / Third, …",
+       "まず／次に／3つ目に",
+       "理由を順番に整理して話す"
+      ],
+      [
+       "So, for me, … is not just …",
+       "だから私にとって〜は単なる…ではない",
+       "話のまとめに使う"
+      ],
+      [
+       "I want to keep …ing",
+       "〜し続けたい",
+       "最後に未来のことを言って自然に締める"
+      ]
+     ],
+     "tips": [
+      "【Fluency and Coherence】カードの4つのポイントを順番どおりにすべて話す。1つでも抜けると評価が下がるので、メモもカードの順に書く。",
+      "【Fluency and Coherence】explain why に一番時間をかけ、理由3つに具体例を1文ずつ付ける。これで1分40秒〜2分話し続けられる。",
+      "【Lexical Resource】準備1分はキーワードだけをメモ（例：library / 10 min bike / 2-3 a week / study, novels / quiet, kind staff, view）。簡単な語でよいので具体的に言う。",
+      "【Grammar】基本は現在形（習慣）で話し、Recently, I've started …（現在完了）と I want to keep …（未来）を1回ずつ入れる。時制を混ぜすぎない。",
+      "【Pronunciation】First / Second / Third の後で少し間をとり、キーワード（quiet, kind, view）をはっきり言うと聞き手に構成が伝わる。"
+     ],
+     "pitfalls": [
+      [
+       "1分足らずで話が終わってしまう",
+       "各ポイントに「答え＋具体例」を付け、explain why では理由を3つ話す。"
+      ],
+      [
+       "準備時間に文章を書いて読み上げる",
+       "メモはキーワードだけにし、目線を上げて話す。"
+      ],
+      [
+       "カードのポイントを1つ飛ばす（how often を言い忘れる）",
+       "メモをカードの順に4行で書き、上から順に話す。"
+      ],
+      [
+       "I like it because it's good. のように理由があいまい",
+       "quiet / kind staff / view のように理由を具体的にし、経験を1文足す。"
+      ]
+     ],
      "phrases": [
       [
        "I'd like to talk about …",

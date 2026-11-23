@@ -344,26 +344,44 @@
     return item;
   }
 
+  // detailed model answer: paragraph-by-paragraph (EN / JA / technique), key language, tips, pitfalls
+  function modelView(it){
+    const w=document.createElement("div"); w.className="mview";
+    w.insertAdjacentHTML("beforeend",'<h4 class="mh">模範解答（バンド5.5の目安：型どおりでミスが少ない答案）</h4>');
+    if(Array.isArray(it.modelParts)&&it.modelParts.length){
+      it.modelParts.forEach(p=>{ w.insertAdjacentHTML("beforeend",'<div class="mpart"><div class="mlabel">'+esc(p.label)+'</div><div class="men">'+esc(p.en).replace(/\n/g,"<br>")+'</div><div class="mja">'+esc(p.ja).replace(/\n/g,"<br>")+'</div><div class="mpoint"><b class="exh">ここがポイント</b>'+esc(p.point)+'</div></div>'); });
+      const full=document.createElement("details"); full.innerHTML='<summary>全文を続けて読む</summary><div class="model">'+esc(it.model)+'</div>'+(it.modelJa?'<div class="modelja">'+esc(it.modelJa)+'</div>':''); w.appendChild(full);
+    } else {
+      w.insertAdjacentHTML("beforeend",'<div class="model">'+esc(it.model)+'</div>'+(it.modelJa?'<details><summary>和訳</summary><div class="modelja">'+esc(it.modelJa)+'</div></details>':''));
+    }
+    if(it.keyLanguage&&it.keyLanguage.length){ w.insertAdjacentHTML("beforeend",'<h4 class="mh">真似したい表現</h4><div class="tbl"><table class="klang"><tbody>'+it.keyLanguage.map(x=>'<tr><td class="ken">'+esc(x[0])+'</td><td>'+esc(x[1])+'</td><td class="note">'+esc(x[2]||"")+'</td></tr>').join("")+'</tbody></table></div>'); }
+    if(it.tips&&it.tips.length){ w.insertAdjacentHTML("beforeend",'<h4 class="mh">5.5 を確実に取るポイント</h4><ul class="tips">'+it.tips.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul>'); }
+    if(it.pitfalls&&it.pitfalls.length){ w.insertAdjacentHTML("beforeend",'<h4 class="mh">やりがちなミス</h4><div class="pits">'+it.pitfalls.map(x=>'<div class="pit"><span class="pit-ng">✗ '+esc(x[0])+'</span><span class="pit-ok">→ '+esc(x[1])+'</span></div>').join("")+'</div>'); }
+    return w;
+  }
+  function hintBox(it){
+    if(!(it.plan||it.phrases)) return null;
+    const h=document.createElement("details"); h.innerHTML='<summary>ヒント：書き方の手順と使える表現</summary>'+
+      (it.plan?'<ol class="tips">'+it.plan.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ol>':'')+
+      (it.phrases?'<div class="phr" style="margin-top:8px">'+it.phrases.map(p=>'<span><b>'+esc(p[0])+'</b> '+esc(p[1])+'</span>').join("")+'</div>':''); return h;
+  }
+  // returns [left, right] columns
   function renderWrite(ds,s,it,i){
     const k=ds+"|"+s.id+"|"+i, done=!!S.wdone[ds+"|"+s.id];
-    const box=document.createElement("div"); box.className="item wbox";
-    box.innerHTML='<div class="prompt">'+esc(it.prompt)+'</div>';
-    if(it.plan||it.phrases){ const h=document.createElement("details"); h.innerHTML='<summary>ヒント：書き方の手順と使える表現</summary>'+
-      (it.plan?'<ol class="tips">'+it.plan.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ol>':'')+
-      (it.phrases?'<div class="phr" style="margin-top:8px">'+it.phrases.map(p=>'<span><b>'+esc(p[0])+'</b> '+esc(p[1])+'</span>').join("")+'</div>':''); box.appendChild(h); }
+    const left=document.createElement("div"); left.className="src";
+    figures(s).forEach(f=>left.appendChild(f));
+    left.insertAdjacentHTML("beforeend",'<div class="prompt">'+esc(it.prompt)+'</div>');
+    const h=hintBox(it); if(h) left.appendChild(h);
+    const right=document.createElement("div"); right.className="qs wbox";
     const ta=document.createElement("textarea"); ta.id="w_"+k.replace(/\W/g,"_"); ta.value=S.write[k]||""; ta.placeholder="ここに英語で書く（"+it.minWords+"語以上）"; ta.spellcheck=false; ta.autocapitalize="sentences";
     const wc=document.createElement("div"); wc.className="toolbar";
     const c=document.createElement("span"); const upd=()=>{ const n=wcount(ta.value); c.className="wc "+(n>=it.minWords?"ok":"short"); c.textContent=n+" 語 / "+it.minWords+" 語以上"; };
     ta.addEventListener("input",()=>{ S.write[k]=ta.value; save(); upd(); }); upd(); wc.appendChild(c);
-    box.append(ta,wc);
-    const act=document.createElement("div"); act.className="toolbar";
-    if(!done){ const b=document.createElement("button"); b.type="button"; b.className="btn primary"; b.textContent="書き終えた（模範解答とチェックへ）";
-      b.addEventListener("click",()=>{ S.wdone[ds+"|"+s.id]=Date.now(); save(); render(s.id); }); act.appendChild(b); box.appendChild(act); }
-    else {
-      const m=document.createElement("details"); m.open=true; m.innerHTML='<summary>模範解答（バンド6.0〜6.5の目安）</summary><div class="model">'+esc(it.model)+'</div>'+(it.modelJa?'<details><summary>和訳</summary><div class="modelja">'+esc(it.modelJa)+'</div></details>':'');
-      box.appendChild(m); box.appendChild(checklist(k,it.checklist));
-    }
-    return box;
+    right.append(ta,wc);
+    if(!done){ const act=document.createElement("div"); act.className="toolbar"; const b=document.createElement("button"); b.type="button"; b.className="btn primary"; b.textContent="書き終えた（模範解答とチェックへ）";
+      b.addEventListener("click",()=>{ S.wdone[ds+"|"+s.id]=Date.now(); save(); render(s.id); }); act.appendChild(b); right.appendChild(act); }
+    else { right.appendChild(checklist(k,it.checklist)); right.appendChild(modelView(it)); }
+    return [left,right];
   }
   function checklist(k,list){
     const w=document.createElement("div");
@@ -378,24 +396,19 @@
   }
   function renderSpeak(ds,s,it,i){
     const k=ds+"|"+s.id+"|"+i, done=!!S.wdone[ds+"|"+s.id];
-    const box=document.createElement("div"); box.className="item";
-    box.insertAdjacentHTML("beforeend",'<p class="note" style="margin:0">Speaking Part '+it.part+'</p>');
-    if(it.cueCard){ box.insertAdjacentHTML("beforeend",'<div class="cue"><b>'+esc(it.cueCard.topic)+'</b>You should say:<ul>'+it.cueCard.points.map(p=>'<li>'+esc(p)+'</li>').join("")+'</ul></div>'); }
-    it.questions.forEach((qq,j)=>{
-      const sq=document.createElement("div"); sq.className="sq";
-      sq.innerHTML='<span class="qtext">'+esc(qq)+'</span>';
-      sq.appendChild(player(k+"|q"+j,"質問の音声",qq));
-      box.appendChild(sq);
-    });
+    const left=document.createElement("div"); left.className="src";
+    left.insertAdjacentHTML("beforeend",'<p class="note" style="margin:0">Speaking Part '+it.part+'</p>');
+    if(it.cueCard){ left.insertAdjacentHTML("beforeend",'<div class="cue"><b>'+esc(it.cueCard.topic)+'</b>You should say:<ul>'+it.cueCard.points.map(p=>'<li>'+esc(p)+'</li>').join("")+'</ul></div>'); }
+    it.questions.forEach((qq,j)=>{ const sq=document.createElement("div"); sq.className="sq"; sq.innerHTML='<span class="qtext">'+esc(qq)+'</span>'; sq.appendChild(player(k+"|q"+j,"質問の音声",qq)); left.appendChild(sq); });
+    if(it.phrases){ const h=document.createElement("details"); h.innerHTML='<summary>使える表現</summary><div class="phr">'+it.phrases.map(p=>'<span><b>'+esc(p[0])+'</b> '+esc(p[1])+'</span>').join("")+'</div>'; left.appendChild(h); }
+    const right=document.createElement("div"); right.className="qs";
     const tb=document.createElement("div"); tb.className="toolbar";
     if(it.prepSec) tb.appendChild(countdown("準備 "+(it.prepSec/60)+"分 スタート",it.prepSec));
     tb.appendChild(countdown("話す "+(it.speakSec>=60?(it.speakSec/60)+"分":it.speakSec+"秒")+" スタート",it.speakSec||60));
-    box.appendChild(tb);
-    box.appendChild(recorder());
-    if(it.phrases){ const h=document.createElement("details"); h.innerHTML='<summary>使える表現</summary><div class="phr">'+it.phrases.map(p=>'<span><b>'+esc(p[0])+'</b> '+esc(p[1])+'</span>').join("")+'</div>'; box.appendChild(h); }
-    if(!done){ const b=document.createElement("button"); b.type="button"; b.className="btn primary"; b.textContent="話し終えた（模範解答とチェックへ）"; b.addEventListener("click",()=>{ S.wdone[ds+"|"+s.id]=Date.now(); save(); render(s.id); }); const a=document.createElement("div"); a.className="toolbar"; a.appendChild(b); box.appendChild(a); }
-    else { const m=document.createElement("details"); m.open=true; m.innerHTML='<summary>模範解答（バンド6.0〜6.5の目安）</summary><div class="model">'+esc(it.model)+'</div>'+(it.modelJa?'<details><summary>和訳</summary><div class="modelja">'+esc(it.modelJa)+'</div></details>':''); box.appendChild(m); box.appendChild(checklist(k,it.checklist)); }
-    return box;
+    right.appendChild(tb); right.appendChild(recorder());
+    if(!done){ const b=document.createElement("button"); b.type="button"; b.className="btn primary"; b.textContent="話し終えた（模範解答とチェックへ）"; b.addEventListener("click",()=>{ S.wdone[ds+"|"+s.id]=Date.now(); save(); render(s.id); }); const a=document.createElement("div"); a.className="toolbar"; a.appendChild(b); right.appendChild(a); }
+    else { right.appendChild(checklist(k,it.checklist)); right.appendChild(modelView(it)); }
+    return [left,right];
   }
 
   // ---- set ----
@@ -409,22 +422,23 @@
     if(s.instructions) body.insertAdjacentHTML("beforeend",'<p class="instr">'+esc(s.instructions)+'</p>');
     if(s.directions) body.insertAdjacentHTML("beforeend",'<p class="dir" style="margin:0">'+esc(s.directions)+'</p>');
     const tb=document.createElement("div"); tb.className="toolbar"; tb.appendChild(timerUI(k,s.limitMin)); body.appendChild(tb);
-    const hasSrc=!!(s.passage||s.script||s.chart||s.plan||s.process||s.table) && s.skill!=="W";
+    if(s.skill==="W"||s.skill==="S"){
+      s.items.forEach((it,i)=>{ const cols=(it.type==="write"?renderWrite:renderSpeak)(ds,s,it,i); const row=document.createElement("div"); row.className="split two ws"; row.append(cols[0],cols[1]); body.appendChild(row); });
+      det.appendChild(body); return det;
+    }
+    const hasSrc=!!(s.passage||s.script||s.chart||s.plan||s.process||s.table);
     const split=document.createElement("div"); split.className="split"+(hasSrc?" two":"");
     const src=document.createElement("div"); src.className="src"; const qs=document.createElement("div"); qs.className="qs";
     if(s.script){ src.appendChild(player(k,"音声（本番は1回だけ）")); }
-    (s.skill==="W"?[]:figures(s)).forEach(f=>src.appendChild(f));
+    figures(s).forEach(f=>src.appendChild(f));
     if(s.passage){ src.appendChild(paras(s.passage,"passage")); if(graded&&s.passageJa) src.appendChild(jaBox(s.passageJa)); }
     if(s.script){ if(graded) src.appendChild(scriptBox(s.script,s.scriptJa)); else src.insertAdjacentHTML("beforeend",'<p class="note" style="margin:0">スクリプトと和訳は答え合わせのあとに表示されます。</p>'); }
     if(hasSrc) split.appendChild(src);
-    if(s.skill==="W") figures(s).forEach(f=>qs.appendChild(f));
     if(s.options){ qs.insertAdjacentHTML("beforeend",'<div class="opts">'+s.options.map(o=>'<div>'+esc(o)+'</div>').join("")+'</div>'); }
     let num=startNum;
     s.items.forEach((it,i)=>{
       const t=it.type||"mc";
-      if(t==="write") qs.appendChild(renderWrite(ds,s,it,i));
-      else if(t==="speak") qs.appendChild(renderSpeak(ds,s,it,i));
-      else { qs.appendChild(renderItem(ds,s,it,i,graded,num+(t==="mc2"?"–"+(num+1):""))); num+=pointsOf(it); }
+      { qs.appendChild(renderItem(ds,s,it,i,graded,num+(t==="mc2"?"–"+(num+1):""))); num+=pointsOf(it); }
     });
     split.appendChild(qs); body.appendChild(split);
     if(gradable){

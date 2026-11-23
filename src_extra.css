@@ -42,3 +42,25 @@ figure.fig svg{display:block;width:100%;height:auto;max-width:720px}
 .rec audio{height:36px;max-width:100%}
 .big-timer{font-family:var(--f-display);font-size:28px;font-variant-numeric:tabular-nums;color:var(--blue)}
 .big-timer.over{color:var(--ng)}
+/* detailed model answers */
+.mview{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.mh{margin:10px 0 0;font-size:15px;color:var(--ok)}
+.mpart{border:1px solid var(--line);border-left:4px solid var(--ok);border-radius:8px;padding:10px 12px;background:var(--sheet);display:flex;flex-direction:column;gap:6px}
+.mlabel{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ok)}
+.men{font-family:var(--f-en);font-size:16.5px;line-height:1.7}
+.mja{font-size:14px;color:var(--muted);line-height:1.7}
+.mpoint{font-size:14px;line-height:1.7;background:var(--paper);border-radius:6px;padding:6px 10px}
+.klang{border-collapse:collapse;width:100%;font-size:14px}
+.klang td{border-bottom:1px solid var(--line);padding:5px 8px;vertical-align:top}
+.klang .ken{font-family:var(--f-en);font-weight:600;white-space:nowrap}
+.pits{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.pit{display:flex;flex-direction:column;background:var(--paper);border-radius:6px;padding:6px 10px}
+.pit-ng{color:var(--ng);font-weight:700}
+.pit-ok{color:var(--ok)}
+@media (min-width: 900px){
+  .split.two.ws{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .split.two.ws + .split.two.ws{border-top:1px solid var(--line);padding-top:16px}
+  .wbox textarea{min-height:52vh}
+  .split.two.ws .qs{max-height:none}
+}
+.mpoint .exh{display:inline-block;font-size:12px;letter-spacing:.04em;color:var(--ok);background:var(--ok-soft);border-radius:4px;padding:0 6px;margin-right:6px}

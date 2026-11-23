@@ -254,8 +254,121 @@ window.DRILL.days["2026-11-27"] = {
      "task": 1,
      "prompt": "The graph below shows the average number of hours per week that young people aged 16–24 in one country spent on three leisure activities between 2000 and 2025.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
      "minWords": 150,
-     "model": "The line graph illustrates how many hours per week young people aged 16 to 24 in one country spent on three leisure activities between 2000 and 2025.\n\nOverall, the time spent watching television declined steadily, while social media use rose dramatically and became the most popular activity. In contrast, the figure for playing sport remained relatively stable throughout the period.\n\nIn 2000, young people watched television for 18 hours a week, which was far more than the time they spent on the other two activities. This figure then fell gradually to 15 hours in 2010 and continued to drop, reaching just 9 hours in 2025, half of the original level.\n\nSocial media, on the other hand, accounted for only 1 hour a week in 2000. However, it increased sharply over the next fifteen years and overtook television between 2010 and 2015, reaching 14 hours. By 2025, it had risen to 20 hours, the highest figure on the graph.\n\nAs for sport, young people spent around 5 to 6 hours a week on it for most of the period, with a slight rise to 7 hours in the final year.",
-     "modelJa": "この折れ線グラフは、ある国の16〜24歳の若者が2000年から2025年の間に3つの余暇活動に1週間あたり何時間を費やしたかを示している。\n\n全体として、テレビを見る時間は着実に減少した一方、ソーシャルメディアの利用は劇的に増加し、最も人気のある活動になった。対照的に、スポーツをする時間は期間を通じて比較的安定していた。\n\n2000年、若者は週18時間テレビを見ており、これは他の2つの活動に費やした時間よりはるかに多かった。この数値はその後2010年には15時間へと徐々に下がり、さらに減り続け、2025年にはわずか9時間と当初の半分になった。\n\n一方、ソーシャルメディアは2000年には週1時間にすぎなかった。しかしその後の15年間で急増し、2010年から2015年の間にテレビを追い越し、14時間に達した。2025年までには20時間に上昇し、グラフ中で最も高い数値となった。\n\nスポーツについては、期間の大半で若者は週5〜6時間ほどを費やしており、最後の年に7時間へとわずかに増加した。",
+     "model": "The line graph illustrates how many hours per week young people aged 16 to 24 in one country spent on three leisure activities from 2000 to 2025.\n\nOverall, the time spent watching TV went down, while the time spent using social media went up a lot and became the highest. In contrast, the time for playing sport did not change much.\n\nIn 2000, young people watched TV for 18 hours a week, which was much more than the other two activities. After that, this number fell to 15 hours in 2010. In 2025, it was only 9 hours, which was half of the figure in 2000.\n\nOn the other hand, young people used social media for only 1 hour a week in 2000. However, this number increased quickly to 14 hours in 2015, so it became higher than TV between 2010 and 2015. In 2025, it was 20 hours, the highest figure on the graph. As for sport, the figure stayed at about 5 or 6 hours until 2020 and rose slightly to 7 hours in 2025.",
+     "modelJa": "この折れ線グラフは、ある国の16〜24歳の若者が、2000年から2025年までに3つの余暇活動に1週間あたり何時間を使ったかを示している。\n\n全体として、テレビを見る時間は減った一方、ソーシャルメディアを使う時間は大きく増えて最も多くなった。対照的に、スポーツをする時間はあまり変わらなかった。\n\n2000年、若者は週18時間テレビを見ており、これは他の2つの活動よりずっと多かった。その後、この数値は2010年に15時間まで下がった。2025年にはわずか9時間で、2000年の数値の半分だった。\n\n一方、若者がソーシャルメディアを使った時間は、2000年には週1時間だけだった。しかし、この数値は2015年には14時間まで急に増え、2010年から2015年の間にテレビより多くなった。2025年には20時間で、グラフの中で最も高い数値だった。スポーツについては、2020年まで約5〜6時間のままで、2025年には7時間へと少し増えた。",
+     "modelParts": [
+      {
+       "label": "Introduction（導入）",
+       "en": "The line graph illustrates how many hours per week young people aged 16 to 24 in one country spent on three leisure activities from 2000 to 2025.",
+       "ja": "この折れ線グラフは、ある国の16〜24歳の若者が、2000年から2025年までに3つの余暇活動に1週間あたり何時間を使ったかを示している。",
+       "point": "問題文の shows を illustrates に、the average number of hours を how many hours に、between ... and ... を from ... to ... に言い換えている。対象（16〜24歳）・期間・活動の数（3つ）を入れれば、導入はこの1文で十分。"
+      },
+      {
+       "label": "Overview（全体の傾向）",
+       "en": "Overall, the time spent watching TV went down, while the time spent using social media went up a lot and became the highest. In contrast, the time for playing sport did not change much.",
+       "ja": "全体として、テレビを見る時間は減った一方、ソーシャルメディアを使う時間は大きく増えて最も多くなった。対照的に、スポーツをする時間はあまり変わらなかった。",
+       "point": "5.5 を取るために一番大切な段落。Overall, で始め、数字は入れずに「減った・増えて一番になった・あまり変わらない」の3つだけを書く。went down / went up / did not change much のような簡単な語で十分。while と In contrast で3つを比べている。"
+      },
+      {
+       "label": "Body 1（テレビの変化）",
+       "en": "In 2000, young people watched TV for 18 hours a week, which was much more than the other two activities. After that, this number fell to 15 hours in 2010. In 2025, it was only 9 hours, which was half of the figure in 2000.",
+       "ja": "2000年、若者は週18時間テレビを見ており、これは他の2つの活動よりずっと多かった。その後、この数値は2010年に15時間まで下がった。2025年にはわずか9時間で、2000年の数値の半分だった。",
+       "point": "減ったテレビだけを扱う段落。数字は全部並べず、最初（18）・途中（15）・最後（9）の3つに絞る。which ... で説明を足し、this number で TV の繰り返しを避けている。half of the figure のように数字の意味を一言で言うと分かりやすい。"
+      },
+      {
+       "label": "Body 2（SNS とスポーツ）",
+       "en": "On the other hand, young people used social media for only 1 hour a week in 2000. However, this number increased quickly to 14 hours in 2015, so it became higher than TV between 2010 and 2015. In 2025, it was 20 hours, the highest figure on the graph. As for sport, the figure stayed at about 5 or 6 hours until 2020 and rose slightly to 7 hours in 2025.",
+       "ja": "一方、若者がソーシャルメディアを使った時間は、2000年には週1時間だけだった。しかし、この数値は2015年には14時間まで急に増え、2010年から2015年の間にテレビより多くなった。2025年には20時間で、グラフの中で最も高い数値だった。スポーツについては、2020年まで約5〜6時間のままで、2025年には7時間へと少し増えた。",
+       "point": "On the other hand で前の段落（テレビ）と対比させて始める。became higher than TV で順位が入れ替わったことを必ず書く。変化の小さいスポーツは As for ... で1文にまとめればよい。"
+      }
+     ],
+     "keyLanguage": [
+      [
+       "The line graph illustrates how many ...",
+       "この折れ線グラフは…がどれだけかを示している",
+       "shows の言い換え。導入はこの型で毎回書ける"
+      ],
+      [
+       "from 2000 to 2025",
+       "2000年から2025年まで",
+       "問題文の between ... and ... の言い換え"
+      ],
+      [
+       "Overall, ...",
+       "全体として",
+       "Overview の書き出しの決まり文句。この後に数字は書かない"
+      ],
+      [
+       "went down / went up a lot",
+       "減った／大きく増えた",
+       "簡単な語で傾向を言える。Body では fell / increased に言い換える"
+      ],
+      [
+       "did not change much",
+       "あまり変わらなかった",
+       "5〜7のような小さな上下はこれでまとめてよい"
+      ],
+      [
+       "while ... / In contrast, ...",
+       "…一方で／対照的に",
+       "2つの系列を1文で比べる。Overview で特に便利"
+      ],
+      [
+       "which was much more than ...",
+       "…よりずっと多かった",
+       "which で説明を足す。比較の強調は much + 比較級"
+      ],
+      [
+       "fell to 15 hours",
+       "15時間まで下がった",
+       "to は『〜まで』。fell by 3 hours なら『3時間減った』"
+      ],
+      [
+       "half of the figure in 2000",
+       "2000年の数値の半分",
+       "18 → 9 のような変化を言葉でまとめる"
+      ],
+      [
+       "became higher than TV",
+       "テレビより多くなった",
+       "2本の線が交差したときに使う。順位の逆転は必ず書く"
+      ],
+      [
+       "the highest figure on the graph",
+       "グラフの中で最も高い数値",
+       "最上級で一番大きな数字を目立たせる"
+      ],
+      [
+       "As for sport, ...",
+       "スポーツについては",
+       "最後の系列を短く紹介する表現"
+      ]
+     ],
+     "tips": [
+      "【Task Achievement】Overview を必ず書く。Overview がないと 5.5 に届きにくい。『減った・増えた・変わらない』を数字なしで1〜2文にまとめる",
+      "【Task Achievement】3つの系列すべてに触れ、数字は図とぴったり同じにする。単位（hours）と年を書き忘れない。150語は必ず超える",
+      "【Coherence and Cohesion】Introduction／Overview／Body 1／Body 2 の4段落に分け、On the other hand / As for ... で系列の切り替えを示す",
+      "【Lexical Resource】increase / go up、fall / go down を交互に使い、同じ動詞を3回以上続けない。難しい語より正しい語を優先する",
+      "【Grammatical Range and Accuracy】時制は過去形でそろえる。which の文と比較級（much more than / higher than）をそれぞれ1回は正しく使う"
+     ],
+     "pitfalls": [
+      [
+       "Overview を書かない、または最後に Conclusion として書く",
+       "Introduction のすぐ後に Overall, で始まる段落を置く。Task1 に自分の意見は不要"
+      ],
+      [
+       "年ごとの数字を全部並べる（18, 17, 15, 12, 10, 9 ...）",
+       "最初・途中の目立つ値・最後の3つほどに絞る"
+      ],
+      [
+       "現在形で書いてしまう（Social media increases ...）",
+       "2025年までの過去のデータなので過去形でそろえる"
+      ],
+      [
+       "SNS がテレビを追い越したことを書かない",
+       "2本の線の交差は重要な特徴。became higher than TV between 2010 and 2015 のように時期と一緒に書く"
+      ]
+     ],
      "plan": [
       "Introduction（1〜2文）：問題文を言い換える。shows → illustrates、the average number of hours → how many hours。年・対象（16〜24歳）を入れる",
       "Overview（2〜3文）：数字を入れずに全体の傾向だけ書く。①TVは減少 ②SNSは急増して1位に ③スポーツはほぼ横ばい。『Overall, …』で始める",
@@ -315,14 +428,14 @@ window.DRILL.days["2026-11-27"] = {
       ]
      ],
      "checklist": [
+      "【課題】Introduction で shows や the average number of hours を自分の言葉に言い換えた",
       "【課題】Overview（全体の傾向）を『Overall,』で書き、数字を入れなかった",
-      "【課題】3つの系列すべてに触れ、TV と SNS の逆転（追い越し）を書いた",
-      "【課題】数字を正確に書き、単位（hours）をつけた。150語以上",
-      "【一貫性】Introduction／Overview／Body 2つの段落に分けた",
-      "【一貫性】On the other hand, As for ... などで系列の切り替えを示した",
-      "【語彙】increase / rise / grow、fall / decline / drop を言い換えて同じ語を繰り返さなかった",
-      "【文法】過去形を正しく使い、By 2025, it had risen ... のような過去完了も1回使った",
-      "【文法】which や while を使った複文を2つ以上入れた"
+      "【課題】3つの系列すべてに触れ、TV と SNS の逆転（2010〜2015年の間）を書いた",
+      "【課題】数字を図と一致させ、単位（hours）をつけた。150語以上",
+      "【一貫性】Introduction／Overview／Body 2つ の4段落に分けた",
+      "【一貫性】On the other hand, As for ..., this number などで系列の切り替えを示した",
+      "【語彙】increase / go up、fall / go down を言い換えて同じ語を繰り返さなかった",
+      "【文法】過去形でそろえ、which の文と比較級（more than / higher than）を正しく使った"
      ]
     }
    ]
@@ -883,8 +996,127 @@ window.DRILL.days["2026-11-28"] = {
      "task": 2,
      "prompt": "Some people think that children should start learning a foreign language at primary school, while others believe it is better to wait until secondary school.\n\nDiscuss both these views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
      "minWords": 250,
-     "model": "Many countries debate the best age for children to begin learning a foreign language. While some people argue that lessons should start in primary school, others believe it is more effective to wait until secondary school. In my opinion, an early start is better, provided that the lessons are well designed.\n\nOn the one hand, there are good reasons to delay foreign language study. Young children are still developing their first language, and adding a second one too early may confuse them. In addition, primary school teachers are not always trained to teach languages, so lessons may be of poor quality. Supporters of this view claim that older students, who can understand grammar rules and study independently, are able to make faster progress in a shorter time.\n\nOn the other hand, those who support an earlier start point out that young children are natural learners. They are less afraid of making mistakes than teenagers, and they can copy new sounds easily, which helps them to develop good pronunciation. Furthermore, starting at primary school gives students more years of practice before they leave education. For example, in countries where English is taught from the age of six, many young adults can communicate confidently with foreigners.\n\nPersonally, I agree with the second view. Although older learners may understand grammar more quickly, the confidence and natural pronunciation gained in childhood are difficult to achieve later. However, governments must invest in training primary teachers, because an early start is only useful if the teaching is good. Short, enjoyable lessons with songs and games are likely to work better than formal grammar practice at this age.\n\nIn conclusion, although both views have some merit, I believe that children should start learning a foreign language at primary school, as long as qualified teachers are available.",
-     "modelJa": "現在、多くの国で子どもが外国語を学び始める最適な年齢が議論されている。授業は小学校で始めるべきだと主張する人がいる一方で、中学校まで待つほうが効果的だと考える人もいる。私の意見では、授業がよく工夫されていれば、早く始めるほうが良い。\n\n一方では、外国語学習を遅らせるもっともな理由がある。幼い子どもはまだ第一言語を発達させている途中で、早すぎる時期に第二言語を加えると混乱させるかもしれない。加えて、小学校の教師は必ずしも語学を教える訓練を受けておらず、授業の質が低くなるおそれがある。この考えの支持者は、文法規則を理解し自分で勉強できる年長の生徒のほうが、短期間で速く上達できると主張する。\n\n他方、早く始めることを支持する人は、幼い子どもは生まれながらの学習者だと指摘する。彼らは10代の若者より間違いを恐れず、新しい音を簡単にまねできるので、良い発音を身につけやすい。さらに、小学校で始めれば、学校教育を終えるまでに練習できる年数が長くなる。たとえば、6歳から英語を教えている国では、多くの若者が外国人と自信をもって意思疎通できる。\n\n個人的には、私は二つ目の意見に賛成だ。年長の学習者のほうが文法を速く理解するかもしれないが、子ども時代に得られる自信と自然な発音は後から身につけるのが難しい。ただし、早期開始は指導が良い場合にのみ役立つので、政府は小学校教師の研修に投資しなければならない。この年齢では、形式的な文法練習よりも、歌やゲームを使った短く楽しい授業のほうがうまくいくだろう。\n\n結論として、どちらの意見にも長所はあるが、資格のある教師がいるのであれば、子どもは小学校で外国語を学び始めるべきだと私は考える。",
+     "model": "Nowadays, many people discuss when children should begin studying a foreign language. Some people believe that lessons should start at primary school, while others think it is better to wait until secondary school. In my opinion, children should start early if the lessons are good.\n\nOn the one hand, there are some reasons to wait until secondary school. First, young children are still learning their first language, so a second language may confuse them. Second, many primary school teachers are not trained to teach languages, so the lessons may not be very good. Also, older students can understand grammar rules and study by themselves, so they can learn faster.\n\nOn the other hand, there are also good reasons to start at primary school. Young children are not afraid of making mistakes, and they can copy new sounds easily. This helps them to get good pronunciation. In addition, if they start early, they have more years to practise the language. For example, in countries where English is taught from the age of six, many young people can speak English with confidence.\n\nPersonally, I agree with the second view. It is true that older students can understand grammar more quickly. However, it is difficult for them to get natural pronunciation and confidence later. The government should also train primary school teachers, because early lessons are only useful when the teaching is good. Short lessons with songs and games are a good way to help young children enjoy learning.\n\nIn conclusion, although both views have some good points, I believe that children should start learning a foreign language at primary school, as long as they have good teachers.",
+     "modelJa": "今日、子どもがいつ外国語の勉強を始めるべきかについて、多くの人が議論している。授業は小学校で始めるべきだと考える人がいる一方で、中学校まで待つほうが良いと考える人もいる。私の意見では、授業が良いものであれば、子どもは早く始めるべきだ。\n\n一方では、中学校まで待つべき理由がいくつかある。第一に、幼い子どもはまだ第一言語を学んでいる途中なので、第二言語は彼らを混乱させるかもしれない。第二に、多くの小学校の先生は語学を教える訓練を受けていないので、授業があまり良くないかもしれない。また、年上の生徒は文法のルールを理解して自分で勉強できるので、速く学ぶことができる。\n\n他方、小学校で始めるべきもっともな理由もある。幼い子どもは間違えることを恐れず、新しい音を簡単にまねできる。これは良い発音を身につけるのに役立つ。さらに、早く始めれば、その言語を練習する年数が多くなる。たとえば、6歳から英語を教えている国では、多くの若者が自信をもって英語を話せる。\n\n個人的には、私は二つ目の意見に賛成だ。年上の生徒のほうが文法を速く理解できるのは確かだ。しかし、彼らが後から自然な発音と自信を身につけるのは難しい。また、早い時期の授業は教え方が良いときにだけ役に立つので、政府は小学校の先生を訓練するべきだ。歌やゲームを使った短い授業は、幼い子どもが楽しく学ぶための良い方法だ。\n\n結論として、どちらの意見にも良い点はあるが、良い先生がいるのであれば、子どもは小学校で外国語を学び始めるべきだと私は考える。",
+     "modelParts": [
+      {
+       "label": "Introduction（導入＋意見）",
+       "en": "Nowadays, many people discuss when children should begin studying a foreign language. Some people believe that lessons should start at primary school, while others think it is better to wait until secondary school. In my opinion, children should start early if the lessons are good.",
+       "ja": "今日、子どもがいつ外国語の勉強を始めるべきかについて、多くの人が議論している。授業は小学校で始めるべきだと考える人がいる一方で、中学校まで待つほうが良いと考える人もいる。私の意見では、授業が良いものであれば、子どもは早く始めるべきだ。",
+       "point": "①話題の紹介 → ②2つの意見 → ③自分の意見、の3文の型。start learning を begin studying に言い換え、Some people believe ..., while others think ... で2つの意見を1文にまとめている。最初の段落で自分の立場をはっきり書くことが大切。"
+      },
+      {
+       "label": "Body 1（中学校まで待つ派）",
+       "en": "On the one hand, there are some reasons to wait until secondary school. First, young children are still learning their first language, so a second language may confuse them. Second, many primary school teachers are not trained to teach languages, so the lessons may not be very good. Also, older students can understand grammar rules and study by themselves, so they can learn faster.",
+       "ja": "一方では、中学校まで待つべき理由がいくつかある。第一に、幼い子どもはまだ第一言語を学んでいる途中なので、第二言語は彼らを混乱させるかもしれない。第二に、多くの小学校の先生は語学を教える訓練を受けていないので、授業があまり良くないかもしれない。また、年上の生徒は文法のルールを理解して自分で勉強できるので、速く学ぶことができる。",
+       "point": "自分と反対の意見を説明する段落。On the one hand で始め、First, / Second, / Also, で理由を順番に並べている。それぞれの理由に so ...（だから〜）で結果を1つ足すと、理由だけで終わらない。"
+      },
+      {
+       "label": "Body 2（小学校から始める派）",
+       "en": "On the other hand, there are also good reasons to start at primary school. Young children are not afraid of making mistakes, and they can copy new sounds easily. This helps them to get good pronunciation. In addition, if they start early, they have more years to practise the language. For example, in countries where English is taught from the age of six, many young people can speak English with confidence.",
+       "ja": "他方、小学校で始めるべきもっともな理由もある。幼い子どもは間違えることを恐れず、新しい音を簡単にまねできる。これは良い発音を身につけるのに役立つ。さらに、早く始めれば、その言語を練習する年数が多くなる。たとえば、6歳から英語を教えている国では、多くの若者が自信をもって英語を話せる。",
+       "point": "On the other hand で Body 1 と対になる意見を出す。理由1（間違いを恐れない・発音）→ In addition, 理由2（練習の年数）→ For example, 具体例、の流れ。例は国名や数字がなくても in countries where ... の形で書けば十分。"
+      },
+      {
+       "label": "Body 3（自分の意見）",
+       "en": "Personally, I agree with the second view. It is true that older students can understand grammar more quickly. However, it is difficult for them to get natural pronunciation and confidence later. The government should also train primary school teachers, because early lessons are only useful when the teaching is good. Short lessons with songs and games are a good way to help young children enjoy learning.",
+       "ja": "個人的には、私は二つ目の意見に賛成だ。年上の生徒のほうが文法を速く理解できるのは確かだ。しかし、彼らが後から自然な発音と自信を身につけるのは難しい。また、早い時期の授業は教え方が良いときにだけ役に立つので、政府は小学校の先生を訓練するべきだ。歌やゲームを使った短い授業は、幼い子どもが楽しく学ぶための良い方法だ。",
+       "point": "自分の意見を理由つきで書く段落。It is true that ... . However, ... で相手の意見を一度認めてから反論すると説得力が出る。序論の if the lessons are good とつながる内容（先生の訓練）を入れて、立場がぶれないようにしている。"
+      },
+      {
+       "label": "Conclusion（結論）",
+       "en": "In conclusion, although both views have some good points, I believe that children should start learning a foreign language at primary school, as long as they have good teachers.",
+       "ja": "結論として、どちらの意見にも良い点はあるが、良い先生がいるのであれば、子どもは小学校で外国語を学び始めるべきだと私は考える。",
+       "point": "In conclusion, で始め、序論と同じ立場を別の言葉（if the lessons are good → as long as they have good teachers）で繰り返す。新しい理由や例はここで書かない。"
+      }
+     ],
+     "keyLanguage": [
+      [
+       "Some people believe that ..., while others think ...",
+       "…と考える人もいれば、…と考える人もいる",
+       "序論で2つの意見を1文にまとめる型。Discuss both views の問題で毎回使える"
+      ],
+      [
+       "In my opinion, ... if ...",
+       "私の意見では、…なら…",
+       "意見に条件をつけると、極端すぎない意見になる"
+      ],
+      [
+       "On the one hand, / On the other hand,",
+       "一方では／他方では",
+       "Body 1 と Body 2 の最初に置き、2つの意見を対にする"
+      ],
+      [
+       "there are some reasons to ...",
+       "…する理由がいくつかある",
+       "段落の最初の文（トピック文）にそのまま使える"
+      ],
+      [
+       "First, / Second, / Also,",
+       "第一に／第二に／また",
+       "理由を順番に並べる。読み手が迷わない"
+      ],
+      [
+       "may confuse them",
+       "彼らを混乱させるかもしれない",
+       "may で言い切りを避ける。反対意見の説明で便利"
+      ],
+      [
+       "are not afraid of making mistakes",
+       "間違えることを恐れない",
+       "be afraid of + -ing の形。子どもの学習の話題でよく使う"
+      ],
+      [
+       "This helps them to ...",
+       "これは彼らが…するのに役立つ",
+       "前の文の内容を This で受けて、結果を説明する"
+      ],
+      [
+       "For example, in countries where ...",
+       "たとえば…の国では",
+       "具体例の型。where を使うと文が少し長くなり文法の評価にもつながる"
+      ],
+      [
+       "It is true that ... . However, ...",
+       "…は確かだ。しかし…",
+       "相手の意見を認めてから反論する型。although より簡単に使える"
+      ],
+      [
+       "as long as ...",
+       "…であれば",
+       "結論で条件を言い換える。序論の if と同じ意味"
+      ],
+      [
+       "both views have some good points",
+       "どちらの意見にも良い点がある",
+       "結論で両方の意見に触れたことを示す決まり文句"
+      ]
+     ],
+     "tips": [
+      "【Task Response】両方の意見を1段落ずつ書き、自分の意見を序論と結論の両方に同じ立場で書く。どちらかが抜けると 5.5 に届きにくい",
+      "【Task Response】理由のあとに so ... で結果を1つ、または For example で例を1つ足す。理由を並べるだけで終わらせない",
+      "【Coherence and Cohesion】4〜5段落の型を守り、On the one hand / On the other hand / Personally / In conclusion で段落の役割を示す。1段落に1つのテーマ",
+      "【Lexical Resource】問題文の語をそのまま写さず、start → begin、better → good reasons などに少し言い換える。知らない難しい語は使わない",
+      "【Grammatical Range and Accuracy】because / so / if / while / where を使った文を入れ、三単現の s・複数形・冠詞を見直す。短く正しい文を優先する"
+     ],
+     "pitfalls": [
+      [
+       "I think を何度も繰り返す",
+       "In my opinion / Personally / I believe を使い分ける。反対意見は Some people believe ... のように主語を変える"
+      ],
+      [
+       "片方の意見しか書かない、または自分の意見を書き忘れる",
+       "Body 1＝意見A、Body 2＝意見B、Body 3（または結論）＝自分の意見、と段落で役割を分ける"
+      ],
+      [
+       "序論と結論で立場が違う",
+       "書き始める前に立場を決め、結論は序論の意見を言い換えて繰り返すだけにする"
+      ],
+      [
+       "例が自分の体験談だけで長くなる",
+       "For example, in countries where ... のように一般的な例を1文で入れる"
+      ]
+     ],
      "plan": [
       "Introduction（2〜3文）：話題の紹介 → 2つの意見を While some people ..., others ... で言い換え → 自分の立場（In my opinion, ...）を1文で",
       "Body 1：中学校まで待つべきという意見の理由2つ（第一言語の発達中で混乱／小学校教師の訓練不足）＋年長者は文法を理解して速く伸びる",
@@ -1084,8 +1316,133 @@ window.DRILL.days["2026-11-30"] = {
      ],
      "prepSec": 0,
      "speakSec": 60,
-     "model": "Q1: Well, I'd say technology has changed learning quite a lot. In my country, most high school students now use tablets in class, and teachers often send homework through an app. It's convenient because we can check our assignments anytime. On the other hand, some students rely on the internet too much and don't think for themselves.\n\nQ2: To be honest, I don't think they're quite as effective. Online classes are useful when students live far from school, but it's harder to concentrate at home and there's less interaction with classmates. For example, during online lessons, I sometimes found it difficult to ask questions.\n\nQ3: I think they should be allowed, but with clear rules. Smartphones can be useful for looking up words or doing research. However, they can also be a big distraction, so maybe students should only use them when the teacher says it's OK.\n\nQ4: In my opinion, communication skills and the ability to adapt will be the most important. Technology changes so quickly that people will need to keep learning throughout their lives. Also, being able to collaborate with people from different countries will matter more and more.\n\nQ5: Not really. Computers can give students personalised practice and check their answers quickly, but they can't really understand how a student feels. A good teacher can notice when a student is worried and encourage them, and I don't think a machine can do that.\n\nQ6: I think it should be shared. Parents can control how much time their children spend online at home, but schools have trained teachers who can explain the risks clearly. So ideally, both should work together.",
-     "modelJa": "Q1：テクノロジーは学び方をかなり変えたと思います。私の国では今やほとんどの高校生が授業でタブレットを使い、先生はアプリで宿題を送ることが多いです。いつでも課題を確認できるので便利です。一方で、インターネットに頼りすぎて自分で考えない生徒もいます。\n\nQ2：正直に言うと、そこまで効果的だとは思いません。オンライン授業は学校から遠くに住む生徒には便利ですが、家では集中しにくく、クラスメートとの交流も少なくなります。たとえば、オンライン授業中は質問しにくいと感じることがありました。\n\nQ3：許可すべきだと思いますが、明確なルールが必要です。スマートフォンは単語を調べたり調べ学習をしたりするのに役立ちます。でも大きく気を散らすものにもなりうるので、先生が許可したときだけ使うのがいいかもしれません。\n\nQ4：私の意見では、コミュニケーション能力と適応する力が最も重要になると思います。テクノロジーはとても速く変わるので、人は生涯学び続ける必要があるでしょう。また、さまざまな国の人と協力できることがますます大切になると思います。\n\nQ5：そうは思いません。コンピューターは生徒に個別の練習を与え、答えをすぐに確認できますが、生徒の気持ちを本当に理解することはできません。良い先生は生徒が不安なときに気づいて励ますことができますが、機械にそれができるとは思いません。\n\nQ6：両方で分担すべきだと思います。親は家で子どもがネットに使う時間を管理できますが、学校には危険をわかりやすく説明できる訓練を受けた先生がいます。だから理想的には、両者が協力するべきです。",
+     "model": "Q: How has technology changed the way students learn in your country?\nWell, I'd say technology has changed learning quite a lot. In my country, most high school students now use tablets in class, and teachers often send homework through an app. This is convenient because we can check our homework anytime, even on the train. On the other hand, some students use the internet too much and don't think for themselves. So technology has made learning easier, but we need to use it carefully.\n\nQ: Do you think online classes can be as effective as face-to-face lessons? Why or why not?\nTo be honest, I don't think they are as effective. Online classes are useful for students who live far from school, because they don't need to travel. However, it's harder to concentrate at home, and there's less interaction with classmates. For example, during online lessons, I sometimes found it difficult to ask the teacher questions. So I think online classes are good as an extra choice, but not as a replacement for real lessons.\n\nQ: Should children be allowed to use smartphones at school?\nI think they should be allowed, but with clear rules. Smartphones can be very useful for looking up words or doing research in class. However, they can also be a big distraction, because students often want to check social media. For instance, some of my friends secretly play games during lessons. So maybe students should only use their phones when the teacher says it's OK.\n\nQ: What skills do you think students will need most in the future?\nIn my opinion, communication skills and the ability to adapt will be the most important. This is because technology changes very quickly, so people will need to keep learning new things all their lives. For example, many jobs today, such as supermarket cashiers, may be done by machines in the future. Also, being able to collaborate with people from different countries will become more and more important. So I think schools should teach these skills as well as knowledge.\n\nQ: Some people say that computers will replace teachers one day. Do you agree?\nNot really. Computers can give each student practice at the right level and check answers very quickly, so they are a useful tool for teachers. However, they can't really understand how a student feels. For example, a good teacher can notice when a student is worried and encourage them, and I don't think a machine can do that. So I believe computers will help teachers, but they won't replace them.\n\nQ: Who should be responsible for teaching children to use the internet safely, parents or schools?\nI think both parents and schools should be responsible. Parents can control how much time their children spend online at home, and they know their own children best. On the other hand, schools have trained teachers who can explain the dangers clearly, such as online bullying or fake news. Some people say it's only the parents' job, but many parents don't know much about the internet themselves. So ideally, both should work together.",
+     "modelJa": "Q：あなたの国では、テクノロジーは生徒の学び方をどのように変えましたか。\nテクノロジーは学び方をかなり変えたと思います。私の国では今やほとんどの高校生が授業でタブレットを使い、先生はアプリで宿題を送ることが多いです。電車の中でもいつでも宿題を確認できるので便利です。一方で、インターネットを使いすぎて自分で考えない生徒もいます。だから、テクノロジーは学習を楽にしましたが、気をつけて使う必要があります。\n\nQ：オンライン授業は対面授業と同じくらい効果的だと思いますか。それはなぜですか。\n正直に言うと、同じくらい効果的だとは思いません。オンライン授業は、通学しなくてよいので、学校から遠くに住む生徒には便利です。でも、家では集中しにくく、クラスメートとの交流も少なくなります。たとえば、オンライン授業中は先生に質問しにくいと感じることがありました。だから、オンライン授業は追加の選択肢としては良いですが、本当の授業の代わりにはならないと思います。\n\nQ：子どもは学校でスマートフォンを使うことを許可されるべきですか。\n許可すべきだと思いますが、明確なルールが必要です。スマートフォンは授業中に単語を調べたり、調べ物をしたりするのにとても役立ちます。でも、生徒はよくSNSを見たくなるので、大きく気を散らすものにもなります。たとえば、私の友達の中には授業中にこっそりゲームをする人もいます。だから、先生が許可したときだけスマホを使うようにするのがいいかもしれません。\n\nQ：生徒は将来どんなスキルが最も必要になると思いますか。\n私の意見では、コミュニケーション能力と変化に適応する力が最も重要になると思います。なぜなら、テクノロジーはとても速く変わるので、人は一生新しいことを学び続ける必要があるからです。たとえば、スーパーのレジ係のように今ある多くの仕事は、将来は機械が行うかもしれません。また、さまざまな国の人と協力できることがますます重要になるでしょう。だから、学校は知識だけでなくこうしたスキルも教えるべきだと思います。\n\nQ：コンピューターはいつか教師に取って代わると言う人がいます。あなたは賛成ですか。\nそうは思いません。コンピューターは生徒一人ひとりにちょうどよいレベルの練習を与え、答えをすぐに確認できるので、教師にとって役に立つ道具です。でも、生徒の気持ちを本当に理解することはできません。たとえば、良い先生は生徒が不安なときに気づいて励ますことができますが、機械にそれができるとは思いません。だから、コンピューターは教師を助けますが、教師に取って代わることはないと思います。\n\nQ：子どもにインターネットを安全に使うことを教える責任は、親と学校のどちらにあるべきですか。\n親と学校の両方に責任があると思います。親は家で子どもがネットに使う時間を管理でき、自分の子どものことを一番よく知っています。一方、学校には、ネットいじめやフェイクニュースなどの危険をわかりやすく説明できる訓練を受けた先生がいます。親だけの仕事だと言う人もいますが、多くの親は自分自身もインターネットのことをあまり知りません。だから理想的には、両者が協力するべきです。",
+     "modelParts": [
+      {
+       "label": "Q1（テクノロジーと学び方）",
+       "en": "Q: How has technology changed the way students learn in your country?\nWell, I'd say technology has changed learning quite a lot. In my country, most high school students now use tablets in class, and teachers often send homework through an app. This is convenient because we can check our homework anytime, even on the train. On the other hand, some students use the internet too much and don't think for themselves. So technology has made learning easier, but we need to use it carefully.",
+       "ja": "Q：あなたの国では、テクノロジーは生徒の学び方をどのように変えましたか。\nテクノロジーは学び方をかなり変えたと思います。私の国では今やほとんどの高校生が授業でタブレットを使い、先生はアプリで宿題を送ることが多いです。電車の中でもいつでも宿題を確認できるので便利です。一方で、インターネットを使いすぎて自分で考えない生徒もいます。だから、テクノロジーは学習を楽にしましたが、気をつけて使う必要があります。",
+       "point": "意見（かなり変わった）→ 具体例（タブレット・アプリ）→ 理由（いつでも確認できる）→ On the other hand で欠点 → So でまとめ、の5文。I'd say で始めると考える時間を取りながら自然に答えられる。"
+      },
+      {
+       "label": "Q2（オンライン授業）",
+       "en": "Q: Do you think online classes can be as effective as face-to-face lessons? Why or why not?\nTo be honest, I don't think they are as effective. Online classes are useful for students who live far from school, because they don't need to travel. However, it's harder to concentrate at home, and there's less interaction with classmates. For example, during online lessons, I sometimes found it difficult to ask the teacher questions. So I think online classes are good as an extra choice, but not as a replacement for real lessons.",
+       "ja": "Q：オンライン授業は対面授業と同じくらい効果的だと思いますか。それはなぜですか。\n正直に言うと、同じくらい効果的だとは思いません。オンライン授業は、通学しなくてよいので、学校から遠くに住む生徒には便利です。でも、家では集中しにくく、クラスメートとの交流も少なくなります。たとえば、オンライン授業中は先生に質問しにくいと感じることがありました。だから、オンライン授業は追加の選択肢としては良いですが、本当の授業の代わりにはならないと思います。",
+       "point": "最初の1文で No と答え、良い点（遠くに住む生徒に便利）を先に認めてから However で自分の理由を出している。For example で自分の体験を1文入れ、最後に So ... でまとめると話が終わったことが伝わる。"
+      },
+      {
+       "label": "Q3（学校でのスマートフォン）",
+       "en": "Q: Should children be allowed to use smartphones at school?\nI think they should be allowed, but with clear rules. Smartphones can be very useful for looking up words or doing research in class. However, they can also be a big distraction, because students often want to check social media. For instance, some of my friends secretly play games during lessons. So maybe students should only use their phones when the teacher says it's OK.",
+       "ja": "Q：子どもは学校でスマートフォンを使うことを許可されるべきですか。\n許可すべきだと思いますが、明確なルールが必要です。スマートフォンは授業中に単語を調べたり、調べ物をしたりするのにとても役立ちます。でも、生徒はよくSNSを見たくなるので、大きく気を散らすものにもなります。たとえば、私の友達の中には授業中にこっそりゲームをする人もいます。だから、先生が許可したときだけスマホを使うようにするのがいいかもしれません。",
+       "point": "Yes / No ではなく『条件つきの賛成』で答えている。利点 → However で欠点 → For instance で身近な例 → So maybe で提案、の流れ。can / should / maybe を使い分けると文法の幅が出る。"
+      },
+      {
+       "label": "Q4（将来必要なスキル）",
+       "en": "Q: What skills do you think students will need most in the future?\nIn my opinion, communication skills and the ability to adapt will be the most important. This is because technology changes very quickly, so people will need to keep learning new things all their lives. For example, many jobs today, such as supermarket cashiers, may be done by machines in the future. Also, being able to collaborate with people from different countries will become more and more important. So I think schools should teach these skills as well as knowledge.",
+       "ja": "Q：生徒は将来どんなスキルが最も必要になると思いますか。\n私の意見では、コミュニケーション能力と変化に適応する力が最も重要になると思います。なぜなら、テクノロジーはとても速く変わるので、人は一生新しいことを学び続ける必要があるからです。たとえば、スーパーのレジ係のように今ある多くの仕事は、将来は機械が行うかもしれません。また、さまざまな国の人と協力できることがますます重要になるでしょう。だから、学校は知識だけでなくこうしたスキルも教えるべきだと思います。",
+       "point": "答えを2つ（コミュニケーション・適応力）先に言い、This is because ... で理由、For example で具体的な仕事、Also で補足を出している。will / may を使った未来の予測は Part3 でよく使うので、型として覚えておく。"
+      },
+      {
+       "label": "Q5（コンピューターは教師に代わるか）",
+       "en": "Q: Some people say that computers will replace teachers one day. Do you agree?\nNot really. Computers can give each student practice at the right level and check answers very quickly, so they are a useful tool for teachers. However, they can't really understand how a student feels. For example, a good teacher can notice when a student is worried and encourage them, and I don't think a machine can do that. So I believe computers will help teachers, but they won't replace them.",
+       "ja": "Q：コンピューターはいつか教師に取って代わると言う人がいます。あなたは賛成ですか。\nそうは思いません。コンピューターは生徒一人ひとりにちょうどよいレベルの練習を与え、答えをすぐに確認できるので、教師にとって役に立つ道具です。でも、生徒の気持ちを本当に理解することはできません。たとえば、良い先生は生徒が不安なときに気づいて励ますことができますが、機械にそれができるとは思いません。だから、コンピューターは教師を助けますが、教師に取って代わることはないと思います。",
+       "point": "Not really. と短く答えてから、まず相手側の意見（コンピューターの良い点）を認め、However で反論している。最後に質問の語 replace を使って won't replace them と締めくくると、質問にきちんと答えたことがはっきりする。"
+      },
+      {
+       "label": "Q6（ネットの安全教育は誰の責任か）",
+       "en": "Q: Who should be responsible for teaching children to use the internet safely, parents or schools?\nI think both parents and schools should be responsible. Parents can control how much time their children spend online at home, and they know their own children best. On the other hand, schools have trained teachers who can explain the dangers clearly, such as online bullying or fake news. Some people say it's only the parents' job, but many parents don't know much about the internet themselves. So ideally, both should work together.",
+       "ja": "Q：子どもにインターネットを安全に使うことを教える責任は、親と学校のどちらにあるべきですか。\n親と学校の両方に責任があると思います。親は家で子どもがネットに使う時間を管理でき、自分の子どものことを一番よく知っています。一方、学校には、ネットいじめやフェイクニュースなどの危険をわかりやすく説明できる訓練を受けた先生がいます。親だけの仕事だと言う人もいますが、多くの親は自分自身もインターネットのことをあまり知りません。だから理想的には、両者が協力するべきです。",
+       "point": "A or B の質問に『両方』と答える型。親の役割 → On the other hand で学校の役割 → Some people say ..., but ... で反対意見に触れてから反論 → So ideally でまとめ。such as ... で具体例を短く添えている。"
+      }
+     ],
+     "keyLanguage": [
+      [
+       "I'd say ...",
+       "…だと思います",
+       "I think のやわらかい言い換え。答え始めに使うと考える時間が取れる"
+      ],
+      [
+       "To be honest, ...",
+       "正直に言うと",
+       "否定的な意見を言う前のクッション"
+      ],
+      [
+       "Not really.",
+       "そうは思いません",
+       "No だけより自然。すぐ後に理由を続ける"
+      ],
+      [
+       "with clear rules",
+       "明確なルールのもとで",
+       "条件つきの賛成を表す。but with ... の形で使う"
+      ],
+      [
+       "use ... too much",
+       "…を使いすぎる",
+       "テクノロジーの欠点を言うときの簡単な表現"
+      ],
+      [
+       "there's less interaction with ...",
+       "…との交流が少ない",
+       "今日の語彙 interaction をそのまま使える形"
+      ],
+      [
+       "a big distraction",
+       "気を散らす大きなもの",
+       "スマホやSNSの話題で使える"
+      ],
+      [
+       "This is because ...",
+       "なぜなら…だからです",
+       "意見のすぐ後に理由を言う決まった形"
+      ],
+      [
+       "more and more important",
+       "ますます重要な",
+       "将来の話題で使いやすい"
+      ],
+      [
+       "..., but they won't replace them",
+       "…だが、取って代わることはない",
+       "質問の語をそのまま使って答えを締めくくる"
+      ],
+      [
+       "Some people say ..., but ...",
+       "…と言う人もいますが、…",
+       "反対意見に触れてから反論する。Part3 で使いやすい型"
+      ],
+      [
+       "So ideally, ...",
+       "だから理想的には",
+       "答えの最後のまとめ。話が終わったことを示せる"
+      ]
+     ],
+     "tips": [
+      "【Fluency and Coherence】最初の1文で質問に直接答え、理由 → 例 → まとめ（So ...）の順で4〜5文話す。順番が決まっていれば止まらずに話せる",
+      "【Fluency and Coherence】because / for example / on the other hand / so などのつなぎ言葉を必ず入れる。長い沈黙より、Well, / Let me think. でつなぐ",
+      "【Lexical Resource】難しい語より、知っている語を正しく使う。good / important だけを繰り返さず、useful / convenient などに少し言い換える",
+      "【Grammar】現在形と will / can / should を正しく使い分ける。三単現の s（technology changes）など基本のミスを減らすことが 5.5 への近道",
+      "【Pronunciation】一語一語をはっきり、文の区切りで短く間を取る。録音して、早口で聞き取りにくくなっていないか確認する"
+     ],
+     "pitfalls": [
+      [
+       "Yes / No だけ、または1〜2文で終わる",
+       "答え → 理由 → 例 → まとめ の4ステップを最低限話す。例は自分や友達の経験でもよい"
+      ],
+      [
+       "I think を毎回の文頭で連発する",
+       "I'd say / In my opinion / To be honest / Not really など、質問ごとに書き出しを変える"
+      ],
+      [
+       "Part3 で自分の話だけをする",
+       "Part3 は社会全般の質問。in my country / many students のように一般論にしてから、例として自分の体験を加える"
+      ],
+      [
+       "難しい単語を思い出そうとして止まる",
+       "知っている簡単な語で言い換える（distraction が出なければ makes students lose focus など）。止まらないことを優先する"
+      ]
+     ],
      "phrases": [
       [
        "I'd say ...",
@@ -1129,12 +1486,13 @@ window.DRILL.days["2026-11-30"] = {
       ]
      ],
      "checklist": [
-      "【流暢さ】各質問に沈黙せず30秒以上話し続けた",
-      "【流暢さ】最初の1文で質問に直接答え（Yes / No / I think ...）、そのあと理由を足した",
-      "【一貫性】because / so / on the other hand でつなぎ、理由と例を順に話した",
+      "【流暢さ】各質問に沈黙せず30秒以上（4〜5文）話し続けた",
+      "【流暢さ】最初の1文で質問に直接答え（Yes / No / I think ... / Not really.）、そのあと理由を足した",
+      "【一貫性】because / for example / on the other hand / so でつなぎ、理由・例・まとめを順に話した",
+      "【一貫性】最後に So ... の1文でまとめた",
       "【語彙】interaction, distraction, adapt, collaborate など今日の語彙を2つ以上使った",
       "【語彙】同じ語（good, important など）を何度も繰り返さなかった",
-      "【文法】仮定や推測（will, would, could）を使った文を入れた",
+      "【文法】will / can / should と三単現の s を正しく使った",
       "【発音】録音を聞き返し、文の区切りと強く言う語がはっきりしているか確認した"
      ]
     }

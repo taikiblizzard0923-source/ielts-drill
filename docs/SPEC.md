@@ -73,14 +73,14 @@ window.DRILL.days["2026-11-24"] = { ... };
 { type: "fill", q: "Name of hotel: ________", limit: "ONE WORD AND/OR A NUMBER",
   accept: ["Riverside", "the Riverside"], ex }                           // 穴埋め・記述。accept は正規化（小文字・前後空白・末尾ピリオド除去）後の完全一致で判定。表記ゆれ（数字/綴り/冠詞/単複が許される場合）を全部入れる。語数制限を守る答えだけ
 { type: "write", task: 1|2, prompt: "…（本番どおりの英語）", minWords: 150|250,
-  model: "模範解答（バンド6.0〜6.5相当。長すぎない。Task1 160〜190語、Task2 260〜300語）", modelJa: "和訳",
+  model: "模範解答（バンド5.5相当。長すぎない。Task1 160〜190語、Task2 260〜300語）", modelJa: "和訳",
   plan: ["構成メモ：Introduction で…", "…"],            // 書き方の手順（日本語）
   phrases: [ ["rose sharply", "急増した"], … ],          // 使える表現 8〜12
   checklist: ["Overview（全体の傾向）を書いた", "…"] }    // 自己採点の観点 6〜8（4つの評価観点に対応）
 { type: "speak", part: 1|2|3, questions: ["Do you work or are you a student?", …],   // Part2 は cueCard を使い questions は Part2 の指示＋追加質問1つ
   cueCard: { topic: "Describe a …", points: ["what it was","when…","and explain…"] },  // Part2 のみ
   prepSec: 60, speakSec: 120,                     // Part2: 60/120、Part1: 0/30（1問あたり）、Part3: 0/60
-  model: "模範解答（バンド6.0〜6.5相当の自然な話し言葉）", modelJa: "和訳",
+  model: "模範解答（バンド5.5相当の自然な話し言葉）", modelJa: "和訳",
   phrases: [ ["To be honest,", "正直に言うと"], … ], checklist: ["質問に答えてから理由・例を足した", "…"] }
 ```
 
