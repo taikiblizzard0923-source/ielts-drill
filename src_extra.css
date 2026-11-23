@@ -79,3 +79,4 @@ summary:focus:not(:focus-visible){outline:none}
 .step ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px;font-size:14.5px;line-height:1.7}
 .step .arr{color:var(--print);font-weight:700}
 .klang tr:nth-child(odd) td{background:var(--paper)}
+.optsblock{display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--blue);padding-top:12px;margin-top:4px}

@@ -280,6 +280,7 @@ summary:focus:not(:focus-visible){outline:none}
 .step ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px;font-size:14.5px;line-height:1.7}
 .step .arr{color:var(--print);font-weight:700}
 .klang tr:nth-child(odd) td{background:var(--paper)}
+.optsblock{display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--blue);padding-top:12px;margin-top:4px}
 
 </style>
 </head>
@@ -738,16 +739,23 @@ summary:focus:not(:focus-visible){outline:none}
     if(s.passage){ src.appendChild(paras(s.passage,"passage")); if(graded&&s.passageJa) src.appendChild(jaBox(s.passageJa)); }
     if(s.script){ if(graded) src.appendChild(scriptBox(s.script,s.scriptJa)); else src.insertAdjacentHTML("beforeend",'<p class="note" style="margin:0">スクリプトと和訳は答え合わせのあとに表示されます。</p>'); }
     if(hasSrc) split.appendChild(src);
-    if(s.options){
+    // the box/explanation for "select" questions goes right before the first of them, with their question numbers
+    function optsBlock(from,to){
+      const w=document.createElement("div"); w.className="optsblock";
+      const range='問'+from+(to>from?'〜'+to:'');
       const lettersOnly = s.options.every(o=>/^[A-Z]$/.test(String(o).trim()));
-      if(lettersOnly && s.passage) qs.insertAdjacentHTML("beforeend",'<p class="howto">左の本文で、各問の内容が書かれている<b>段落（'+esc(s.options[0])+'〜'+esc(s.options[s.options.length-1])+'）</b>を探し、「選ぶ」から段落の記号を選ぶ。同じ段落を2回以上選んでもよい。</p>');
-      else if(lettersOnly && s.plan) qs.insertAdjacentHTML("beforeend",'<p class="howto">音声を聞きながら、各問の場所が<b>地図のどの記号（'+esc(s.options[0])+'〜'+esc(s.options[s.options.length-1])+'）</b>かを「選ぶ」から選ぶ。</p>');
-      else qs.insertAdjacentHTML("beforeend",'<p class="howto">下の選択肢から、各問に合うものを「選ぶ」で選ぶ。'+(s.options.length>s.items.filter(it=>it.type==="select").length?'使わない選択肢もある。':'')+'</p><div class="opts">'+s.options.map(o=>'<div>'+esc(o)+'</div>').join("")+'</div>');
+      if(lettersOnly && s.passage) w.innerHTML='<p class="howto"><b>'+range+'</b>：左の本文で、各問の内容が書かれている<b>段落（'+esc(s.options[0])+'〜'+esc(s.options[s.options.length-1])+'）</b>を探し、「選ぶ」から段落の記号を選ぶ。同じ段落を2回以上選んでもよい。</p>';
+      else if(lettersOnly && s.plan) w.innerHTML='<p class="howto"><b>'+range+'</b>：音声を聞きながら、各問の場所が<b>地図のどの記号（'+esc(s.options[0])+'〜'+esc(s.options[s.options.length-1])+'）</b>かを「選ぶ」から選ぶ。</p>';
+      else w.innerHTML='<p class="howto"><b>'+range+'</b>は、下の選択肢から合うものを「選ぶ」で選ぶ。'+(s.options.length>s.items.filter(it=>it.type==="select").length?'使わない選択肢もある。':'同じ選択肢を2回以上使うこともある。')+'</p><div class="opts">'+s.options.map(o=>'<div>'+esc(o)+'</div>').join("")+'</div>';
+      return w;
     }
+    let selFrom=null, selTo=null; { let n=startNum; s.items.forEach(it=>{ if(it.type==="select"){ if(selFrom===null) selFrom=n; selTo=n; } n+=pointsOf(it); }); }
+    let optsShown=false;
     let num=startNum;
     s.items.forEach((it,i)=>{
       const t=it.type||"mc";
-      { qs.appendChild(renderItem(ds,s,it,i,graded,num+(t==="mc2"?"–"+(num+1):""))); num+=pointsOf(it); }
+      { if(it.type==="select" && s.options && !optsShown){ qs.appendChild(optsBlock(selFrom,selTo)); optsShown=true; }
+        qs.appendChild(renderItem(ds,s,it,i,graded,num+(t==="mc2"?"–"+(num+1):""))); num+=pointsOf(it); }
     });
     split.appendChild(qs); body.appendChild(split);
     if(gradable){
