@@ -374,8 +374,9 @@
   function renderWrite(ds,s,it,i){
     const k=ds+"|"+s.id+"|"+i, done=!!S.wdone[ds+"|"+s.id];
     const left=document.createElement("div"); left.className="src";
-    figures(s).forEach(f=>left.appendChild(f));
+    // prompt first: it says "the chart/diagram below"
     left.insertAdjacentHTML("beforeend",'<div class="prompt">'+esc(it.prompt)+'</div>');
+    figures(s).forEach(f=>left.appendChild(f));
     const h=hintBox(it); if(h) left.appendChild(h);
     const right=document.createElement("div"); right.className="qs wbox";
     const ta=document.createElement("textarea"); ta.id="w_"+k.replace(/\W/g,"_"); ta.value=S.write[k]||""; ta.placeholder="ここに英語で書く（"+it.minWords+"語以上）"; ta.spellcheck=false; ta.autocapitalize="sentences";
