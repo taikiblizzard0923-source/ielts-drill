@@ -67,3 +67,5 @@ figure.fig svg{display:block;width:100%;height:auto;max-width:720px}
 .chip .pm{font-size:11px;font-weight:700;color:var(--blue);font-variant-numeric:tabular-nums}
 .chip.sel .pm{color:var(--paper)}
 @media (min-width: 900px){ .split.two.ws .src{position:static;max-height:none;overflow:visible;padding-right:0} }
+.howto{margin:0;font-size:14px;background:var(--blue-soft);color:var(--ink);border-radius:8px;padding:8px 12px;line-height:1.7}
+.instr p{margin:0 0 4px}.instr p:last-child{margin:0}.instr b{color:var(--print)}

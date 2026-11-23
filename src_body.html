@@ -300,7 +300,7 @@
     const k=ds+"|"+s.id+"|"+i, t=it.type||"mc", v=S.ans[k], must=MUST[k];
     const item=document.createElement("div"); item.className="item"+(graded?" graded":"");
     const q=document.createElement("div"); q.className="qrow";
-    q.innerHTML='<span class="qno">'+num+'</span><span class="qtext">'+(must?'<span class="must">★ 落とせない</span>':'')+esc(it.q)+(t==="mc2"?'<span class="pts">（2点）</span>':'')+'</span>';
+    q.innerHTML='<span class="qno">'+num+'</span><span class="qtext">'+(must?'<span class="must">★ 落とせない</span>':'')+esc(String(it.q).replace(/^\s*\d{1,2}(\s*[–-]\s*\d{1,2})?[.)]?\s+(?=\S)/,""))+(t==="mc2"?'<span class="pts">（2点）</span>':'')+'</span>';
     item.appendChild(q);
     let ok=null;
     if(t==="mc"||t==="mc2"){
@@ -425,7 +425,8 @@
     const right = gradable ? (graded? sc.e+" / "+sc.p : sc.p+"点"+(s.limitMin?" · "+s.limitMin+"分":"")) : (S.wdone[k]?"済":(s.limitMin?s.limitMin+"分":""));
     det.innerHTML='<summary><span class="t"><span class="tag '+s.skill+'">'+({L:"LISTENING",R:"READING",W:"WRITING",S:"SPEAKING"}[s.skill])+'</span>'+esc(s.title)+'</span><span class="r'+(graded&&sc.e/sc.p>=0.55?" ok":"")+'">'+right+'</span></summary>';
     const body=document.createElement("div"); body.className="setbody";
-    if(s.instructions) body.insertAdjacentHTML("beforeend",'<p class="instr">'+esc(s.instructions)+'</p>');
+    // one line per "Questions 11–16: …" block, and keep authored line breaks
+    if(s.instructions) body.insertAdjacentHTML("beforeend",'<div class="instr">'+esc(s.instructions).replace(/([.!?])\s+(?=Questions?\s+\d+\s*[–\-]\s*\d+\s*[:.])/g,"$1\n").split(/\n+/).filter(x=>x.trim()).map(x=>'<p>'+x.trim().replace(/^(Questions?\s+[\d–\-\s]+(and\s+\d+)?:?)/,'<b>$1</b>')+'</p>').join("")+'</div>');
     if(s.directions) body.insertAdjacentHTML("beforeend",'<p class="dir" style="margin:0">'+esc(s.directions)+'</p>');
     const tb=document.createElement("div"); tb.className="toolbar"; tb.appendChild(timerUI(k,s.limitMin)); body.appendChild(tb);
     if(s.skill==="W"||s.skill==="S"){
@@ -440,7 +441,12 @@
     if(s.passage){ src.appendChild(paras(s.passage,"passage")); if(graded&&s.passageJa) src.appendChild(jaBox(s.passageJa)); }
     if(s.script){ if(graded) src.appendChild(scriptBox(s.script,s.scriptJa)); else src.insertAdjacentHTML("beforeend",'<p class="note" style="margin:0">スクリプトと和訳は答え合わせのあとに表示されます。</p>'); }
     if(hasSrc) split.appendChild(src);
-    if(s.options){ qs.insertAdjacentHTML("beforeend",'<div class="opts">'+s.options.map(o=>'<div>'+esc(o)+'</div>').join("")+'</div>'); }
+    if(s.options){
+      const lettersOnly = s.options.every(o=>/^[A-Z]$/.test(String(o).trim()));
+      if(lettersOnly && s.passage) qs.insertAdjacentHTML("beforeend",'<p class="howto">左の本文で、各問の内容が書かれている<b>段落（'+esc(s.options[0])+'〜'+esc(s.options[s.options.length-1])+'）</b>を探し、「選ぶ」から段落の記号を選ぶ。同じ段落を2回以上選んでもよい。</p>');
+      else if(lettersOnly && s.plan) qs.insertAdjacentHTML("beforeend",'<p class="howto">音声を聞きながら、各問の場所が<b>地図のどの記号（'+esc(s.options[0])+'〜'+esc(s.options[s.options.length-1])+'）</b>かを「選ぶ」から選ぶ。</p>');
+      else qs.insertAdjacentHTML("beforeend",'<p class="howto">下の選択肢から、各問に合うものを「選ぶ」で選ぶ。'+(s.options.length>s.items.filter(it=>it.type==="select").length?'使わない選択肢もある。':'')+'</p><div class="opts">'+s.options.map(o=>'<div>'+esc(o)+'</div>').join("")+'</div>');
+    }
     let num=startNum;
     s.items.forEach((it,i)=>{
       const t=it.type||"mc";
