@@ -238,7 +238,7 @@
     const out=[];
     if(s.chart){ const f=document.createElement("figure"); f.className="fig"; f.innerHTML=(s.chart.title?'<figcaption>'+esc(s.chart.title)+'</figcaption>':'')+chartSVG(s.chart); out.push(f); }
     if(s.plan){ const f=document.createElement("figure"); f.className="fig"; f.innerHTML=(s.plan.title?'<figcaption>'+esc(s.plan.title)+'</figcaption>':'')+planSVG(s.plan); out.push(f); }
-    if(s.process){ const f=document.createElement("figure"); f.className="fig"; f.innerHTML=(s.process.title?'<figcaption>'+esc(s.process.title)+'</figcaption>':'')+'<div class="proc">'+s.process.steps.map((x,i)=>'<div class="st"><b>'+(i+1)+'.</b> '+esc(x)+'</div>').join('<div class="ar">↓</div>')+'</div>'; out.push(f); }
+    if(s.process){ const f=document.createElement("figure"); f.className="fig"; f.innerHTML=(s.process.title?'<figcaption>'+esc(s.process.title)+'</figcaption>':'')+'<div class="proc">'+s.process.steps.map((x,i)=>'<div class="st"><b>'+(i+1)+'.</b> '+esc(String(x).replace(/^\s*(step\s*)?\d+\s*[.):\-]?\s*/i,""))+'</div>').join('<div class="ar">↓</div>')+'</div>'; out.push(f); }
     if(s.table){ const w=document.createElement("div"); w.className="tbl"; const t=s.table;
       w.innerHTML='<table>'+(t.caption?'<caption>'+esc(t.caption)+'</caption>':'')+'<thead><tr>'+t.head.map(h=>'<th>'+esc(h)+'</th>').join("")+'</tr></thead><tbody>'+t.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join("")+'</tr>').join("")+'</tbody></table>'; out.push(w); }
     return out;

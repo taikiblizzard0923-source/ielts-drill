@@ -66,3 +66,4 @@ figure.fig svg{display:block;width:100%;height:auto;max-width:720px}
 .mpoint .exh{display:inline-block;font-size:12px;letter-spacing:.04em;color:var(--ok);background:var(--ok-soft);border-radius:4px;padding:0 6px;margin-right:6px}
 .chip .pm{font-size:11px;font-weight:700;color:var(--blue);font-variant-numeric:tabular-nums}
 .chip.sel .pm{color:var(--paper)}
+@media (min-width: 900px){ .split.two.ws .src{position:static;max-height:none;overflow:visible;padding-right:0} }
