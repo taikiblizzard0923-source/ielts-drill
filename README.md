@@ -1,6 +1,6 @@
 # IELTS 2週間ドリル
 
-IELTS Academic（2026/12/6受験、Overall 5.0→5.5）向けの14日分の学習ページ。オリジナル予想問題（L・R 260点分＋Writing・Speaking）、解説・全訳、リスニング音声付き。
+IELTS Academic（2026/12/13受験、Overall 5.0→5.5）向けの14日分の学習ページ。オリジナル予想問題（L・R 260点分＋Writing・Speaking）、解説・全訳、リスニング音声付き。
 
 公開URL: https://taikiblizzard0923-source.github.io/ielts-drill/
 

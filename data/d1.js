@@ -1,5 +1,5 @@
 window.DRILL = window.DRILL || { days: {} };
-window.DRILL.days["2026-11-23"] = {
+window.DRILL.days["2026-11-29"] = {
  "theme": "診断ミニ模試（L Part1・2／R／W Task1）",
  "minutes": 120,
  "cheer": "本番2週間前の今日は、今の実力を知るための日。点数より「どこで落としたか」を見つけられたら大成功です。",
@@ -1135,7 +1135,7 @@ window.DRILL.days["2026-11-23"] = {
   }
  ]
 };
-window.DRILL.days["2026-11-24"] = {
+window.DRILL.days["2026-11-30"] = {
  "theme": "L Part1 フォーム穴埋め＋S Part1",
  "minutes": 60,
  "cheer": "Part 1 は確実に点を取れるパート。綴りと数字を丁寧に聞き取る練習が、そのまま本番の得点になります。",
@@ -1777,7 +1777,7 @@ window.DRILL.days["2026-11-24"] = {
   }
  ]
 };
-window.DRILL.days["2026-11-25"] = {
+window.DRILL.days["2026-12-01"] = {
  "theme": "R TRUE/FALSE/NOT GIVEN＋W Task2の型",
  "minutes": 60,
  "cheer": "TFNG は「本文と矛盾するか、書いていないか」を冷静に見分けるゲーム。型を身につければ、Task 2 も迷わず書き始められます。",
@@ -2206,7 +2206,7 @@ window.DRILL.days["2026-11-25"] = {
   }
  ]
 };
-window.DRILL.days["2026-11-26"] = {
+window.DRILL.days["2026-12-02"] = {
  "theme": "L Part2 地図・選択＋S Part2",
  "minutes": 60,
  "cheer": "地図問題は「入口に立った自分」をイメージできれば怖くありません。今日の Part 2 スピーチは、2分話し切れたら合格です。",

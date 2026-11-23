@@ -1,7 +1,7 @@
 // Screenshot every set before and after answering (iPad landscape) for a visual audit
 const {chromium}=require('playwright');(async()=>{const b=await chromium.launch();const out=process.argv[3];
 const p=await b.newPage({viewport:{width:1180,height:820},deviceScaleFactor:1});
-const days=[];for(let d=new Date('2026-11-23');d<=new Date('2026-12-06');d.setDate(d.getDate()+1))days.push(String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0'));
+const days=[];for(let d=new Date('2026-11-29');d<=new Date('2026-12-13');d.setDate(d.getDate()+1))days.push(String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0'));
 for(const d of days){await p.goto(process.argv[2]+'#d'+d);await p.waitForTimeout(300);
  await p.screenshot({path:out+'/'+d+'_00_day.png'});
  const n=await p.$$eval('details.set',x=>x.length);

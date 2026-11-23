@@ -1,6 +1,6 @@
 // Compare "Questions x–y" in instructions with the numbers the page will display
 const fs=require('fs'),vm=require('vm');const g={};g.window=g;vm.createContext(g);
-for(const f of ['d1','d2','mockL','mockR','d3'])vm.runInContext(fs.readFileSync('data/'+f+'.js','utf8'),g);
+for(const f of ['d1','d2','mockL','mockR','d3','d4'])vm.runInContext(fs.readFileSync('data/'+f+'.js','utf8'),g);
 const D=g.DRILL;(D.pending||[]).forEach(x=>{D.days[x.day].sets=D.days[x.day].sets.concat(x.sets)});
 const pts=it=>it.type==='mc2'?2:(it.type==='write'||it.type==='speak'?0:1);
 const out=[];

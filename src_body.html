@@ -1,7 +1,7 @@
 <div class="wrap">
   <header class="top">
     <div class="brand">
-      <span class="eyebrow">IELTS Academic · 2026.12.6（日）· 目標 5.5</span>
+      <span class="eyebrow">IELTS Academic · 2026.12.13（日）· 目標 5.5</span>
       <h1>IELTS 2週間ドリル</h1>
     </div>
     <div class="count">
@@ -86,6 +86,7 @@
 <script src="data/mockL.js"></script>
 <script src="data/mockR.js"></script>
 <script src="data/d3.js"></script>
+<script src="data/d4.js"></script>
 <script src="data/audio.js"></script>
 <script src="data/must.js"></script>
 <script>
@@ -93,16 +94,16 @@
   const DRILL = window.DRILL || {days:{}};
   // merge sets that other files queued for an existing day
   (DRILL.pending||[]).forEach(p=>{ const d=DRILL.days[p.day]; if(d){ d.sets=(d.sets||[]).concat(p.sets); } });
-  const EXAM = "2026-12-06", START = "2026-11-23";
+  const EXAM = "2026-12-13", START = "2026-11-29";
   const DAYS = [];
   for(let d=new Date(START+"T00:00:00"); d<=new Date(EXAM+"T00:00:00"); d.setDate(d.getDate()+1)){
     DAYS.push(d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"));
   }
   const WK = ["日","月","火","水","木","金","土"];
   // 「今日は〇〇の日」：櫻坂46 四期生（9名）→ 三期生（5名）の順
-  const OSHI = {"2026-11-23":"浅井恋乃未","2026-11-24":"稲熊ひな","2026-11-25":"勝又春","2026-11-26":"佐藤愛桜","2026-11-27":"中川智尋",
-    "2026-11-28":"松本和子","2026-11-29":"目黒陽色","2026-11-30":"山川宇衣","2026-12-01":"山田桃実","2026-12-02":"山下瞳月",
-    "2026-12-03":"村井優","2026-12-04":"谷口愛季","2026-12-05":"中嶋優月","2026-12-06":"的野美青"};
+  const OSHI = {"2026-11-29":"浅井恋乃未","2026-11-30":"稲熊ひな","2026-12-01":"勝又春","2026-12-02":"佐藤愛桜","2026-12-03":"中川智尋",
+    "2026-12-04":"松本和子","2026-12-05":"目黒陽色","2026-12-06":"山川宇衣","2026-12-07":"山田桃実","2026-12-08":"山下瞳月",
+    "2026-12-09":"村井優","2026-12-10":"谷口愛季","2026-12-11":"小島凪紗","2026-12-12":"中嶋優月","2026-12-13":"的野美青"};
   const BAND_L = [[39,9],[37,8.5],[35,8],[32,7.5],[30,7],[26,6.5],[23,6],[18,5.5],[16,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]];
   const BAND_R = [[39,9],[37,8.5],[35,8],[33,7.5],[30,7],[27,6.5],[23,6],[19,5.5],[15,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]];
   function band(raw,skill){ const t=skill==="L"?BAND_L:BAND_R; for(const [m,b] of t) if(raw>=m) return b.toFixed(1); return "2.5未満"; }
@@ -141,7 +142,8 @@
     const d=DRILL.days[ds]; if(!d) return null;
     let p=0,e=0,doneSets=0;
     d.sets.forEach(s=>{ if(setDone(ds,s)) doneSets++; if(isGradable(s)&&S.graded[ds+"|"+s.id]){ const r=setScore(ds,s); p+=r.p; e+=r.e; } });
-    return {p,e,done: d.sets.length>0 && doneSets===d.sets.length};
+    const tasksDone = (d.tasks||[]).length>0 && d.tasks.every((t,i)=>S.tasks[ds+"|"+i]);
+    return {p,e,done: d.sets.length>0 ? doneSets===d.sets.length : tasksDone};
   }
 
   function renderHead(){
@@ -355,7 +357,7 @@
       const exAns=(String(it.ex||"").match(/【正解】\s*([^\n【]+)/)||[])[1];
       let ans = t==="fill" ? ((exAns&&exAns.trim().length<=40)?exAns.trim():it.accept[0]) : t==="select" ? s.options[it.a] : t==="mc2" ? it.a.map(x=>String.fromCharCode(65+x)).join(" と ") : isTF ? it.choices[it.a] : String.fromCharCode(65+it.a);
       const part = t==="mc2" && !ok ? '（'+earned(k,it)+'/2点）' : '';
-      ex.innerHTML='<p><span class="mark '+(ok?"ok":"ng")+'">'+(ok?"正解":"不正解"+part+" · 正解は "+esc(ans))+'</span>'+(must&&!ok?' <span class="must-miss">'+(ds>="2026-12-05"?'★落とせない問題です。今日のうちに解説を読んでもう一度解き直しましょう':'★落とせない問題です。明日もう一度解き直しましょう')+'</span>':'')+'</p>'+(must?'<p><b class="exh must-h">★ なぜ落とせない</b>'+esc(must)+'</p>':'')+'<p>'+exHTML(it.ex);
+      ex.innerHTML='<p><span class="mark '+(ok?"ok":"ng")+'">'+(ok?"正解":"不正解"+part+" · 正解は "+esc(ans))+'</span>'+(must&&!ok?' <span class="must-miss">'+(ds>="2026-12-12"?'★落とせない問題です。今日のうちに解説を読んでもう一度解き直しましょう':'★落とせない問題です。明日もう一度解き直しましょう')+'</span>':'')+'</p>'+(must?'<p><b class="exh must-h">★ なぜ落とせない</b>'+esc(must)+'</p>':'')+'<p>'+exHTML(it.ex);
       item.appendChild(ex);
     }
     return item;
@@ -558,7 +560,7 @@
     }
     const ss=document.createElement("section"); ss.className="block";
     const pts=d.sets.reduce((n,s)=>n+setScore(current,s).p,0);
-    ss.innerHTML='<h3><span>予想問題</span><span>'+(pts?pts+"点分":"")+'</span></h3>';
+    ss.innerHTML='<h3><span>予想問題</span><span>'+(pts?pts+"点分":"")+'</span></h3>'+(d.sets.length?'':'<div class="pending">今日は新しい問題はありません。上の「今日やること」に沿って、これまでの問題を解き直しましょう。</div>');
     // band summary for full mock days (40 points per skill)
     ["L","R"].forEach(sk=>{ const sets=d.sets.filter(s=>s.skill===sk); const p=sets.reduce((n,s)=>n+setScore(current,s).p,0);
       if(p===40 && sets.every(s=>S.graded[current+"|"+s.id])){ const e=sets.reduce((n,s)=>n+setScore(current,s).e,0);

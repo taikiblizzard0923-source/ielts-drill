@@ -1,5 +1,5 @@
 window.DRILL = window.DRILL || { days: {} };
-window.DRILL.days["2026-11-29"] = {
+window.DRILL.days["2026-12-06"] = {
  "theme": "模試②（L・R 本番形式）",
  "minutes": 120,
  "cheer": "本番まであと1週間、今日は本番と同じ流れで通してみよう。点数よりも「どこで落としたか」を見つけられたら大成功です。",

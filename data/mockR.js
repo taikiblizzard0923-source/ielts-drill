@@ -1,5 +1,5 @@
 window.DRILL = window.DRILL || { days: {} };
-(window.DRILL.pending = window.DRILL.pending || []).push({ day: "2026-11-29", sets: [
+(window.DRILL.pending = window.DRILL.pending || []).push({ day: "2026-12-06", sets: [
  {
   "id": "E",
   "skill": "R",
