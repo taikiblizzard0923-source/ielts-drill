@@ -364,11 +364,19 @@
     if(it.pitfalls&&it.pitfalls.length){ w.insertAdjacentHTML("beforeend",'<h4 class="mh">やりがちなミス</h4><div class="pits">'+it.pitfalls.map(x=>'<div class="pit"><span class="pit-ng">✗ '+esc(x[0])+'</span><span class="pit-ok">→ '+esc(x[1])+'</span></div>').join("")+'</div>'); }
     return w;
   }
+  // plan step "【見出し】本文。本文。" -> card with heading + one line per sentence
+  function stepsHTML(list){
+    return '<div class="steps">'+list.map((x,i)=>{ const m=String(x).match(/^\s*【([^】]+)】\s*([\s\S]*)$/); const head=m?m[1]:"STEP "+(i+1); const body=m?m[2]:String(x);
+      const lines=body.split(/。\s*/).map(t=>t.trim()).filter(Boolean);
+      return '<div class="step"><div class="step-h">'+esc(head)+'</div><ul>'+lines.map(t=>'<li>'+esc(t).replace(/\s*→\s*/g,' <span class="arr">→</span> ')+'</li>').join("")+'</ul></div>'; }).join("")+'</div>';
+  }
+  function phrasesHTML(list){ return '<div class="tbl"><table class="klang"><tbody>'+list.map(p=>'<tr><td class="ken">'+esc(p[0])+'</td><td>'+esc(p[1])+'</td></tr>').join("")+'</tbody></table></div>'; }
   function hintBox(it){
     if(!(it.plan||it.phrases)) return null;
-    const h=document.createElement("details"); h.innerHTML='<summary>ヒント：書き方の手順と使える表現</summary>'+
-      (it.plan?'<ol class="tips">'+it.plan.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ol>':'')+
-      (it.phrases?'<div class="phr" style="margin-top:8px">'+it.phrases.map(p=>'<span><b>'+esc(p[0])+'</b> '+esc(p[1])+'</span>').join("")+'</div>':''); return h;
+    const h=document.createElement("details"); h.className="hint";
+    h.innerHTML='<summary>ヒント：書き方の手順と使える表現</summary>'+
+      (it.plan?'<h4 class="mh">書き方の手順</h4>'+stepsHTML(it.plan):'')+
+      (it.phrases?'<h4 class="mh">使える表現</h4>'+phrasesHTML(it.phrases):''); return h;
   }
   // returns [left, right] columns
   function renderWrite(ds,s,it,i){
@@ -406,7 +414,7 @@
     left.insertAdjacentHTML("beforeend",'<p class="note" style="margin:0">Speaking Part '+it.part+'</p>');
     if(it.cueCard){ left.insertAdjacentHTML("beforeend",'<div class="cue"><b>'+esc(it.cueCard.topic)+'</b>You should say:<ul>'+it.cueCard.points.map(p=>'<li>'+esc(p)+'</li>').join("")+'</ul></div>'); }
     it.questions.forEach((qq,j)=>{ const sq=document.createElement("div"); sq.className="sq"; sq.innerHTML='<span class="qtext">'+esc(qq)+'</span>'; sq.appendChild(player(k+"|q"+j,"質問の音声",qq)); left.appendChild(sq); });
-    if(it.phrases){ const h=document.createElement("details"); h.innerHTML='<summary>使える表現</summary><div class="phr">'+it.phrases.map(p=>'<span><b>'+esc(p[0])+'</b> '+esc(p[1])+'</span>').join("")+'</div>'; left.appendChild(h); }
+    if(it.phrases){ const h=document.createElement("details"); h.className="hint"; h.innerHTML='<summary>使える表現</summary>'+phrasesHTML(it.phrases); left.appendChild(h); }
     const right=document.createElement("div"); right.className="qs";
     const tb=document.createElement("div"); tb.className="toolbar";
     if(it.prepSec) tb.appendChild(countdown("準備 "+(it.prepSec/60)+"分 スタート",it.prepSec));

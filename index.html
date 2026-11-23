@@ -270,6 +270,16 @@ figure.fig svg{display:block;width:100%;height:auto;max-width:720px}
 @media (min-width: 900px){ .split.two.ws .src{position:static;max-height:none;overflow:visible;padding-right:0} }
 .howto{margin:0;font-size:14px;background:var(--blue-soft);color:var(--ink);border-radius:8px;padding:8px 12px;line-height:1.7}
 .instr p{margin:0 0 4px}.instr p:last-child{margin:0}.instr b{color:var(--print)}
+/* hints: step cards + phrase table */
+details.hint{background:var(--sheet);border:1px solid var(--line);border-radius:8px;padding:4px 12px 10px}
+details.hint>summary{padding:8px 0}
+summary:focus:not(:focus-visible){outline:none}
+.steps{display:flex;flex-direction:column;gap:8px}
+.step{border-left:4px solid var(--blue);background:var(--paper);border-radius:6px;padding:8px 12px}
+.step-h{font-weight:700;font-size:15px;color:var(--blue);margin-bottom:4px}
+.step ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px;font-size:14.5px;line-height:1.7}
+.step .arr{color:var(--print);font-weight:700}
+.klang tr:nth-child(odd) td{background:var(--paper)}
 
 </style>
 </head>
@@ -640,11 +650,19 @@ figure.fig svg{display:block;width:100%;height:auto;max-width:720px}
     if(it.pitfalls&&it.pitfalls.length){ w.insertAdjacentHTML("beforeend",'<h4 class="mh">やりがちなミス</h4><div class="pits">'+it.pitfalls.map(x=>'<div class="pit"><span class="pit-ng">✗ '+esc(x[0])+'</span><span class="pit-ok">→ '+esc(x[1])+'</span></div>').join("")+'</div>'); }
     return w;
   }
+  // plan step "【見出し】本文。本文。" -> card with heading + one line per sentence
+  function stepsHTML(list){
+    return '<div class="steps">'+list.map((x,i)=>{ const m=String(x).match(/^\s*【([^】]+)】\s*([\s\S]*)$/); const head=m?m[1]:"STEP "+(i+1); const body=m?m[2]:String(x);
+      const lines=body.split(/。\s*/).map(t=>t.trim()).filter(Boolean);
+      return '<div class="step"><div class="step-h">'+esc(head)+'</div><ul>'+lines.map(t=>'<li>'+esc(t).replace(/\s*→\s*/g,' <span class="arr">→</span> ')+'</li>').join("")+'</ul></div>'; }).join("")+'</div>';
+  }
+  function phrasesHTML(list){ return '<div class="tbl"><table class="klang"><tbody>'+list.map(p=>'<tr><td class="ken">'+esc(p[0])+'</td><td>'+esc(p[1])+'</td></tr>').join("")+'</tbody></table></div>'; }
   function hintBox(it){
     if(!(it.plan||it.phrases)) return null;
-    const h=document.createElement("details"); h.innerHTML='<summary>ヒント：書き方の手順と使える表現</summary>'+
-      (it.plan?'<ol class="tips">'+it.plan.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ol>':'')+
-      (it.phrases?'<div class="phr" style="margin-top:8px">'+it.phrases.map(p=>'<span><b>'+esc(p[0])+'</b> '+esc(p[1])+'</span>').join("")+'</div>':''); return h;
+    const h=document.createElement("details"); h.className="hint";
+    h.innerHTML='<summary>ヒント：書き方の手順と使える表現</summary>'+
+      (it.plan?'<h4 class="mh">書き方の手順</h4>'+stepsHTML(it.plan):'')+
+      (it.phrases?'<h4 class="mh">使える表現</h4>'+phrasesHTML(it.phrases):''); return h;
   }
   // returns [left, right] columns
   function renderWrite(ds,s,it,i){
@@ -682,7 +700,7 @@ figure.fig svg{display:block;width:100%;height:auto;max-width:720px}
     left.insertAdjacentHTML("beforeend",'<p class="note" style="margin:0">Speaking Part '+it.part+'</p>');
     if(it.cueCard){ left.insertAdjacentHTML("beforeend",'<div class="cue"><b>'+esc(it.cueCard.topic)+'</b>You should say:<ul>'+it.cueCard.points.map(p=>'<li>'+esc(p)+'</li>').join("")+'</ul></div>'); }
     it.questions.forEach((qq,j)=>{ const sq=document.createElement("div"); sq.className="sq"; sq.innerHTML='<span class="qtext">'+esc(qq)+'</span>'; sq.appendChild(player(k+"|q"+j,"質問の音声",qq)); left.appendChild(sq); });
-    if(it.phrases){ const h=document.createElement("details"); h.innerHTML='<summary>使える表現</summary><div class="phr">'+it.phrases.map(p=>'<span><b>'+esc(p[0])+'</b> '+esc(p[1])+'</span>').join("")+'</div>'; left.appendChild(h); }
+    if(it.phrases){ const h=document.createElement("details"); h.className="hint"; h.innerHTML='<summary>使える表現</summary>'+phrasesHTML(it.phrases); left.appendChild(h); }
     const right=document.createElement("div"); right.className="qs";
     const tb=document.createElement("div"); tb.className="toolbar";
     if(it.prepSec) tb.appendChild(countdown("準備 "+(it.prepSec/60)+"分 スタート",it.prepSec));
