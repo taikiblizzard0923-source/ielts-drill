@@ -439,7 +439,10 @@
     const tb=document.createElement("div"); tb.className="toolbar"; tb.appendChild(timerUI(k,s.limitMin)); body.appendChild(tb);
     if(s.skill==="W"||s.skill==="S"){
       s.items.forEach((it,i)=>{ const cols=(it.type==="write"?renderWrite:renderSpeak)(ds,s,it,i); const row=document.createElement("div"); row.className="split two ws"; row.append(cols[0],cols[1]); body.appendChild(row); });
-      det.appendChild(body); return det;
+      det.appendChild(body);
+      det.addEventListener("toggle",()=>{ if(det.open) loadAudios(det); });
+      if(det.open) setTimeout(()=>loadAudios(det),0);
+      return det;
     }
     const hasSrc=!!(s.passage||s.script||s.chart||s.plan||s.process||s.table);
     const split=document.createElement("div"); split.className="split"+(hasSrc?" two":"");
