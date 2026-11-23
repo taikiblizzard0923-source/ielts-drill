@@ -265,6 +265,8 @@ figure.fig svg{display:block;width:100%;height:auto;max-width:720px}
   .split.two.ws .qs{max-height:none}
 }
 .mpoint .exh{display:inline-block;font-size:12px;letter-spacing:.04em;color:var(--ok);background:var(--ok-soft);border-radius:4px;padding:0 6px;margin-right:6px}
+.chip .pm{font-size:11px;font-weight:700;color:var(--blue);font-variant-numeric:tabular-nums}
+.chip.sel .pm{color:var(--paper)}
 
 </style>
 </head>
@@ -370,6 +372,10 @@ figure.fig svg{display:block;width:100%;height:auto;max-width:720px}
     DAYS.push(d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"));
   }
   const WK = ["日","月","火","水","木","金","土"];
+  // 「今日は〇〇の日」：櫻坂46 四期生（9名）→ 三期生（5名）の順
+  const OSHI = {"2026-11-23":"浅井恋乃未","2026-11-24":"稲熊ひな","2026-11-25":"勝又春","2026-11-26":"佐藤愛桜","2026-11-27":"中川智尋",
+    "2026-11-28":"松本和子","2026-11-29":"目黒陽色","2026-11-30":"山川宇衣","2026-12-01":"山田桃実","2026-12-02":"山下瞳月",
+    "2026-12-03":"村井優","2026-12-04":"谷口愛季","2026-12-05":"中嶋優月","2026-12-06":"的野美青"};
   const BAND_L = [[39,9],[37,8.5],[35,8],[32,7.5],[30,7],[26,6.5],[23,6],[18,5.5],[16,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]];
   const BAND_R = [[39,9],[37,8.5],[35,8],[33,7.5],[30,7],[27,6.5],[23,6],[19,5.5],[15,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]];
   function band(raw,skill){ const t=skill==="L"?BAND_L:BAND_R; for(const [m,b] of t) if(raw>=m) return b.toFixed(1); return "2.5未満"; }
@@ -427,9 +433,10 @@ figure.fig svg{display:block;width:100%;height:auto;max-width:720px}
       const f=fmt(ds), st=dayStats(ds), d=DRILL.days[ds];
       const b=document.createElement("button"); b.type="button";
       b.className="chip"+(ds===TODAY?" today":"")+(ds===current?" sel":"")+(st&&st.done?" done":"")+(ds===EXAM?" exam":"");
-      let s=""; if(ds===EXAM) s="本番"; else if(st&&st.p) s=Math.round(st.e/st.p*100)+"%"; else if(st&&st.done) s="済";
+      let s=""; if(ds===EXAM) s=""; else if(st&&st.p) s=Math.round(st.e/st.p*100)+"%"; else if(st&&st.done) s="済";
       const tag = d ? [...new Set(d.sets.map(x=>x.skill))].join("") : "";
-      b.innerHTML='<span class="d">'+f.md+'</span><span class="w">'+(ds===TODAY?"今日":f.w)+'</span><span class="o">'+esc(tag)+'</span><span class="s">'+s+'</span>';
+      const plan = ds===EXAM ? "本番" : (d&&d.minutes ? d.minutes+"分" : "");
+      b.innerHTML='<span class="d">'+f.md+'</span><span class="w">'+(ds===TODAY?"今日":f.w)+'</span><span class="pm">'+plan+'</span>'+(OSHI[ds]?'<span class="o">'+esc(OSHI[ds].slice(0,2))+'</span>':'')+'<span class="s">'+s+'</span>';
       b.addEventListener("click",()=>{ current=ds; history.replaceState(null,"","#d"+ds.slice(5).replace("-","")); render(); });
       el.appendChild(b);
       if(ds===current) requestAnimationFrame(()=>b.scrollIntoView({inline:"center",block:"nearest"}));
@@ -747,7 +754,7 @@ figure.fig svg{display:block;width:100%;height:auto;max-width:720px}
     const main=document.getElementById("day"); main.innerHTML="";
     const f=fmt(current), d=DRILL.days[current];
     const head=document.createElement("div"); head.className="dayhead";
-    head.innerHTML=(d&&d.cheer?'<p class="cheer">'+esc(d.cheer)+'</p>':'')+'<span class="meta">'+f.md+'（'+f.w+'）· Day '+(DAYS.indexOf(current)+1)+(d&&d.minutes?' · 目安 '+d.minutes+'分':'')+'</span><h2>'+esc(d?d.theme:(current===EXAM?"本番":"準備中"))+'</h2>';
+    head.innerHTML=(OSHI[current]?'<span class="oshi">今日は<b>'+esc(OSHI[current])+'</b>の日</span>':'')+(d&&d.cheer?'<p class="cheer">'+esc(d.cheer)+'</p>':'')+'<span class="meta">'+f.md+'（'+f.w+'）· Day '+(DAYS.indexOf(current)+1)+(d&&d.minutes?' · 目安 '+d.minutes+'分':'')+'</span><h2>'+esc(d?d.theme:(current===EXAM?"本番":"準備中"))+'</h2>';
     main.appendChild(head);
     if(current===EXAM){
       main.insertAdjacentHTML("beforeend",'<p class="cheer">いよいよ本番。2週間の積み重ねを信じて、落ち着いていこう！</p><section class="block"><h3>本番で守ること</h3><ul class="tasks">'+
