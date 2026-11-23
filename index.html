@@ -626,8 +626,8 @@ summary:focus:not(:focus-visible){outline:none}
         b.innerHTML='<span class="oval">'+(t==="mc2"?(on?"✓":""):label(ci))+'</span><span class="ctext">'+(t==="mc2"?'<b>'+String.fromCharCode(65+ci)+'</b> ':'')+esc(c.replace(/^[A-Z]\s+(?=\S)/,""))+'</span>';
         if(!graded) b.addEventListener("click",()=>{
           if(t==="mc2"){ let cur=Array.isArray(S.ans[k])?S.ans[k].slice():[]; if(cur.includes(ci)) cur=cur.filter(x=>x!==ci); else { cur.push(ci); if(cur.length>2) cur.shift(); } S.ans[k]=cur; }
-          else S.ans[k]=ci;
-          save(); const nv=S.ans[k];
+          else { if(S.ans[k]===ci) delete S.ans[k]; else S.ans[k]=ci; }   // tap the chosen answer again to clear it
+          save(); const nv = t==="mc2" ? (S.ans[k]||[]) : S.ans[k];
           cs.querySelectorAll(".ch").forEach((x,xi)=>{ const o = t==="mc2"? nv.includes(xi) : nv===xi; x.classList.toggle("on",o); if(t==="mc2") x.querySelector(".oval").textContent=o?"✓":""; }); updCnt();
         });
         cs.appendChild(b);
