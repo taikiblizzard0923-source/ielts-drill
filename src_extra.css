@@ -80,3 +80,15 @@ summary:focus:not(:focus-visible){outline:none}
 .step .arr{color:var(--print);font-weight:700}
 .klang tr:nth-child(odd) td{background:var(--paper)}
 .optsblock{display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--blue);padding-top:12px;margin-top:4px}
+/* audit fixes */
+.src > *, .qs > *{flex-shrink:0}
+.scrollhint{display:none;margin:0;font-size:12px;color:var(--muted)}
+@media (min-width: 900px){ .split.two:not(.ws) .scrollhint{display:block} .split.two:not(.ws) .src{border-bottom:3px solid var(--line)} }
+.choices.multi .oval{border-radius:6px;width:26px;height:26px;margin-top:0;font-size:15px}
+.choices.multi .ch.on .oval{background:var(--blue);border-color:var(--blue)}
+.choices.tf .oval{width:16px;height:16px;border-radius:50%;margin-top:4px}
+.pts{white-space:nowrap}
+.klang td{word-break:normal;overflow-wrap:anywhere}
+.klang td:first-child{width:38%} .klang td:nth-child(2){width:27%;min-width:7em} .klang td:nth-child(3){width:35%}
+.klang .ken{white-space:normal}
+.sqh{font-size:12px;font-weight:700;color:var(--print);letter-spacing:.04em}

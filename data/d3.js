@@ -110,9 +110,9 @@ window.DRILL.days["2026-12-02"] = {
   minutes: 60,
   cheer: "プロセス図は「順番どおりに受動態でつなぐ」だけで形になる。今日は型を体に入れる日、完璧より最後まで書き切ることを優先しよう！",
   tasks: [
-    { min: 3, text: "セットAの図を見て、7つの段階を確認し、Overview に書く「全体の流れ（何段階・始まりと終わり）」をメモする" },
+    { min: 3, text: "セットAの図を見て、7つの段階を確認し、Overview に書く「段階の数・始まりと終わり・全体の変化（緑の生葉→乾いた茶色の茶）」をメモする" },
     { min: 20, text: "セットA（W Task1 プロセス図）を20分計って150語以上書く（PCで打つかノートに書く）" },
-    { min: 7, text: "セットAの模範解答と比べ、checklist で自己採点。受動態・順序の接続語（Next, Subsequently, Finally）を何回使えたか数える" },
+    { min: 7, text: "セットAの模範解答と比べ、checklist で自己採点。受動態・順序の接続語（First, Then, After that, Next, Finally）を何回使えたか数える" },
     { min: 12, text: "セットB①（S Part2 習いたい技能）：準備1分→スマホで録音2分→聞き直して checklist で確認" },
     { min: 12, text: "セットB②（S Part2 好きな場所）：同じ手順で録音。①で詰まった表現を phrases から1つ以上使う" },
     { min: 6, text: "今日の vocab 20語を音読し、英→日・日→英で2周チェック" }
@@ -195,35 +195,35 @@ window.DRILL.days["2026-12-02"] = {
             ["数字の書き方が不正確（12-18hour, 1-2 hour）","between 12 and 18 hours / one to two hours のように前置詞と複数形をつけて書く"]
           ],
           plan: [
-            "Introduction（1〜2文）：問題文の shows the stages in the production of を illustrates the process by which … is produced に言い換える",
-            "Overview（2文）：段階の数（seven stages）、始まり（picking）と終わり（packing and transport）、全体の特徴（乾燥・加熱が中心）",
+            "Introduction（1文）：問題文の shows the stages in the production of black tea を illustrates how black tea is produced に言い換える",
+            "Overview（3〜4文）：段階の数（seven stages）、始まり（picking）と終わり（packing and transporting）、全体の変化（緑の生葉が乾いた茶色の茶になる：changes fresh green leaves into dry brown tea）",
             "Body 1：段階1〜3（摘む→しおれさせる→揉む）。時間（12–18 hours）などの細部を入れる",
             "Body 2：段階4〜7（酸化→加熱→選別→包装・輸送）。色の変化（green → brown）を必ず書く",
             "動詞はすべて受動態（are picked, are rolled）。主語を The leaves / They / The tea で変えて単調にしない",
             "最後に語数を数え、150語以上か確認（目標160〜190語）"
           ],
           phrases: [
-            ["The diagram illustrates the process by which …", "図は…される工程を示している"],
+            ["The diagram illustrates how … is produced", "図は…がどのように生産されるかを示している"],
             ["Overall, there are seven stages in the process.", "全体として工程は7段階ある"],
-            ["At the first stage, …", "最初の段階では"],
-            ["They are then …", "その後それらは…される"],
-            ["After this, …", "この後"],
+            ["It starts with … and ends with …", "…で始まり…で終わる"],
+            ["The whole process changes … into …", "工程全体で…が…に変わる"],
+            ["First, … / Then, … / After that, …", "まず／次に／その後"],
+            ["and as a result …", "その結果"],
             ["Next, …", "次に"],
-            ["subsequently", "その後"],
-            ["Once they have been dried, …", "乾燥が終わると"],
-            ["during which time …", "その間に"],
-            ["in order to …", "…するために"],
+            ["After this stage, …", "この段階の後"],
+            ["The dried tea is then …", "乾燥した茶はその後…される"],
+            ["changes from green to brown", "緑から茶色に変わる"],
             ["Finally, …", "最後に"],
-            ["according to their size", "大きさによって"]
+            ["sorted by the size of the leaves", "葉の大きさによって選別される"]
           ],
           checklist: [
             "【課題への対応】Overview（段階の数・始まりと終わり）を書いた",
             "【課題への対応】7段階すべてを抜けなく説明し、時間（12–18 hours, 1–2 hours）などの細部を入れた",
-            "【一貫性とまとまり】順序の接続語（then, After this, Next, Finally など）を4種類以上使った",
+            "【一貫性とまとまり】順序の接続語（First, Then, After that, Next, After this stage, Finally など）を4種類以上使った",
             "【一貫性とまとまり】段落を Introduction / Overview / Body 2つに分けた",
-            "【語彙】問題文の語をそのまま写さず、言い換え（illustrates, the process by which）を使った",
+            "【語彙】問題文の語をそのまま写さず、言い換え（illustrates how black tea is produced, by the size of the leaves）を使った",
             "【文法】受動態（are picked, are rolled）を正しく使えた",
-            "【文法】関係詞や分詞（which makes them soft, Once dried）で長めの文を1〜2文作った",
+            "【文法】and as a result / and their colour changes from … to … などで2つの情報をつないだ長めの文を1〜2文作った",
             "150語以上書けた（20分以内）"
           ]
         }
@@ -233,7 +233,7 @@ window.DRILL.days["2026-12-02"] = {
       id: "B",
       skill: "S",
       title: "Speaking Part 2",
-      limitMin: 20,
+      limitMin: 24,
       instructions: "You will have to talk about the topic for one to two minutes. You have one minute to think about what you are going to say. You can make some notes to help you if you wish.",
       directions: "準備の1分は文を書かず、カードの4つのポイントごとにキーワードを2〜3語ずつメモするだけにしよう。",
       items: [
@@ -281,7 +281,7 @@ window.DRILL.days["2026-12-02"] = {
           ],
           tips: [
             "【Fluency and Coherence】カードの4つのポイントを順番にすべて話す。As for … / In terms of … で次のポイントに移ることを示す。",
-            "【Fluency and Coherence】1分40秒以上話し続ける。詰まったら So, … / Also, … で次の文につなげ、長く黙らない。",
+            "【Fluency and Coherence】1分30秒〜2分話し続ける。詰まったら So, … / Also, … で次の文につなげ、長く黙らない。",
             "【Lexical Resource】want to ばかりにせず、I'd love to / I'm planning to などで少し言い換えれば十分。",
             "【Grammar】まだ実現していない話には would / could を使う。If I can't …, I'll … の条件文を1つ正しく言う。",
             "【Pronunciation】語尾の -s, -ed をはっきり発音し、ゆっくりでも聞き取りやすく話す。"
@@ -305,7 +305,7 @@ window.DRILL.days["2026-12-02"] = {
           ],
           checklist: [
             "【流暢さと一貫性】カードの4つのポイントすべてに順番に触れた",
-            "【流暢さと一貫性】1分30秒以上、長い沈黙なしで話し続けた",
+            "【流暢さと一貫性】1分30秒〜2分、長い沈黙なしで話し続けた",
             "【語彙】I'd like to / I'd love to など願望の表現を使い分けた",
             "【文法】仮定の would（It would make me …）を正しく使えた",
             "【文法】理由を because / so that でつないで長めの文を作った",
@@ -385,7 +385,7 @@ window.DRILL.days["2026-12-02"] = {
             "【文法】There is / There are を単数・複数で正しく使い分けた",
             "【文法】頻度の副詞（usually, sometimes, often）を使った",
             "【発音】文の最後を下げ、単語を一語ずつ区切らずにつなげて話した",
-            "1分30秒以上話せた"
+            "1分30秒〜2分話せた"
           ]
         }
       ]
@@ -439,7 +439,7 @@ window.DRILL.days["2026-12-03"] = {
         { type: "mc", q: "7  Vertical farms generally need more pesticides than traditional farms.", choices: ["TRUE", "FALSE", "NOT GIVEN"], a: 1,
           ex: "【正解】FALSE\n【根拠】\"there is little need for pesticides\"（農薬の必要がほとんどない）\n【他の選択肢】TRUE：本文と逆／NOT GIVEN：農薬についてはっきり書かれているので NG ではない\n【ポイント】little need（ほとんど必要ない）は more need と正反対なので FALSE。本文が設問を否定できる情報を持っているかどうかが FALSE と NOT GIVEN の分かれ目。" },
         { type: "mc", q: "8  Restaurant owners in Harlow Bay say their customers notice a difference in taste.", choices: ["TRUE", "FALSE", "NOT GIVEN"], a: 0,
-          ex: "【正解】TRUE\n【根拠】\"the restaurant owners say that their customers notice the difference in taste\"（客が味の違いに気づくとオーナーたちが言っている）\n【他の選択肢】FALSE：矛盾していない／NOT GIVEN：味の違いへの言及がはっきりある\n【ポイント】tastes different ＝ the difference in taste。値段や量など書かれていない情報が設問にないかも必ず確認しよう。" },
+          ex: "【正解】TRUE\n【根拠】\"the restaurant owners say that their customers notice the difference in taste\"（客が味の違いに気づくとオーナーたちが言っている）\n【他の選択肢】FALSE：矛盾していない／NOT GIVEN：味の違いへの言及がはっきりある\n【ポイント】notice a difference in taste ＝ customers notice the difference in taste。値段や量など書かれていない情報が設問にないかも必ず確認しよう。" },
         { type: "fill", q: "9  The biggest problem for vertical farms is ________, because every hour of light must be paid for.", limit: "NO MORE THAN TWO WORDS", accept: ["energy", "electricity"],
           ex: "【正解】energy（electricity も可）\n【根拠】\"vertical farming faces serious problems, and the biggest is energy\"（深刻な問題に直面しており、最大のものはエネルギー）\n【よくあるミス】light や lighting を書くと、後ろの「every hour of light」と意味が重なる。the energy と冠詞をつけても語数内だが不要。\n【ポイント】要約問題は段落Eの最初の文に答えがある。the biggest problem ＝ the biggest。" },
         { type: "fill", q: "10  Lighting and climate control may make up over half of a farm's ________.", limit: "NO MORE THAN TWO WORDS", accept: ["running costs", "running cost"],
@@ -710,7 +710,7 @@ window.DRILL.days["2026-12-04"] = {
             "【Task Response】利点・欠点の両方に理由と具体例（For example …）を書く。片方だけだと 5.5 に届きにくい。",
             "【Coherence and Cohesion】4段落（Introduction / 利点 / 欠点 / Conclusion）の型を守り、On the one hand / First / In addition / As a result などのつなぎ言葉を使う。",
             "【Lexical Resource】問題文を丸写ししない。a growing number of → more and more、disadvantages → drawbacks のように簡単な語で言い換えれば十分。",
-            "【Grammatical Range and Accuracy】because / although / which で複文を2〜3個入れ、最後の3分で三単現の s・冠詞・複数形を見直す。260語以上書き切ることを優先。"
+            "【Grammatical Range and Accuracy】because / although / which で複文を2〜3個入れ、最後の3分で三単現の s・冠詞・複数形を見直す。250語以上書き切ることを優先。"
           ],
           pitfalls: [
             ["利点と欠点を書くだけで「どちらが上か」を答えない","Introduction と Conclusion に I believe that its disadvantages are more significant のように立場を1文で書く"],
@@ -719,9 +719,9 @@ window.DRILL.days["2026-12-04"] = {
             ["Conclusion で新しい理由を出す","Conclusion は両面のまとめ＋立場の言い直し＋（あれば）提案だけにする"]
           ],
           plan: [
-            "Introduction（2文）：1文目で問題文を言い換え（taking courses online → study from home）、2文目で「欠点の方が大きい」と立場を明示",
+            "Introduction（2文）：1文目で問題文を言い換え（taking courses online → study online）、2文目で「欠点の方が大きい」と立場を明示",
             "Body 1（利点）：①柔軟性（いつでも・何度でも見られる）②安さ・アクセスのよさ＋具体例（地方の学生）",
-            "Body 2（欠点）：①対面の交流がない（教室との対比 whereas）②自己管理が必要（スマホの誘惑→脱落）③実技科目が難しい",
+            "Body 2（欠点）：①対面の交流がない（教室との対比 … , but online students …）②自己管理が必要（スマホの誘惑→脱落）③実技科目が難しい",
             "欠点の段落を利点より長く・詳しくして、自分の立場と一致させる",
             "Conclusion（2文）：両面をまとめ、立場をもう一度言い換えて述べる（outweighed by）。新しい理由は書かない",
             "最後の3分で語数（250語以上）と、三単現の s・冠詞・綴りを見直す"
@@ -733,7 +733,7 @@ window.DRILL.days["2026-12-04"] = {
             ["offer a great deal of flexibility", "大きな柔軟性をもたらす"],
             ["which is especially helpful for …", "それは…にとって特に役立つ"],
             ["The most important (drawback) is …", "最も重要な（欠点）は…"],
-            ["whereas …", "…である一方"],
+            ["…, but …", "…だが（教室とオンラインの対比）"],
             ["Furthermore, … / Finally, …", "さらに／最後に"],
             ["as a result", "その結果"],
             ["these advantages are outweighed by …", "これらの利点は…に上回られる"],
@@ -746,7 +746,7 @@ window.DRILL.days["2026-12-04"] = {
             "【一貫性とまとまり】On the one hand / Furthermore / as a result などの接続表現を5種類以上使った",
             "【語彙】問題文の語を言い換えた（online courses → online learning, in person → face-to-face など）",
             "【語彙】今日の vocab（flexibility, drawback, outweigh, self-discipline など）を3語以上使った",
-            "【文法】関係詞（which / who）や whereas で複文を3つ以上書いた",
+            "【文法】関係詞（which / who）や although / because で複文を3つ以上書いた",
             "【文法】三単現の s・冠詞・複数形のミスがない／250語以上書けた"
           ]
         }
@@ -812,7 +812,7 @@ window.DRILL.days["2026-12-04"] = {
             ["we had to … instead","代わりに…しなければならなかった","予定が変わった話の定番"]
           ],
           tips: [
-            "【Fluency and Coherence】Yes/No だけで終わらせず、「答え→理由→例」の2〜3文で答える。1問20〜30秒が目安。",
+            "【Fluency and Coherence】Yes/No だけで終わらせず、「答え→理由→例」の2〜4文で答える。1問20〜30秒が目安。",
             "【Lexical Resource】good / nice ばかりにせず、humid, energetic, disappointing など簡単な形容詞を少し加える。",
             "【Grammar】質問の時制に合わせて答える（Did you …? → 過去形、Do you …? → 現在形）。これだけで減点が大きく減る。",
             "【Pronunciation】録音を聞き直し、humid, energetic などのアクセント位置を確認する。"
@@ -821,7 +821,7 @@ window.DRILL.days["2026-12-04"] = {
             ["Yes. / No. だけで答えて黙ってしまう","Yes, I did. の後に「いつ・どのくらい・どう思ったか」を1〜2文足す"],
             ["二択の質問に「どちらも好き」とだけ答える","I'd say I prefer … で一方を選び、But … でもう一方に触れる"],
             ["過去の質問に現在形で答える（Yes, I take piano lessons.）","Did you …? には過去形（I took …）で答える"],
-            ["長く話しすぎて1問1分近くになる","Part1 は2〜3文で止め、次の質問を待つ"]
+            ["長く話しすぎて1問1分近くになる","Part1 は2〜4文で止め、次の質問を待つ"]
           ],
           phrases: [
             ["I mostly … , but recently I've also started …", "主に…だが、最近は…も始めた"],
@@ -858,7 +858,7 @@ window.DRILL.days["2026-12-05"] = {
     { min: 25, text: "セットA（L Part3）とセットB（L Part4）を本番どおり続けて解く（音声1回、問題を見る時間も守る）。答え合わせ後、外した問題のスクリプトを確認" },
     { min: 30, text: "セットC（R 約750語・13問）を20分計って解き、残り10分で解説を読む。見出し問題は先に設問の見出しを読んでから本文へ" },
     { min: 25, text: "セットD（S 通し）：Part1 質問4→Part2（準備1分・2分スピーチ）→Part3 質問4を止めずに録音し、聞き直して checklist で確認" },
-    { min: 10, text: "今週の Writing（12/2 Task1・12/4 Task2）の模範解答の Introduction と Overview を音読し、型を最終確認" },
+    { min: 10, text: "今週の Writing の模範解答（12/2 Task1 の Introduction と Overview、12/4 Task2 の Introduction）を音読し、型を最終確認" },
     { min: 15, text: "当日の確認：持ち物（受験票に登録したパスポート・必要なら眼鏡）、会場の場所と行き方、集合時刻、起床時刻をメモし、カバンに入れる" },
     { min: 10, text: "今日の vocab 20語を1周確認したら勉強は終了。スマホを置いて早く寝る" },
     { min: 5, text: "明日の流れ（L→R→W、Speaking の時刻）を頭の中で1回イメージして、深呼吸して終わる" }
@@ -877,7 +877,7 @@ window.DRILL.days["2026-12-05"] = {
       title: "Listening Part 3",
       limitMin: 10,
       instructions: "Questions 21–25: Choose the correct letter, A, B or C. Questions 26–30: What do the students decide about each of the following ideas? Choose FIVE answers from the box and write the correct letter, A, B or C, next to Questions 26–30. NB You may choose any letter more than once.",
-      directions: "Part3 は3人の意見が行き来する。誰が言ったかより「最終的に2人がどう決めたか」を聞き取ろう。",
+      directions: "Part3 は先生と学生2人の3人の会話。誰が言ったかより「最終的に学生2人がどう決めたか」を聞き取ろう。",
       options: ["A  include it in the presentation", "B  reject it", "C  research it further"],
       script: [
         { sp: "N", t: "You will hear two students, Emma and Jake, talking to their tutor, Dr Patel, about a research project on food waste. First, you have some time to look at questions 21 to 25." },
@@ -1143,8 +1143,8 @@ window.DRILL.days["2026-12-05"] = {
           questions: ["Describe a time when you had to wait for something. You will have to talk about the topic for one to two minutes. You have one minute to think about what you are going to say.", "Are you usually a patient person?"],
           cueCard: { topic: "Describe a time when you had to wait for something.", points: ["what you were waiting for", "where you were", "how long you had to wait", "and explain how you felt while you were waiting"] },
           prepSec: 60, speakSec: 120,
-          model: "I'd like to talk about a time last year when I had to wait for the results of an important English exam. It was the Eiken test, and I really wanted to pass the second grade because I needed it for my university applications.\n\nI took the exam in a big university building in my city, and after that I had to wait about three weeks for the results to be announced online. So for most of that time I was just at home or at school, trying to live normally.\n\nThree weeks doesn't sound very long, but for me it felt like forever. At first, I tried not to think about it. I went back to my normal studies and spent time with my friends. But as the date got closer, I became more and more nervous. I kept checking my answers again and again, and I even had trouble sleeping the night before the results came out.\n\nAs for how I felt, I'd say I was a mixture of excited and anxious. I was excited because I'd studied really hard, but I was anxious because I wasn't sure about the writing section. In the end, I passed, and I felt so relieved. Looking back, I think the experience taught me that worrying doesn't change the result, so it's better to focus on the next goal, like the IELTS test I'm taking now.\n\n(Follow-up) Not always. I'm patient with people, but I'm quite impatient when I'm waiting for results.",
-          modelJa: "去年、大事な英語の試験の結果を待たなければならなかったときのことを話したいと思います。英検で、大学の出願に必要だったので、どうしても2級に合格したかったんです。\n\n試験は市内の大きな大学の建物で受けて、その後、結果がオンラインで発表されるまで約3週間待たなければなりませんでした。なので、その間のほとんどは、家や学校でふつうに過ごそうとしていました。\n\n3週間はそれほど長く聞こえませんが、私にとっては永遠のように感じました。最初は考えないようにしました。いつもの勉強に戻り、友達と過ごしました。でも日にちが近づくにつれて、どんどん緊張してきました。何度も何度も自分の答えを確認して、結果が出る前の晩は眠れないほどでした。\n\nどう感じたかについては、ワクワクと不安が混ざっていたと思います。一生懸命勉強したのでワクワクしていましたが、ライティングに自信がなかったので不安でした。結局合格して、本当にほっとしました。振り返ると、心配しても結果は変わらないから、次の目標、今受けている IELTS のようなものに集中する方がいいと、この経験から学んだと思います。\n\n（追加質問）いつもではありません。人に対しては我慢強いですが、結果を待つときはかなりせっかちです。",
+          model: "I'd like to talk about a time last year when I had to wait for the results of an important English exam. It was the Eiken test, and I really wanted to pass the second grade because I needed it for my university applications.\n\nI took the exam in a big university building in my city, and after that I had to wait about three weeks for the results to be announced online. So for most of that time I was just at home or at school, trying to live normally.\n\nThree weeks doesn't sound very long, but for me it felt like forever. At first, I tried not to think about it. I went back to my normal studies and spent time with my friends. But as the date got closer, I became more and more nervous. I kept checking my answers again and again, and I even had trouble sleeping the night before the results came out.\n\nAs for how I felt, I'd say I felt both excited and anxious. I was excited because I'd studied really hard, but I was anxious because I wasn't sure about the writing section. In the end, I passed, and I felt so relieved. Looking back, I think the experience taught me that worrying doesn't change the result, so it's better to focus on the next goal, like the IELTS test I'm taking now.\n\n(Follow-up) Not always. I'm patient with people, but I'm quite impatient when I'm waiting for results.",
+          modelJa: "去年、大事な英語の試験の結果を待たなければならなかったときのことを話したいと思います。英検で、大学の出願に必要だったので、どうしても2級に合格したかったんです。\n\n試験は市内の大きな大学の建物で受けて、その後、結果がオンラインで発表されるまで約3週間待たなければなりませんでした。なので、その間のほとんどは、家や学校でふつうに過ごそうとしていました。\n\n3週間はそれほど長く聞こえませんが、私にとっては永遠のように感じました。最初は考えないようにしました。いつもの勉強に戻り、友達と過ごしました。でも日にちが近づくにつれて、どんどん緊張してきました。何度も何度も自分の答えを確認して、結果が出る前の晩は眠れないほどでした。\n\nどう感じたかについては、ワクワクと不安の両方を感じていたと思います。一生懸命勉強したのでワクワクしていましたが、ライティングに自信がなかったので不安でした。結局合格して、本当にほっとしました。振り返ると、心配しても結果は変わらないから、次の目標、今受けている IELTS のようなものに集中する方がいいと、この経験から学んだと思います。\n\n（追加質問）いつもではありません。人に対しては我慢強いですが、結果を待つときはかなりせっかちです。",
           modelParts: [
             { label: "何を待っていたか（what you were waiting for）",
               en: "I'd like to talk about a time last year when I had to wait for the results of an important English exam. It was the Eiken test, and I really wanted to pass the second grade because I needed it for my university applications.",
@@ -1159,8 +1159,8 @@ window.DRILL.days["2026-12-05"] = {
               ja: "3週間はそれほど長く聞こえませんが、私にとっては永遠のように感じました。最初は考えないようにしました。いつもの勉強に戻り、友達と過ごしました。でも日にちが近づくにつれて、どんどん緊張してきました。何度も何度も自分の答えを確認して、結果が出る前の晩は眠れないほどでした。",
               point: "At first → But as … got closer → the night before と時間の流れに沿って話すと、長く話しても迷子にならない。more and more nervous、kept checking … again and again のような繰り返しの表現で気持ちの高まりを伝えている。" },
             { label: "どう感じたか（explain how you felt）",
-              en: "As for how I felt, I'd say I was a mixture of excited and anxious. I was excited because I'd studied really hard, but I was anxious because I wasn't sure about the writing section. In the end, I passed, and I felt so relieved. Looking back, I think the experience taught me that worrying doesn't change the result, so it's better to focus on the next goal, like the IELTS test I'm taking now.",
-              ja: "どう感じたかについては、ワクワクと不安が混ざっていたと思います。一生懸命勉強したのでワクワクしていましたが、ライティングに自信がなかったので不安でした。結局合格して、本当にほっとしました。振り返ると、心配しても結果は変わらないから、次の目標、今受けている IELTS のようなものに集中する方がいいと、この経験から学んだと思います。",
+              en: "As for how I felt, I'd say I felt both excited and anxious. I was excited because I'd studied really hard, but I was anxious because I wasn't sure about the writing section. In the end, I passed, and I felt so relieved. Looking back, I think the experience taught me that worrying doesn't change the result, so it's better to focus on the next goal, like the IELTS test I'm taking now.",
+              ja: "どう感じたかについては、ワクワクと不安の両方を感じていたと思います。一生懸命勉強したのでワクワクしていましたが、ライティングに自信がなかったので不安でした。結局合格して、本当にほっとしました。振り返ると、心配しても結果は変わらないから、次の目標、今受けている IELTS のようなものに集中する方がいいと、この経験から学んだと思います。",
               point: "As for how I felt, で最後のポイントに移っている。気持ちを2つ（excited / anxious）挙げ、それぞれに because で理由をつけている。In the end（結末）→ Looking back（振り返り＝学んだこと）で締めると、話に深みが出て Part3 にもつなげやすい。" },
             { label: "追加質問（Follow-up）",
               en: "(Follow-up) Not always. I'm patient with people, but I'm quite impatient when I'm waiting for results.",
@@ -1176,7 +1176,7 @@ window.DRILL.days["2026-12-05"] = {
             ["more and more nervous","どんどん緊張して","比較級＋and＋比較級で「ますます」"],
             ["I kept checking … again and again","何度も何度も…を確認し続けた","keep＋-ing で「…し続ける」"],
             ["I had trouble sleeping","なかなか眠れなかった","have trouble＋-ing で「…するのに苦労する」"],
-            ["a mixture of excited and anxious","ワクワクと不安が混ざった","複雑な気持ちを1語句で表す"],
+            ["I felt both excited and anxious","ワクワクと不安の両方を感じた","both A and B で2つの気持ちを同時に表す。I was a mixture of … とは言わない"],
             ["because I'd studied really hard","一生懸命勉強していたので","過去完了で「それより前に」を表す"],
             ["In the end, … I felt so relieved.","結局…、本当にほっとした","話の結末を言う"],
             ["Looking back, …","振り返ると","経験から学んだことで締めくくる"]
@@ -1199,7 +1199,7 @@ window.DRILL.days["2026-12-05"] = {
             ["It felt like forever.", "永遠のように感じた"],
             ["At first, … But as … got closer, …", "最初は…、でも…が近づくにつれ"],
             ["more and more nervous", "どんどん緊張して"],
-            ["a mixture of excited and anxious", "ワクワクと不安が混ざった"],
+            ["I felt both excited and anxious", "ワクワクと不安の両方を感じた"],
             ["In the end, …", "結局"],
             ["I felt so relieved.", "本当にほっとした"],
             ["Looking back, …", "振り返ると"]
@@ -1282,8 +1282,8 @@ window.DRILL.days["2026-12-05"] = {
           checklist: [
             "【流暢さと一貫性】各質問に、意見→理由→例の順で40秒〜1分話せた",
             "【流暢さと一貫性】I と自分の経験だけでなく、people / young people など一般論で答えた",
-            "【語彙】抽象的な語（uncertainty, patience, progress など）を使った",
-            "【文法】比較（less patient than, more easily）を正しく使えた",
+            "【語彙】抽象的な語（patience, progress, improvement など）を使った",
+            "【文法】be used to＋-ing（are used to getting）や if の文（if you give up too early, you'll …）を正しく使えた",
             "【文法】提案の might / could / would を使って仮定の話ができた",
             "【発音】長い文でも区切りを意識し、聞き取りやすい速さで話した",
             "すぐ答えが浮かばないとき、That's an interesting question. などで沈黙を避けた"

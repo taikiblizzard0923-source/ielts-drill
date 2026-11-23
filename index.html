@@ -281,6 +281,18 @@ summary:focus:not(:focus-visible){outline:none}
 .step .arr{color:var(--print);font-weight:700}
 .klang tr:nth-child(odd) td{background:var(--paper)}
 .optsblock{display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--blue);padding-top:12px;margin-top:4px}
+/* audit fixes */
+.src > *, .qs > *{flex-shrink:0}
+.scrollhint{display:none;margin:0;font-size:12px;color:var(--muted)}
+@media (min-width: 900px){ .split.two:not(.ws) .scrollhint{display:block} .split.two:not(.ws) .src{border-bottom:3px solid var(--line)} }
+.choices.multi .oval{border-radius:6px;width:26px;height:26px;margin-top:0;font-size:15px}
+.choices.multi .ch.on .oval{background:var(--blue);border-color:var(--blue)}
+.choices.tf .oval{width:16px;height:16px;border-radius:50%;margin-top:4px}
+.pts{white-space:nowrap}
+.klang td{word-break:normal;overflow-wrap:anywhere}
+.klang td:first-child{width:38%} .klang td:nth-child(2){width:27%;min-width:7em} .klang td:nth-child(3){width:35%}
+.klang .ken{white-space:normal}
+.sqh{font-size:12px;font-weight:700;color:var(--print);letter-spacing:.04em}
 
 </style>
 </head>
@@ -519,6 +531,7 @@ summary:focus:not(:focus-visible){outline:none}
     (p.areas||[]).forEach(a=>{ g+='<rect x="'+a.x*sc+'" y="'+a.y*sc+'" width="'+a.w*sc+'" height="'+a.h*sc+'" fill="var(--sheet)" stroke="var(--blue)" stroke-width="1.5"/>'; if(a.name) g+='<text x="'+(a.x+a.w/2)*sc+'" y="'+((a.y+a.h/2)*sc+5)+'" text-anchor="middle" font-size="14" fill="var(--ink)">'+esc(a.name)+'</text>'; });
     (p.letters||[]).forEach(l=>{ g+='<circle cx="'+l.x*sc+'" cy="'+l.y*sc+'" r="13" fill="var(--print)"/><text x="'+l.x*sc+'" y="'+(l.y*sc+5)+'" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">'+esc(l.l)+'</text>'; });
     if(p.you){ g+='<polygon points="'+(p.you.x*sc)+','+(p.you.y*sc-12)+' '+(p.you.x*sc-9)+','+(p.you.y*sc+6)+' '+(p.you.x*sc+9)+','+(p.you.y*sc+6)+'" fill="var(--ok)"/><text x="'+(p.you.x*sc)+'" y="'+(p.you.y*sc+24)+'" text-anchor="middle" font-size="13" fill="var(--ok)">'+esc(p.you.label||"You are here")+'</text>'; }
+    g+='<g transform="translate('+(W-26)+',30)"><polygon points="0,-18 7,2 0,-3 -7,2" fill="var(--ink)"/><text x="0" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">N</text></g>';
     return '<svg viewBox="0 0 '+W+' '+(H+10)+'" role="img" aria-label="'+esc(p.title||"plan")+'">'+g+'</svg>';
   }
   function figures(s){
@@ -527,18 +540,23 @@ summary:focus:not(:focus-visible){outline:none}
     if(s.plan){ const f=document.createElement("figure"); f.className="fig"; f.innerHTML=(s.plan.title?'<figcaption>'+esc(s.plan.title)+'</figcaption>':'')+planSVG(s.plan); out.push(f); }
     if(s.process){ const f=document.createElement("figure"); f.className="fig"; f.innerHTML=(s.process.title?'<figcaption>'+esc(s.process.title)+'</figcaption>':'')+'<div class="proc">'+s.process.steps.map((x,i)=>'<div class="st"><b>'+(i+1)+'.</b> '+esc(String(x).replace(/^\s*(step\s*)?\d+\s*[.):\-]?\s*/i,""))+'</div>').join('<div class="ar">↓</div>')+'</div>'; out.push(f); }
     if(s.table){ const w=document.createElement("div"); w.className="tbl"; const t=s.table;
-      w.innerHTML='<table>'+(t.caption?'<caption>'+esc(t.caption)+'</caption>':'')+'<thead><tr>'+t.head.map(h=>'<th>'+esc(h)+'</th>').join("")+'</tr></thead><tbody>'+t.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join("")+'</tr>').join("")+'</tbody></table>'; out.push(w); }
+      w.innerHTML='<table>'+(t.caption?'<caption>'+esc(t.caption)+'</caption>':'')+((t.head||[]).some(h=>String(h).trim())?'<thead><tr>'+t.head.map(h=>'<th>'+esc(h)+'</th>').join("")+'</tr></thead>':'')+'<tbody>'+t.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join("")+'</tr>').join("")+'</tbody></table>'; out.push(w); }
     return out;
   }
   function paras(text,cls){ const d=document.createElement("div"); d.className=cls; d.innerHTML=String(text).split(/\n\n+/).map(par=>{ const m=par.match(/^#\s*(.+)$/); return m?'<h4>'+esc(m[1])+'</h4>':'<p>'+esc(par).replace(/\n/g,"<br>")+'</p>'; }).join(""); return d; }
   function scriptBox(lines,ja){
     const d=document.createElement("details"); d.innerHTML='<summary>スクリプトと和訳</summary>';
     const box=document.createElement("div"); box.className="script";
-    box.innerHTML=lines.map((l,i)=> l.sp==="PAUSE" ? '' : '<p><b>'+({M:"男性",W:"女性",M2:"男性2",W2:"女性2",N:"話者"}[l.sp]||esc(l.sp))+'</b>'+esc(l.t)+(ja&&ja[i]?'<span class="ja">'+esc(ja[i])+'</span>':'')+'</p>').join("");
+    box.innerHTML=lines.map((l,i)=> l.sp==="PAUSE" ? '' : '<p><b>'+({M:"男性A",W:"女性A",M2:"男性B",W2:"女性B",N:"ナレーター／講師"}[l.sp]||esc(l.sp))+'</b>'+esc(l.t)+(ja&&ja[i]?'<span class="ja">'+esc(ja[i])+'</span>':'')+'</p>').join("");
     d.appendChild(box); return d;
   }
   function jaBox(text,label){ const d=document.createElement("details"); d.innerHTML='<summary>'+(label||"全訳を表示")+'</summary>'; d.appendChild(paras(text,"passage-ja")); return d; }
-  function exHTML(t){ return esc(t||"").replace(/\s*／\s*/g,'<br>').replace(/\n/g,'').replace(/【([^】]+)】/g,'</p><p><b class="exh">$1</b>').replace(/^<\/p>/,"")+'</p>'; }
+  // sections start with 【見出し】; only the "他の選択肢" section lists one option per line (split at ／)
+  function exHTML(t){
+    return String(t||"").split(/(?=【)/).map(sec=>{ const m=sec.match(/^【([^】]+)】([\s\S]*)$/); if(!m) return esc(sec).replace(/\n/g,'');
+      let body=esc(m[2]).replace(/\n/g,' '); if(/他の選択肢/.test(m[1])) body=body.replace(/\s*／\s*/g,'<br>');
+      return '</p><p><b class="exh">'+esc(m[1])+'</b>'+body; }).join("").replace(/^<\/p>/,"")+'</p>';
+  }
 
   // ---- timers ----
   const timers={};
@@ -587,23 +605,28 @@ summary:focus:not(:focus-visible){outline:none}
     const k=ds+"|"+s.id+"|"+i, t=it.type||"mc", v=S.ans[k], must=MUST[k];
     const item=document.createElement("div"); item.className="item"+(graded?" graded":"");
     const q=document.createElement("div"); q.className="qrow";
-    q.innerHTML='<span class="qno">'+num+'</span><span class="qtext">'+(must?'<span class="must">★ 落とせない</span>':'')+esc(String(it.q).replace(/^\s*\d{1,2}(\s*[–-]\s*\d{1,2})?[.)]?\s+(?=\S)/,""))+(t==="mc2"?'<span class="pts">（2点）</span>':'')+'</span>';
+    const qtxt=String(it.q).replace(/^\s*\d{1,2}(\s*[–-]\s*\d{1,2})?[.)]?\s+(?=\S)/,"").replace(/(^|\s)\(?\d{1,2}\)?\s*(?=_{3,})/g,"$1");
+    q.innerHTML='<span class="qno">'+num+'</span><span class="qtext">'+(must?'<span class="must">★ 落とせない</span>':'')+esc(qtxt)+(t==="mc2"?'<span class="pts">（2点）</span>':'')+'</span>';
     item.appendChild(q);
     let ok=null;
+    const isTF = t==="mc" && it.choices.length===3 && /^(TRUE|YES)$/.test(String(it.choices[0]).trim());
+    const label = ci => isTF ? "" : String.fromCharCode(65+ci);
     if(t==="mc"||t==="mc2"){
-      const cs=document.createElement("div"); cs.className="choices";
+      const cs=document.createElement("div"); cs.className="choices"+(t==="mc2"?" multi":"")+(isTF?" tf":"");
+      let cnt=null; if(t==="mc2"){ cnt=document.createElement("p"); cnt.className="howto"; cs.appendChild(cnt); }
+      const updCnt=()=>{ if(cnt){ const n=Array.isArray(S.ans[k])?S.ans[k].length:0; cnt.innerHTML='<b>2つ選ぶ</b>（順不同・1つ正解ごとに1点）　選んだ数 '+n+' / 2'; } }; updCnt();
       const sel = t==="mc2" ? (Array.isArray(v)?v.slice():[]) : v;
       it.choices.forEach((c,ci)=>{
         const on = t==="mc2" ? sel.includes(ci) : sel===ci;
         const right = t==="mc2" ? it.a.includes(ci) : ci===it.a;
         const b=document.createElement("button"); b.type="button";
         b.className="ch"+(on?" on":"")+(graded&&right?" correct":"")+(graded&&on&&!right?" wrong":"");
-        b.innerHTML='<span class="oval">'+String.fromCharCode(65+ci)+'</span><span class="ctext">'+esc(c.replace(/^[A-Z]\s+(?=\S)/,""))+'</span>';
+        b.innerHTML='<span class="oval">'+(t==="mc2"?(on?"✓":""):label(ci))+'</span><span class="ctext">'+(t==="mc2"?'<b>'+String.fromCharCode(65+ci)+'</b> ':'')+esc(c.replace(/^[A-Z]\s+(?=\S)/,""))+'</span>';
         if(!graded) b.addEventListener("click",()=>{
           if(t==="mc2"){ let cur=Array.isArray(S.ans[k])?S.ans[k].slice():[]; if(cur.includes(ci)) cur=cur.filter(x=>x!==ci); else { cur.push(ci); if(cur.length>2) cur.shift(); } S.ans[k]=cur; }
           else S.ans[k]=ci;
           save(); const nv=S.ans[k];
-          cs.querySelectorAll(".ch").forEach((x,xi)=>x.classList.toggle("on", t==="mc2"? nv.includes(xi) : nv===xi));
+          cs.querySelectorAll(".ch").forEach((x,xi)=>{ const o = t==="mc2"? nv.includes(xi) : nv===xi; x.classList.toggle("on",o); if(t==="mc2") x.querySelector(".oval").textContent=o?"✓":""; }); updCnt();
         });
         cs.appendChild(b);
       });
@@ -628,9 +651,10 @@ summary:focus:not(:focus-visible){outline:none}
     }
     if(graded && ok!==null){
       const ex=document.createElement("div"); ex.className="ex";
-      let ans = t==="fill" ? it.accept[0] : t==="select" ? s.options[it.a] : t==="mc2" ? it.a.map(x=>String.fromCharCode(65+x)).join(" と ") : String.fromCharCode(65+it.a);
+      const exAns=(String(it.ex||"").match(/【正解】\s*([^\n【]+)/)||[])[1];
+      let ans = t==="fill" ? ((exAns&&exAns.trim().length<=40)?exAns.trim():it.accept[0]) : t==="select" ? s.options[it.a] : t==="mc2" ? it.a.map(x=>String.fromCharCode(65+x)).join(" と ") : isTF ? it.choices[it.a] : String.fromCharCode(65+it.a);
       const part = t==="mc2" && !ok ? '（'+earned(k,it)+'/2点）' : '';
-      ex.innerHTML='<p><span class="mark '+(ok?"ok":"ng")+'">'+(ok?"正解":"不正解"+part+" · 正解は "+esc(ans))+'</span>'+(must&&!ok?' <span class="must-miss">★落とせない問題です。明日もう一度解き直しましょう</span>':'')+'</p>'+(must?'<p><b class="exh must-h">★ なぜ落とせない</b>'+esc(must)+'</p>':'')+'<p>'+exHTML(it.ex);
+      ex.innerHTML='<p><span class="mark '+(ok?"ok":"ng")+'">'+(ok?"正解":"不正解"+part+" · 正解は "+esc(ans))+'</span>'+(must&&!ok?' <span class="must-miss">'+(ds>="2026-12-05"?'★落とせない問題です。今日のうちに解説を読んでもう一度解き直しましょう':'★落とせない問題です。明日もう一度解き直しましょう')+'</span>':'')+'</p>'+(must?'<p><b class="exh must-h">★ なぜ落とせない</b>'+esc(must)+'</p>':'')+'<p>'+exHTML(it.ex);
       item.appendChild(ex);
     }
     return item;
@@ -700,12 +724,22 @@ summary:focus:not(:focus-visible){outline:none}
     const left=document.createElement("div"); left.className="src";
     left.insertAdjacentHTML("beforeend",'<p class="note" style="margin:0">Speaking Part '+it.part+'</p>');
     if(it.cueCard){ left.insertAdjacentHTML("beforeend",'<div class="cue"><b>'+esc(it.cueCard.topic)+'</b>You should say:<ul>'+it.cueCard.points.map(p=>'<li>'+esc(p)+'</li>').join("")+'</ul></div>'); }
-    it.questions.forEach((qq,j)=>{ const sq=document.createElement("div"); sq.className="sq"; sq.innerHTML='<span class="qtext">'+esc(qq)+'</span>'; sq.appendChild(player(k+"|q"+j,"質問の音声",qq)); left.appendChild(sq); });
+    // Part 2: the first line is the examiner's instruction, the rest are follow-up questions asked after the talk
+    it.questions.forEach((qq,j)=>{
+      const sq=document.createElement("div"); sq.className="sq";
+      let head;
+      if(it.part===2) head = j===0 ? '試験官の指示（音声）' : (j===1?'追加質問（2分話し終えたあとに聞かれる）':'');
+      else head = 'Q'+(j+1);
+      sq.innerHTML=(head?'<span class="sqh">'+head+'</span>':'')+'<span class="qtext">'+esc(qq)+'</span>';
+      sq.appendChild(player(k+"|q"+j,"質問の音声",qq));
+      if(it.part!==2) sq.appendChild(countdown("この質問に答える "+(it.speakSec>=60?(it.speakSec/60)+"分":(it.speakSec||30)+"秒"),it.speakSec||30));
+      left.appendChild(sq); });
     if(it.phrases){ const h=document.createElement("details"); h.className="hint"; h.innerHTML='<summary>使える表現</summary>'+phrasesHTML(it.phrases); left.appendChild(h); }
     const right=document.createElement("div"); right.className="qs";
     const tb=document.createElement("div"); tb.className="toolbar";
-    if(it.prepSec) tb.appendChild(countdown("準備 "+(it.prepSec/60)+"分 スタート",it.prepSec));
-    tb.appendChild(countdown("話す "+(it.speakSec>=60?(it.speakSec/60)+"分":it.speakSec+"秒")+" スタート",it.speakSec||60));
+    if(it.part===2){ if(it.prepSec) tb.appendChild(countdown("準備 "+(it.prepSec/60)+"分 スタート",it.prepSec));
+      tb.appendChild(countdown("話す "+(it.speakSec>=60?(it.speakSec/60)+"分":it.speakSec+"秒")+" スタート",it.speakSec||60)); }
+    else tb.insertAdjacentHTML("beforeend",'<p class="howto">左の質問を1つずつ：音声を聞く →「この質問に答える」を押して話す（'+(it.speakSec||30)+'秒が目安）。録音して聞き直すと効果的。</p>');
     right.appendChild(tb); right.appendChild(recorder());
     if(!done){ const b=document.createElement("button"); b.type="button"; b.className="btn primary"; b.textContent="話し終えた（模範解答とチェックへ）"; b.addEventListener("click",()=>{ S.wdone[ds+"|"+s.id]=Date.now(); save(); render(s.id); }); const a=document.createElement("div"); a.className="toolbar"; a.appendChild(b); right.appendChild(a); }
     else { right.appendChild(checklist(k,it.checklist)); right.appendChild(modelView(it)); }
@@ -721,7 +755,8 @@ summary:focus:not(:focus-visible){outline:none}
     det.innerHTML='<summary><span class="t"><span class="tag '+s.skill+'">'+({L:"LISTENING",R:"READING",W:"WRITING",S:"SPEAKING"}[s.skill])+'</span>'+esc(s.title)+'</span><span class="r'+(graded&&sc.e/sc.p>=0.55?" ok":"")+'">'+right+'</span></summary>';
     const body=document.createElement("div"); body.className="setbody";
     // one line per "Questions 11–16: …" block, and keep authored line breaks
-    if(s.instructions) body.insertAdjacentHTML("beforeend",'<div class="instr">'+esc(s.instructions).replace(/([.!?])\s+(?=Questions?\s+\d+\s*[–\-]\s*\d+\s*[:.])/g,"$1\n").split(/\n+/).filter(x=>x.trim()).map(x=>'<p>'+x.trim().replace(/^(Questions?\s+[\d–\-\s]+(and\s+\d+)?:?)/,'<b>$1</b>')+'</p>').join("")+'</div>');
+    const insText = s.skill==="W" ? ((String(s.instructions||"").match(/You should spend about \d+ minutes on this task\./)||[s.instructions])[0]) : s.instructions;
+    if(insText) body.insertAdjacentHTML("beforeend",'<div class="instr">'+esc(insText).replace(/([.!?])\s+(?=Questions?\s+\d+(\s*[–\-]\s*\d+)?\s*[:.])/g,"$1\n").split(/\n+/).filter(x=>x.trim()).map(x=>'<p>'+x.trim().replace(/^(Questions?\s+[\d–\-\s]+(and\s+\d+)?:?)/,'<b>$1</b>')+'</p>').join("")+'</div>');
     if(s.directions) body.insertAdjacentHTML("beforeend",'<p class="dir" style="margin:0">'+esc(s.directions)+'</p>');
     const tb=document.createElement("div"); tb.className="toolbar"; tb.appendChild(timerUI(k,s.limitMin)); body.appendChild(tb);
     if(s.skill==="W"||s.skill==="S"){
@@ -734,6 +769,7 @@ summary:focus:not(:focus-visible){outline:none}
     const hasSrc=!!(s.passage||s.script||s.chart||s.plan||s.process||s.table);
     const split=document.createElement("div"); split.className="split"+(hasSrc?" two":"");
     const src=document.createElement("div"); src.className="src"; const qs=document.createElement("div"); qs.className="qs";
+    if(s.passage||s.script) src.insertAdjacentHTML("beforeend",'<p class="scrollhint">この左側の枠は、指で上下にスクロールできます</p>');
     if(s.script){ src.appendChild(player(k,"音声（本番は1回だけ）")); }
     figures(s).forEach(f=>src.appendChild(f));
     if(s.passage){ src.appendChild(paras(s.passage,"passage")); if(graded&&s.passageJa) src.appendChild(jaBox(s.passageJa)); }
@@ -744,9 +780,9 @@ summary:focus:not(:focus-visible){outline:none}
       const w=document.createElement("div"); w.className="optsblock";
       const range='問'+from+(to>from?'〜'+to:'');
       const lettersOnly = s.options.every(o=>/^[A-Z]$/.test(String(o).trim()));
-      if(lettersOnly && s.passage) w.innerHTML='<p class="howto"><b>'+range+'</b>：左の本文で、各問の内容が書かれている<b>段落（'+esc(s.options[0])+'〜'+esc(s.options[s.options.length-1])+'）</b>を探し、「選ぶ」から段落の記号を選ぶ。同じ段落を2回以上選んでもよい。</p>';
-      else if(lettersOnly && s.plan) w.innerHTML='<p class="howto"><b>'+range+'</b>：音声を聞きながら、各問の場所が<b>地図のどの記号（'+esc(s.options[0])+'〜'+esc(s.options[s.options.length-1])+'）</b>かを「選ぶ」から選ぶ。</p>';
-      else w.innerHTML='<p class="howto"><b>'+range+'</b>は、下の選択肢から合うものを「選ぶ」で選ぶ。'+(s.options.length>s.items.filter(it=>it.type==="select").length?'使わない選択肢もある。':'同じ選択肢を2回以上使うこともある。')+'</p><div class="opts">'+s.options.map(o=>'<div>'+esc(o)+'</div>').join("")+'</div>';
+      if(lettersOnly && s.passage) w.innerHTML='<p class="howto"><b>'+range+'</b>：左の本文で、各問の内容が書かれている<b>段落（'+esc(s.options[0])+'〜'+esc(s.options[s.options.length-1])+'）</b>を探し、「選ぶ」から段落の記号を選ぶ。同じ段落を2回以上選んでもよい。（本番では記号を書く）</p>';
+      else if(lettersOnly && s.plan) w.innerHTML='<p class="howto"><b>'+range+'</b>：音声を聞きながら、各問の場所が<b>地図のどの記号（'+esc(s.options[0])+'〜'+esc(s.options[s.options.length-1])+'）</b>かを「選ぶ」から選ぶ。（本番では記号を書く）</p>';
+      else w.innerHTML='<p class="howto"><b>'+range+'</b>は、下の選択肢から合うものを「選ぶ」で選ぶ。'+(s.options.length>s.items.filter(it=>it.type==="select").length?'使わない選択肢もある。':'同じ選択肢を2回以上使うこともある。')+(/more than once/i.test(s.instructions||"")?'同じ選択肢を2回以上使ってもよい。':'')+'（本番では記号を書く）</p><div class="opts">'+s.options.map(o=>'<div>'+esc(o)+'</div>').join("")+'</div>';
       return w;
     }
     let selFrom=null, selTo=null; { let n=startNum; s.items.forEach(it=>{ if(it.type==="select"){ if(selFrom===null) selFrom=n; selTo=n; } n+=pointsOf(it); }); }
@@ -797,7 +833,7 @@ summary:focus:not(:focus-visible){outline:none}
     main.appendChild(head);
     if(current===EXAM){
       main.insertAdjacentHTML("beforeend",'<p class="cheer">いよいよ本番。2週間の積み重ねを信じて、落ち着いていこう！</p><section class="block"><h3>本番で守ること</h3><ul class="tasks">'+
-        ['持ち物：パスポート（申込時と同じもの）。集合時刻と会場を再確認','Listening：設問を先に読み、答えは設問の順に出てくる。聞き逃したら次へ','穴埋めは語数制限と綴りを確認。複数形の s を忘れない','Reading：1パッセージ約20分。分からない問題は印をつけて先へ、最後に必ず全部埋める','Writing：Task 2 に40分。どちらも語数を数える','Speaking：答え＋理由＋例。止まらず言い換えて話し続ける']
+        ['持ち物：パスポート（申込時と同じもの）。集合時刻と会場を再確認','Listening：設問を先に読み、答えは設問の順に出てくる。聞き逃したら次へ','穴埋めは語数制限と綴りを確認。複数形の s を忘れない','Reading：1パッセージ約20分。分からない問題は印をつけて先へ、最後に必ず全部埋める','Writing：Task 1 に20分・Task 2 に40分。どちらも語数（150語・250語以上）を数える','Speaking：答え＋理由＋例。止まらず言い換えて話し続ける']
         .map(t=>'<li style="grid-template-columns:1fr"><span class="txt">'+esc(t)+'</span></li>').join("")+'</ul></section>');
       return;
     }
@@ -827,7 +863,10 @@ summary:focus:not(:focus-visible){outline:none}
       if(p===40 && sets.every(s=>S.graded[current+"|"+s.id])){ const e=sets.reduce((n,s)=>n+setScore(current,s).e,0);
         ss.insertAdjacentHTML("beforeend",'<div class="result" style="margin-bottom:10px"><b>'+(sk==="L"?"Listening":"Reading")+' '+e+' / 40</b><span>バンドの目安 <span class="band">'+band(e,sk)+'</span></span></div>'); } });
     const nums={L:1,R:1};
-    d.sets.forEach(s=>{ const st = (s.skill in nums) ? nums[s.skill] : 1; ss.appendChild(renderSet(current,s, openSet?openSet===s.id:false, st)); if(s.skill in nums) nums[s.skill]+=setScore(current,s).p; });
+    // numbering follows the set's own "Questions x–y" (as in the real test); otherwise continue from the previous set
+    d.sets.forEach(s=>{ const m=[...String(s.instructions||"").matchAll(/Questions?\s+(\d+)/g)].map(x=>+x[1]);
+      let st = (s.skill in nums) ? nums[s.skill] : 1; if(m.length) st=Math.min(...m);
+      ss.appendChild(renderSet(current,s, openSet?openSet===s.id:false, st)); if(s.skill in nums) nums[s.skill]=st+setScore(current,s).p; });
     main.appendChild(ss);
     if(openSet){ const el=[...ss.querySelectorAll(".set")].find(x=>x.open); if(el) el.scrollIntoView({block:"start"}); }
   }

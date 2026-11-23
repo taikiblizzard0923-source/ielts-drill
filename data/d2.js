@@ -957,7 +957,7 @@ window.DRILL.days["2026-11-28"] = {
       "NOT GIVEN"
      ],
      "a": 0,
-     "ex": "【正解】YES\n【根拠】\"It would be a mistake to remove handwriting lessons from the primary school timetable\"（小学校の時間割から手書きの授業をなくすのは誤りだろう）\n【他の選択肢】NO：筆者は手書きの授業をなくすことに反対しているので、設問と一致する。NOT GIVEN：筆者の意見がはっきり書かれているので当てはまらない。\n【ポイント】「なくすのは誤り」＝「残すべき」。否定＋否定（mistake to remove）が肯定（should remain）に言い換えられる形に慣れよう。"
+     "ex": "【正解】YES\n【根拠】\"It would be a mistake to remove handwriting lessons from the primary school timetable\"（小学校の時間割から手書きの授業をなくすのは誤りだろう）\n【他の選択肢】NO：筆者は手書きの授業をなくすことに反対しており、これは設問（授業は残すべき）と一致するので NO ではない。NOT GIVEN：筆者の意見がはっきり書かれているので当てはまらない。\n【ポイント】「なくすのは誤り」＝「残すべき」。否定＋否定（mistake to remove）が肯定（should remain）に言い換えられる形に慣れよう。"
     },
     {
      "type": "mc",
@@ -996,8 +996,8 @@ window.DRILL.days["2026-11-28"] = {
      "task": 2,
      "prompt": "Some people think that children should start learning a foreign language at primary school, while others believe it is better to wait until secondary school.\n\nDiscuss both these views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
      "minWords": 250,
-     "model": "Nowadays, many people discuss when children should begin studying a foreign language. Some people believe that lessons should start at primary school, while others think it is better to wait until secondary school. In my opinion, children should start early if the lessons are good.\n\nOn the one hand, there are some reasons to wait until secondary school. First, young children are still learning their first language, so a second language may confuse them. Second, many primary school teachers are not trained to teach languages, so the lessons may not be very good. Also, older students can understand grammar rules and study by themselves, so they can learn faster.\n\nOn the other hand, there are also good reasons to start at primary school. Young children are not afraid of making mistakes, and they can copy new sounds easily. This helps them to get good pronunciation. In addition, if they start early, they have more years to practise the language. For example, in countries where English is taught from the age of six, many young people can speak English with confidence.\n\nPersonally, I agree with the second view. It is true that older students can understand grammar more quickly. However, it is difficult for them to get natural pronunciation and confidence later. The government should also train primary school teachers, because early lessons are only useful when the teaching is good. Short lessons with songs and games are a good way to help young children enjoy learning.\n\nIn conclusion, although both views have some good points, I believe that children should start learning a foreign language at primary school, as long as they have good teachers.",
-     "modelJa": "今日、子どもがいつ外国語の勉強を始めるべきかについて、多くの人が議論している。授業は小学校で始めるべきだと考える人がいる一方で、中学校まで待つほうが良いと考える人もいる。私の意見では、授業が良いものであれば、子どもは早く始めるべきだ。\n\n一方では、中学校まで待つべき理由がいくつかある。第一に、幼い子どもはまだ第一言語を学んでいる途中なので、第二言語は彼らを混乱させるかもしれない。第二に、多くの小学校の先生は語学を教える訓練を受けていないので、授業があまり良くないかもしれない。また、年上の生徒は文法のルールを理解して自分で勉強できるので、速く学ぶことができる。\n\n他方、小学校で始めるべきもっともな理由もある。幼い子どもは間違えることを恐れず、新しい音を簡単にまねできる。これは良い発音を身につけるのに役立つ。さらに、早く始めれば、その言語を練習する年数が多くなる。たとえば、6歳から英語を教えている国では、多くの若者が自信をもって英語を話せる。\n\n個人的には、私は二つ目の意見に賛成だ。年上の生徒のほうが文法を速く理解できるのは確かだ。しかし、彼らが後から自然な発音と自信を身につけるのは難しい。また、早い時期の授業は教え方が良いときにだけ役に立つので、政府は小学校の先生を訓練するべきだ。歌やゲームを使った短い授業は、幼い子どもが楽しく学ぶための良い方法だ。\n\n結論として、どちらの意見にも良い点はあるが、良い先生がいるのであれば、子どもは小学校で外国語を学び始めるべきだと私は考える。",
+     "model": "Nowadays, many people discuss when children should begin studying a foreign language. Some people believe that lessons should start at primary school, while others think it is better to wait until secondary school. In my opinion, children should start early if the lessons are good.\n\nOn the one hand, there are some reasons to wait until secondary school. First, young children are still learning their first language, so a second language may confuse them. Second, many primary school teachers are not trained to teach languages, so the lessons may not be very good. Also, older students can understand grammar rules and study by themselves, so they can learn faster.\n\nOn the other hand, there are also good reasons to start at primary school. Young children are not afraid of making mistakes, and they can copy new sounds easily. This helps them to get good pronunciation. In addition, if they start early, they have more years to practise the language. For example, in countries where English is taught from the age of six, many young people can speak English with confidence.\n\nPersonally, I agree with the view that children should start at primary school. It is true that older students can understand grammar more quickly. However, it is difficult for them to get natural pronunciation and confidence later. The government should also train primary school teachers, because early lessons are only useful when the teaching is good. Short lessons with songs and games are a good way to help young children enjoy learning.\n\nIn conclusion, although both views have some good points, I believe that children should start learning a foreign language at primary school, as long as they have good teachers.",
+     "modelJa": "今日、子どもがいつ外国語の勉強を始めるべきかについて、多くの人が議論している。授業は小学校で始めるべきだと考える人がいる一方で、中学校まで待つほうが良いと考える人もいる。私の意見では、授業が良いものであれば、子どもは早く始めるべきだ。\n\n一方では、中学校まで待つべき理由がいくつかある。第一に、幼い子どもはまだ第一言語を学んでいる途中なので、第二言語は彼らを混乱させるかもしれない。第二に、多くの小学校の先生は語学を教える訓練を受けていないので、授業があまり良くないかもしれない。また、年上の生徒は文法のルールを理解して自分で勉強できるので、速く学ぶことができる。\n\n他方、小学校で始めるべきもっともな理由もある。幼い子どもは間違えることを恐れず、新しい音を簡単にまねできる。これは良い発音を身につけるのに役立つ。さらに、早く始めれば、その言語を練習する年数が多くなる。たとえば、6歳から英語を教えている国では、多くの若者が自信をもって英語を話せる。\n\n個人的には、私は子どもは小学校から始めるべきだという意見に賛成だ。年上の生徒のほうが文法を速く理解できるのは確かだ。しかし、彼らが後から自然な発音と自信を身につけるのは難しい。また、早い時期の授業は教え方が良いときにだけ役に立つので、政府は小学校の先生を訓練するべきだ。歌やゲームを使った短い授業は、幼い子どもが楽しく学ぶための良い方法だ。\n\n結論として、どちらの意見にも良い点はあるが、良い先生がいるのであれば、子どもは小学校で外国語を学び始めるべきだと私は考える。",
      "modelParts": [
       {
        "label": "Introduction（導入＋意見）",
@@ -1019,8 +1019,8 @@ window.DRILL.days["2026-11-28"] = {
       },
       {
        "label": "Body 3（自分の意見）",
-       "en": "Personally, I agree with the second view. It is true that older students can understand grammar more quickly. However, it is difficult for them to get natural pronunciation and confidence later. The government should also train primary school teachers, because early lessons are only useful when the teaching is good. Short lessons with songs and games are a good way to help young children enjoy learning.",
-       "ja": "個人的には、私は二つ目の意見に賛成だ。年上の生徒のほうが文法を速く理解できるのは確かだ。しかし、彼らが後から自然な発音と自信を身につけるのは難しい。また、早い時期の授業は教え方が良いときにだけ役に立つので、政府は小学校の先生を訓練するべきだ。歌やゲームを使った短い授業は、幼い子どもが楽しく学ぶための良い方法だ。",
+       "en": "Personally, I agree with the view that children should start at primary school. It is true that older students can understand grammar more quickly. However, it is difficult for them to get natural pronunciation and confidence later. The government should also train primary school teachers, because early lessons are only useful when the teaching is good. Short lessons with songs and games are a good way to help young children enjoy learning.",
+       "ja": "個人的には、私は子どもは小学校から始めるべきだという意見に賛成だ。年上の生徒のほうが文法を速く理解できるのは確かだ。しかし、彼らが後から自然な発音と自信を身につけるのは難しい。また、早い時期の授業は教え方が良いときにだけ役に立つので、政府は小学校の先生を訓練するべきだ。歌やゲームを使った短い授業は、幼い子どもが楽しく学ぶための良い方法だ。",
        "point": "自分の意見を理由つきで書く段落。It is true that ... . However, ... で相手の意見を一度認めてから反論すると説得力が出る。序論の if the lessons are good とつながる内容（先生の訓練）を入れて、立場がぶれないようにしている。"
       },
       {
@@ -1087,6 +1087,11 @@ window.DRILL.days["2026-11-28"] = {
        "結論で条件を言い換える。序論の if と同じ意味"
       ],
       [
+       "Personally, I agree with the view that ...",
+       "個人的には…という意見に賛成だ",
+       "自分の立場は the second view のように番号で書かず、内容で書く。番号だと問題文の順番と逆になるミスが起きやすい"
+      ],
+      [
        "both views have some good points",
        "どちらの意見にも良い点がある",
        "結論で両方の意見に触れたことを示す決まり文句"
@@ -1151,8 +1156,8 @@ window.DRILL.days["2026-11-28"] = {
        "たとえば…の国では"
       ],
       [
-       "Personally, I agree with the second view.",
-       "個人的には二つ目の意見に賛成だ"
+       "Personally, I agree with the view that children should start at primary school.",
+       "個人的には、子どもは小学校から始めるべきだという意見に賛成だ（second view などと番号で書かず、立場を名前で書く）"
       ],
       [
        "Although ..., ...",
@@ -1201,7 +1206,7 @@ window.DRILL.days["2026-11-30"] = {
   },
   {
    "min": 15,
-   "text": "セットA（Speaking Part 3）：6問それぞれ60秒で声に出して答え、スマホで録音（8分）→ 模範解答と phrases を読み、2問を言い直して録音（7分）"
+   "text": "セットA（Speaking Part 3）：6問それぞれ40〜60秒で声に出して答え、スマホで録音（8分）→ 模範解答と phrases を読み、2問を言い直して録音（7分）"
   },
   {
    "min": 15,
@@ -1301,7 +1306,7 @@ window.DRILL.days["2026-11-30"] = {
    "title": "Speaking Part 3（Education and technology）",
    "limitMin": 8,
    "instructions": "Part 3: Discussion. The examiner will ask you some more general questions about education and technology. Answer each question in about one minute.",
-   "directions": "Part 3 は「意見＋理由＋例（または対比）」の3ステップで、1問30〜60秒話すことを目指す。",
+   "directions": "Part 3 は「意見＋理由＋例（または対比）」の3ステップで、1問40〜60秒話すことを目指す。",
    "items": [
     {
      "type": "speak",
@@ -1428,7 +1433,7 @@ window.DRILL.days["2026-11-30"] = {
      "pitfalls": [
       [
        "Yes / No だけ、または1〜2文で終わる",
-       "答え → 理由 → 例 → まとめ の4ステップを最低限話す。例は自分や友達の経験でもよい"
+       "答え → 理由 → 例 → まとめ の4ステップを最低限話す（1問 40〜60秒が目安）。例は自分や友達の経験でもよい"
       ],
       [
        "I think を毎回の文頭で連発する",
@@ -1486,7 +1491,7 @@ window.DRILL.days["2026-11-30"] = {
       ]
      ],
      "checklist": [
-      "【流暢さ】各質問に沈黙せず30秒以上（4〜5文）話し続けた",
+      "【流暢さ】各質問に沈黙せず40〜60秒（4〜5文）話し続けた",
       "【流暢さ】最初の1文で質問に直接答え（Yes / No / I think ... / Not really.）、そのあと理由を足した",
       "【一貫性】because / for example / on the other hand / so でつなぎ、理由・例・まとめを順に話した",
       "【一貫性】最後に So ... の1文でまとめた",

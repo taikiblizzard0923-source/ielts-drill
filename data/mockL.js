@@ -350,7 +350,7 @@ window.DRILL.days["2026-11-29"] = {
     "パート1。自転車を借りたい女性とレンタサイクル店の店員の電話の会話を聞きます。まず、問題1〜5に目を通す時間があります。",
     "",
     "では、よく聞いて問題1〜5に答えなさい。",
-    "おはようございます、コーストライン・サイクル・ハイヤーです。ご用件をどうぞ。",
+    "おはようございます、コーストライン・レンタサイクルです。ご用件をどうぞ。",
     "もしもし。来月夫とそちらの地域に滞在する予定で、自転車を2台借りたいんです。事前に予約できますか。",
     "はい、もちろんです。夏はとても混むので、予約されるのは良い考えですよ。予約フォームを開きますね。まず名字をお願いできますか。",
     "はい、フォークナーです。F、A、U、L、K、N、E、R です。",
@@ -1242,9 +1242,10 @@ window.DRILL.days["2026-11-29"] = {
      "q": "Problems: the high ________ of building a green roof",
      "limit": "ONE WORD ONLY",
      "accept": [
-      "cost"
+      "cost",
+      "costs"
      ],
-     "ex": "【正解】cost\n【根拠】\"The biggest problem is cost. A green roof can cost two or three times as much to build as an ordinary roof\"（＝最大の問題は費用。普通の屋根の2〜3倍の建設費がかかる）\n【よくあるミス】the high ___ of building と単数の形なので costs ではなく cost が自然。price は音声に出てこない。\n【ポイント】The biggest problem is … は重要情報の合図。Problems という見出しに入ったら最初の名詞を逃さない。"
+     "ex": "【正解】cost（costs も可）\n【根拠】\"The biggest problem is cost. A green roof can cost two or three times as much to build as an ordinary roof\"（＝最大の問題は費用。普通の屋根の2〜3倍の建設費がかかる）\n【よくあるミス】本文（音声）が The biggest problem is cost. と cost を使っているので cost が最適（costs も可）。price は音声に出てこない。\n【ポイント】The biggest problem is … は重要情報の合図。Problems という見出しに入ったら最初の名詞を逃さない。"
     },
     {
      "type": "fill",

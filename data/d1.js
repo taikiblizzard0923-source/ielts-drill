@@ -351,7 +351,7 @@ window.DRILL.days["2026-11-23"] = {
      "accept": [
       "Pennock"
      ],
-     "ex": "【正解】Pennock\n【根拠】\"Sure. It's P, E, N, N, O, C, K.\"（＝はい。P、E、N、N、O、C、Kです。）\n【よくあるミス】N を1つしか書かない（Penock）、最後の C と K を逆にする、などの綴りミス。IELTS は綴りが1文字でも違えば不正解。同じ文字が続くときは \"double N\" と言われることもあるので注意。\n【ポイント】Part 1 の名前は必ず1文字ずつ読み上げられる。聞きながらメモ用紙に1文字ずつ書き、最後に文字数を数えて確認しよう。"
+     "ex": "【正解】Pennock\n【根拠】\"Sure. It's P, E, N, N, O, C, K.\"（＝はい。P、E、N、N、O、C、Kです。）\n【よくあるミス】N を1つしか書かない（Penock）、最後の C と K を逆にする、などの綴りミス。IELTS は綴りが1文字でも違えば不正解。同じ文字が続くときは \"double N\" と言われることもあるので注意。\n【ポイント】Part 1 の名前は多くの場合1文字ずつ読み上げられる。聞きながらメモ用紙に1文字ずつ書き、最後に文字数を数えて確認しよう。"
     },
     {
      "type": "fill",
@@ -761,14 +761,14 @@ window.DRILL.days["2026-11-23"] = {
    "skill": "R",
    "title": "Reading Passage（模試）",
    "limitMin": 20,
-   "instructions": "You should spend about 20 minutes on Questions 1–13, which are based on the Reading Passage below. Questions 1–5: Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+   "instructions": "You should spend about 20 minutes on Questions 1–13, which are based on the Reading Passage below. Questions 1–5: Do the following statements agree with the information given in the Reading Passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this. Questions 6–8: Choose the correct letter, A, B, C or D. Questions 9–13: Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
    "directions": "先に設問をざっと見てから本文へ。TFNG は本文の順に答えが並ぶので、1問ずつ該当箇所を探して読み進めよう。",
    "passage": "# Farming Above the Streets\n\nFor most of human history, food was grown close to where people lived. Small vegetable plots, fruit trees and farm animals were a normal part of town life until the late nineteenth century, when railways and refrigerated transport made it cheaper to grow food in the countryside and carry it into cities. Today, however, a growing number of city planners, architects and community groups are bringing agriculture back into urban areas, and many of them are looking upwards. Flat roofs, which cover a surprisingly large proportion of most city centres, are increasingly being turned into farms.\n\nThe idea is not entirely new. During the Second World War, residents of several European cities kept vegetable gardens on top of apartment blocks to make up for food shortages. What is different now is the scale and the technology. A modern rooftop farm may cover several thousand square metres and use computer-controlled watering systems, sensors that measure the moisture in the soil, and lightweight growing materials designed to reduce the load on the building. In Harlow Point, a former warehouse district in a northern European port city, a single rooftop farm now supplies salad vegetables to more than forty local restaurants.\n\nSupporters point to a range of benefits. The most obvious is freshness: vegetables harvested in the morning can be on a customer's plate the same day, and because they travel only a short distance, less fuel is used to transport them. Rooftop gardens also help to cool buildings. A layer of soil and plants absorbs heat that would otherwise pass through the roof, and in one study researchers found that the room directly below a planted roof was up to four degrees cooler on hot summer afternoons. In addition, plants and soil hold rainwater, which reduces the pressure on city drainage systems during heavy storms.\n\nThere are social advantages as well. Many rooftop projects are run by community organisations rather than businesses, and they offer local residents, particularly those living in flats without gardens, the chance to grow their own food. Some schools use nearby rooftop farms as outdoor classrooms, where children learn about plant biology and healthy eating. According to project organisers, volunteers often say that the greatest benefit is not the food itself but the opportunity to meet neighbours they had never spoken to before.\n\nDespite this enthusiasm, rooftop farming faces serious practical challenges. The first is weight. Wet soil is extremely heavy, and many older buildings were never designed to carry such loads. Before a farm can be built, engineers must examine the structure, and in some cases the roof has to be strengthened, which can be expensive. Access is a second problem: soil, tools and harvested crops all have to be carried up and down, and if a building has no lift, this can be slow and tiring work. Finally, rooftops are exposed to strong winds, which can damage young plants and dry out the soil quickly. For this reason, many farms put up low walls or nets around their growing areas, although these add further weight and cost.\n\nCost is perhaps the most significant obstacle. Setting up a commercial rooftop farm requires a large initial investment, and because the growing area is limited, the amount of food produced is small compared with a conventional farm. As a result, most rooftop farms grow high-value crops such as herbs, salad leaves and tomatoes, which can be sold at good prices and take up little room, rather than staple foods like wheat or potatoes, which need far more space. Critics argue that, for this reason, rooftop farming will never make a meaningful contribution to feeding a city's population. Supporters reply that this misses the point. The aim, they say, is not to replace traditional agriculture but to make cities greener and to reconnect people with the source of their food.\n\nGovernments in some regions have started to encourage the trend. In certain cities, new commercial buildings above a certain size must include either solar panels or a green roof, and owners who install a rooftop garden may receive a reduction in local taxes. Planners hope that these policies will gradually change the appearance of city skylines, replacing grey concrete with green spaces.\n\nWhether rooftop farms will become a normal feature of urban life remains uncertain. Much will depend on whether new buildings are designed from the start to support them, which would remove many of the engineering difficulties described above. What seems clear is that the flat, empty roof, once regarded as wasted space, is now being seen as a valuable resource.",
    "passageJa": "# 街の上の農業\n\n人類の歴史の大半において、食料は人々が住む場所の近くで育てられていた。小さな野菜畑、果樹、家畜は、19世紀後半まで町の暮らしのごく普通の一部だった。その頃、鉄道と冷蔵輸送によって、田舎で食料を育てて都市に運ぶ方が安くなったのである。しかし今日、ますます多くの都市計画家、建築家、地域団体が農業を都市部に呼び戻しており、その多くが上を見上げている。ほとんどの都心部で驚くほど大きな割合を占める平らな屋上が、次々と農場に変わりつつあるのだ。\n\nこの発想はまったく新しいものではない。第二次世界大戦中、ヨーロッパのいくつかの都市の住民は、食料不足を補うためにアパートの屋上で菜園を営んでいた。現在違うのは規模と技術である。現代の屋上農場は数千平方メートルに及ぶこともあり、コンピューター制御の散水装置、土の水分を測るセンサー、建物への負荷を減らすよう設計された軽量の栽培用資材を使う。北ヨーロッパのある港湾都市の旧倉庫街ハーロウ・ポイントでは、1つの屋上農場が今や40軒を超える地元レストランにサラダ用野菜を供給している。\n\n支持者はさまざまな利点を挙げる。最もわかりやすいのは鮮度だ。朝に収穫した野菜がその日のうちに客の皿に載ることもあり、運ぶ距離が短いので輸送に使う燃料も少なくて済む。屋上庭園は建物を涼しくするのにも役立つ。土と植物の層が、本来なら屋根を通り抜ける熱を吸収するのだ。ある研究では、植物を植えた屋上の真下の部屋は、暑い夏の午後に最大4度涼しかったことがわかった。さらに、植物と土は雨水を保持するので、大雨の際に都市の排水設備にかかる負担が減る。\n\n社会的な利点もある。屋上プロジェクトの多くは企業ではなく地域団体によって運営され、地元住民、とりわけ庭のない集合住宅に住む人々に、自分で食べ物を育てる機会を提供している。近くの屋上農場を屋外教室として使い、子どもたちが植物の生物学や健康的な食事について学ぶ学校もある。プロジェクトの主催者によれば、ボランティアはしばしば、最大の利点は食べ物そのものではなく、それまで話したことのなかった近所の人と出会える機会だと言うそうだ。\n\nこうした熱意にもかかわらず、屋上農業は深刻な実際上の課題に直面している。1つ目は重さである。濡れた土は非常に重く、古い建物の多くはそのような荷重に耐えるよう設計されていない。農場を作る前に技術者が構造を調べなければならず、場合によっては屋根を補強する必要があり、それには費用がかかる。2つ目の問題は出入りだ。土、道具、収穫した作物はすべて運び上げたり下ろしたりしなければならず、建物にエレベーターがなければ、時間がかかって疲れる作業になる。最後に、屋上は強風にさらされ、若い植物が傷んだり土がすぐに乾いたりする。そのため多くの農場は栽培区画の周りに低い壁やネットを設けるが、それがさらに重さと費用を増やすことになる。\n\nおそらく最大の障害は費用である。商業用の屋上農場を作るには多額の初期投資が必要で、栽培面積が限られているため、生産量は通常の農場に比べて少ない。その結果、ほとんどの屋上農場は、小麦やジャガイモのようにはるかに広い面積を必要とする主食作物ではなく、高値で売れて場所をとらないハーブ、サラダ用の葉野菜、トマトなどの高付加価値作物を育てている。批判的な人々は、このため屋上農業は都市の人口を養うことに意味のある貢献をすることは決してないと主張する。支持者はそれは的外れだと反論する。目的は従来の農業に取って代わることではなく、都市をより緑豊かにし、人々を食べ物の源とつなぎ直すことなのだという。\n\n一部の地域の政府は、この流れを後押しし始めている。ある都市では、一定規模以上の新しい商業ビルには太陽光パネルか緑化屋上のどちらかを設置することが義務づけられ、屋上庭園を設けた所有者は地方税の減額を受けられることがある。計画担当者たちは、こうした政策によって、灰色のコンクリートが緑の空間に置き換わり、都市のスカイラインの姿が徐々に変わることを期待している。\n\n屋上農場が都市生活の当たり前の一部になるかどうかはまだわからない。多くは、新しい建物が最初から屋上農場を支えられるよう設計されるかどうかにかかっており、そうなれば上で述べた技術的な困難の多くがなくなるだろう。はっきりしているのは、かつて無駄な空間とみなされていた平らで何もない屋上が、今では貴重な資源と見られているということである。",
    "items": [
     {
      "type": "mc",
-     "q": "Questions 1–5. Do the following statements agree with the information given in the Reading Passage? 1  Food production moved away from towns partly because of improvements in transport.",
+     "q": "Food production moved away from towns partly because of improvements in transport.",
      "choices": [
       "TRUE",
       "FALSE",
@@ -823,7 +823,7 @@ window.DRILL.days["2026-11-23"] = {
     },
     {
      "type": "mc",
-     "q": "Questions 6–8. Choose the correct letter, A, B, C or D. 6  What does the writer say about older buildings?",
+     "q": "What does the writer say about older buildings?",
      "choices": [
       "A  They usually have no lift.",
       "B  They may not be strong enough to hold wet soil.",
@@ -859,7 +859,7 @@ window.DRILL.days["2026-11-23"] = {
     },
     {
      "type": "fill",
-     "q": "Questions 9–13. Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer. Government support: In some cities, large new ________ buildings must have solar panels or a green roof.",
+     "q": "Government support: In some cities, large new ________ buildings must have solar panels or a green roof.",
      "limit": "NO MORE THAN TWO WORDS",
      "accept": [
       "commercial"
@@ -1096,8 +1096,8 @@ window.DRILL.days["2026-11-23"] = {
        "追い越す"
       ],
       [
-       "more than three times the figure for …",
-       "〜の数字の3倍を超える"
+       "more than twice the figure for …",
+       "〜の数字の2倍を超える（例：2020年の自転車31%は2005年の12%の2倍以上）"
       ],
       [
        "a fall of 16 percentage points",
@@ -1792,11 +1792,11 @@ window.DRILL.days["2026-11-25"] = {
   },
   {
    "min": 5,
-   "text": "セットB（Writing Task 2）の plan を読み、段落構成テンプレート（Intro→Body1→Body2→反論→Conclusion）を書き写す"
+   "text": "セットB（Writing Task 2）の plan を読み、4段落の構成テンプレート（Intro→Body1→Body2（最後に反対意見に1文触れる）→Conclusion）を書き写す"
   },
   {
    "min": 22,
-   "text": "セットBを22分で書く（本番は40分。今日は短縮版として各段落を簡潔に、250語を目標）"
+   "text": "セットBを22分で書く（本番は40分・250語以上。今日は短縮版として各段落を簡潔に、約200語を目標）"
   },
   {
    "min": 8,
@@ -1890,8 +1890,8 @@ window.DRILL.days["2026-11-25"] = {
    "id": "A",
    "skill": "R",
    "title": "Reading Passage",
-   "limitMin": 20,
-   "instructions": "You should spend about 20 minutes on Questions 1–10, which are based on the Reading Passage below. Questions 1–8: Do the following statements agree with the information given in the Reading Passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+   "limitMin": 18,
+   "instructions": "You should spend about 20 minutes on Questions 1–10, which are based on the Reading Passage below. Questions 1–8: Do the following statements agree with the information given in the Reading Passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this. Questions 9–10: Choose the correct letter, A, B, C or D.",
    "directions": "FALSE は「本文と矛盾する」、NOT GIVEN は「本文に情報がない」。迷ったら「本文のどの文が反対のことを言っているか」を指させるか確かめよう。",
    "passage": "# City Songs: How Birds Adapt to Urban Noise\n\nAnyone who has walked through a city park early in the morning will know that birds can survive surprisingly well in urban areas. Pigeons, sparrows and blackbirds are common in almost every large city. Yet towns and cities present birds with a problem that their ancestors never faced: noise. Traffic, construction work and aircraft produce a constant background sound, and for animals that depend on song to communicate, this can be a serious difficulty.\n\nBirds use song for two main purposes. Males sing to attract a partner and to warn other males to keep away from their territory. If a song cannot be heard clearly, a male may fail to find a mate, or he may have to spend more time and energy defending his area. Scientists have therefore been interested in whether city birds change the way they sing.\n\nOne of the first detailed studies was carried out by a team led by Dr Helena Voss, who recorded great tits in ten European cities and compared them with great tits living in nearby forests. The city birds sang faster and at a higher pitch than their forest relatives. Most traffic noise is low in pitch, so a higher song is less likely to be covered by the sound of engines. Interestingly, the birds living closest to the busiest roads showed the greatest changes. Similar results have since been reported for several other species.\n\nSome birds have adopted a different strategy: they change the time at which they sing. Robins in busy city centres have been observed singing at night, when the streets are quieter. Researchers at first believed that street lights were responsible for this behaviour, since artificial light can confuse birds about the time of day. However, later observations showed that daytime noise levels were a much better predictor of night singing than the amount of light.\n\nSinging more loudly is another option. When background noise increases, many birds raise the volume of their songs, in much the same way that people speak more loudly in a busy restaurant. This, however, has a cost. Loud singing requires more energy, and it may also make birds easier for predators such as cats to find.\n\nNot all species are able to adjust. Birds whose songs are naturally low in pitch, such as pigeons and doves, find it hard to make themselves heard above traffic, and some studies suggest that these species are becoming less common in the noisiest parts of cities. This raises an important question for conservation: as cities continue to grow, the variety of birds living in them may decrease.\n\nThere is also debate about why the changes happen and whether they are permanent. Some scientists believe that city birds simply learn their songs from the birds around them, so higher-pitched songs are passed on from one generation to the next. Others argue that natural selection may be involved, with birds that sing at a higher pitch producing more young. It is likely that both factors play a part, but more research is needed.\n\nMeanwhile, some city councils have begun to take action. Quieter road surfaces, lower speed limits and lines of trees along busy roads can all reduce noise. In one city, for example, replacing an old road surface reduced traffic noise by about three decibels, roughly the same effect as halving the number of cars. Although these measures are usually introduced to benefit human residents, they may also help the birds that share our cities.",
    "passageJa": "# 都市の歌：鳥は都市の騒音にどう適応するか\n\n朝早く都市の公園を歩いたことがある人なら、鳥が都市部で驚くほどうまく生き延びていることを知っているだろう。ハト、スズメ、クロウタドリはほとんどすべての大都市でよく見られる。しかし町や都市は、鳥の祖先が直面したことのない問題を鳥に突きつけている。騒音である。交通、建設工事、航空機は絶え間ない背景音を生み出し、歌に頼って意思疎通をする動物にとって、これは深刻な困難になりうる。\n\n鳥が歌うのには主に2つの目的がある。オスはつがいの相手を引きつけるため、そして他のオスに縄張りに近づくなと警告するために歌う。歌がはっきり聞こえなければ、オスは相手を見つけられなかったり、縄張りを守るのにより多くの時間とエネルギーを使わなければならなかったりする。そのため科学者たちは、都市の鳥が歌い方を変えるのかどうかに関心を持ってきた。\n\n最初期の詳しい研究の一つは、ヘレナ・ヴォス博士が率いるチームによって行われた。チームはヨーロッパの10都市でシジュウカラの声を録音し、近くの森に住むシジュウカラと比較した。都市の鳥は森の仲間よりも速く、高い音で歌っていた。交通騒音のほとんどは低い音なので、高い歌の方がエンジン音にかき消されにくい。興味深いことに、最も交通量の多い道路の近くに住む鳥ほど、変化が最も大きかった。その後、他のいくつかの種でも同様の結果が報告されている。\n\n別の戦略をとる鳥もいる。歌う時間を変えるのである。にぎやかな都心のコマドリは、通りが静かになる夜に歌うのが観察されている。研究者たちは当初、この行動の原因は街灯だと考えていた。人工の光は鳥に時間帯を誤らせることがあるからだ。しかしその後の観察で、夜に歌うかどうかは、光の量よりも昼間の騒音レベルの方がはるかによく予測できることがわかった。\n\nもっと大きな声で歌うのも一つの方法だ。背景の騒音が大きくなると、多くの鳥は、人がにぎやかなレストランで大きな声で話すのとほぼ同じように、歌の音量を上げる。しかしこれには代償がある。大きな声で歌うにはより多くのエネルギーが必要で、さらに猫などの捕食者に見つかりやすくなるかもしれない。\n\nすべての種が適応できるわけではない。ハトやキジバトのように、もともと歌が低い音の鳥は、交通音の上に自分の声を届けるのが難しく、いくつかの研究では、こうした種が都市の最も騒がしい地域で減ってきていることが示唆されている。これは保護の観点から重要な問題を提起する。都市が拡大し続けるにつれて、そこに住む鳥の種類が減るかもしれないのである。\n\n変化がなぜ起こるのか、そしてそれが永続的なものなのかについても議論がある。都市の鳥は単に周りの鳥から歌を学ぶので、高い歌が世代から世代へと受け継がれるだけだと考える科学者もいる。一方で、高い音で歌う鳥ほど多くの子を残すという自然選択が関わっている可能性を主張する科学者もいる。おそらく両方の要因が関係しているが、さらなる研究が必要である。\n\nその一方で、対策を始めた市議会もある。静かな路面、低い速度制限、交通量の多い道路沿いの並木は、どれも騒音を減らすことができる。例えばある都市では、古い路面を張り替えたことで交通騒音が約3デシベル下がった。これは車の数を半分にするのとほぼ同じ効果である。こうした対策はふつう人間の住民のために導入されるが、都市で私たちと共に暮らす鳥の助けにもなるかもしれない。",
@@ -1986,7 +1986,7 @@ window.DRILL.days["2026-11-25"] = {
     },
     {
      "type": "mc",
-     "q": "Questions 9–10. Choose the correct letter, A, B, C or D. 9  What does the writer say about birds with naturally low songs?",
+     "q": "What does the writer say about birds with naturally low songs?",
      "choices": [
       "A  They sing more loudly than other species.",
       "B  They may be declining in the noisiest areas.",
@@ -2014,17 +2014,17 @@ window.DRILL.days["2026-11-25"] = {
    "id": "B",
    "skill": "W",
    "title": "Writing Task 2",
-   "limitMin": 40,
+   "limitMin": 22,
    "instructions": "You should spend about 40 minutes on this task. Write at least 250 words.",
-   "directions": "最初の5分で「賛成か反対か（立場）」と各段落の理由を1つずつ決める。立場は最初から最後まで変えないこと。",
+   "directions": "今日は短縮版（22分・約200語目標）。本番は40分・250語以上。最初の3分で「賛成か反対か（立場）」と各段落の理由を1つずつ決める。立場は最初から最後まで変えないこと。",
    "items": [
     {
      "type": "write",
      "task": 2,
      "minWords": 250,
      "prompt": "Write about the following topic:\n\nSome people believe that all secondary school students should be required to do unpaid community work as part of their education.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
-     "model": "Some people think that every student at secondary school should do community work without pay as a part of their school education. I agree with this idea because this kind of work can teach students useful skills and help them understand their local area.\n\nFirstly, community work gives students a chance to learn important skills which they cannot easily learn in the classroom. For example, if students help at a care home for elderly people, they have to talk with people of different ages and work together with other volunteers. These communication and teamwork skills will be very useful when they go to university or start working in the future. At my school, some students cleaned a local park last year, and they said that they learned how to plan their work as a team.\n\nSecondly, community work can help young people understand the problems in their local area. Many teenagers spend most of their time at school or at home, so they do not know much about the people who live around them. However, when they help elderly people or clean the streets, they can see these problems with their own eyes. As a result, they may become more interested in their community and want to help other people even after they leave school.\n\nIn conclusion, I agree that secondary school students should do unpaid community work. Although some people say that students are too busy with their studies, a few hours a week will not cause serious problems. This work can teach students useful skills and make them more caring members of society.",
-     "modelJa": "中等学校のすべての生徒が、学校教育の一部として無償で地域奉仕活動をするべきだと考える人がいる。この種の活動は生徒に役立つスキルを教え、自分の住む地域を理解する助けになるので、私はこの考えに賛成する。\n\n第一に、地域奉仕活動は、教室では簡単に学べない大切なスキルを学ぶ機会を生徒に与える。例えば、生徒が高齢者の介護施設を手伝う場合、さまざまな年齢の人と話し、ほかのボランティアと協力して働かなければならない。こうしたコミュニケーション能力やチームワークの力は、大学に進んだり将来働き始めたりするときにとても役立つだろう。私の学校では、昨年何人かの生徒が地域の公園を清掃し、チームとして作業を計画する方法を学んだと話していた。\n\n第二に、地域奉仕活動は若者が自分の地域の問題を理解する助けになる。多くの10代は時間のほとんどを学校か家で過ごすので、周りに住んでいる人たちのことをあまり知らない。しかし、高齢者を手伝ったり道を掃除したりすると、こうした問題を自分の目で見ることができる。その結果、地域にもっと関心を持ち、学校を卒業した後も他の人を助けたいと思うようになるかもしれない。\n\n結論として、私は中等学校の生徒が無償の地域奉仕活動をするべきだという考えに賛成する。生徒は勉強で忙しすぎると言う人もいるが、週に数時間なら大きな問題にはならないだろう。この活動は生徒に役立つスキルを教え、より思いやりのある社会の一員にしてくれる。",
+     "model": "Some people think that every student at secondary school should do community work without pay as a part of their school education. I agree with this idea because this kind of work can teach students useful skills and help them understand their local area.\n\nFirstly, community work gives students a chance to learn important skills which they cannot easily learn in the classroom. For example, if students help at a care home for elderly people, they have to talk with people of different ages and work together with other volunteers. These communication and teamwork skills will be very useful when they go to university or start working in the future. At my school, some students cleaned a local park last year, and they said that they learned how to plan their work as a team.\n\nSecondly, community work can help young people understand the problems in their local area. Many teenagers spend most of their time at school or at home, so they do not know much about the people who live around them. However, when they help elderly people or clean the streets, they can see these problems with their own eyes. As a result, they may become more interested in their community and want to help other people even after they leave school. Although some people say that students are too busy with their studies, a few hours a week will not cause serious problems.\n\nIn conclusion, I agree that secondary school students should do unpaid community work. This work can teach students useful skills and make them more caring members of society.",
+     "modelJa": "中等学校のすべての生徒が、学校教育の一部として無償で地域奉仕活動をするべきだと考える人がいる。この種の活動は生徒に役立つスキルを教え、自分の住む地域を理解する助けになるので、私はこの考えに賛成する。\n\n第一に、地域奉仕活動は、教室では簡単に学べない大切なスキルを学ぶ機会を生徒に与える。例えば、生徒が高齢者の介護施設を手伝う場合、さまざまな年齢の人と話し、ほかのボランティアと協力して働かなければならない。こうしたコミュニケーション能力やチームワークの力は、大学に進んだり将来働き始めたりするときにとても役立つだろう。私の学校では、昨年何人かの生徒が地域の公園を清掃し、チームとして作業を計画する方法を学んだと話していた。\n\n第二に、地域奉仕活動は若者が自分の地域の問題を理解する助けになる。多くの10代は時間のほとんどを学校か家で過ごすので、周りに住んでいる人たちのことをあまり知らない。しかし、高齢者を手伝ったり道を掃除したりすると、こうした問題を自分の目で見ることができる。その結果、地域にもっと関心を持ち、学校を卒業した後も他の人を助けたいと思うようになるかもしれない。生徒は勉強で忙しすぎると言う人もいるが、週に数時間なら大きな問題にはならないだろう。\n\n結論として、私は中等学校の生徒が無償の地域奉仕活動をするべきだという考えに賛成する。この活動は生徒に役立つスキルを教え、より思いやりのある社会の一員にしてくれる。",
      "modelParts": [
       {
        "label": "Introduction（言い換え＋意見）",
@@ -2040,15 +2040,15 @@ window.DRILL.days["2026-11-25"] = {
       },
       {
        "label": "Body 2（理由2：地域を理解する）",
-       "en": "Secondly, community work can help young people understand the problems in their local area. Many teenagers spend most of their time at school or at home, so they do not know much about the people who live around them. However, when they help elderly people or clean the streets, they can see these problems with their own eyes. As a result, they may become more interested in their community and want to help other people even after they leave school.",
-       "ja": "第二に、地域奉仕活動は若者が自分の地域の問題を理解する助けになる。多くの10代は時間のほとんどを学校か家で過ごすので、周りに住んでいる人たちのことをあまり知らない。しかし、高齢者を手伝ったり道を掃除したりすると、こうした問題を自分の目で見ることができる。その結果、地域にもっと関心を持ち、学校を卒業した後も他の人を助けたいと思うようになるかもしれない。",
-       "point": "Secondly, で2つ目の理由に移る。Body 1 は「スキル」、Body 2 は「地域への理解」と観点を分けているので内容が重ならない。so → However → As a result とつなぎ言葉で「問題→変化→結果」の流れを作っている。"
+       "en": "Secondly, community work can help young people understand the problems in their local area. Many teenagers spend most of their time at school or at home, so they do not know much about the people who live around them. However, when they help elderly people or clean the streets, they can see these problems with their own eyes. As a result, they may become more interested in their community and want to help other people even after they leave school. Although some people say that students are too busy with their studies, a few hours a week will not cause serious problems.",
+       "ja": "第二に、地域奉仕活動は若者が自分の地域の問題を理解する助けになる。多くの10代は時間のほとんどを学校か家で過ごすので、周りに住んでいる人たちのことをあまり知らない。しかし、高齢者を手伝ったり道を掃除したりすると、こうした問題を自分の目で見ることができる。その結果、地域にもっと関心を持ち、学校を卒業した後も他の人を助けたいと思うようになるかもしれない。生徒は勉強で忙しすぎると言う人もいるが、週に数時間なら大きな問題にはならないだろう。",
+       "point": "Secondly, で2つ目の理由に移る。Body 1 は「スキル」、Body 2 は「地域への理解」と観点を分けているので内容が重ならない。so → However → As a result とつなぎ言葉で「問題→変化→結果」の流れを作っている。最後の Although … の1文で反対意見（勉強で忙しい）に短く触れて答え、反論のための段落は作らない。"
       },
       {
        "label": "Conclusion（結論）",
-       "en": "In conclusion, I agree that secondary school students should do unpaid community work. Although some people say that students are too busy with their studies, a few hours a week will not cause serious problems. This work can teach students useful skills and make them more caring members of society.",
-       "ja": "結論として、私は中等学校の生徒が無償の地域奉仕活動をするべきだという考えに賛成する。生徒は勉強で忙しすぎると言う人もいるが、週に数時間なら大きな問題にはならないだろう。この活動は生徒に役立つスキルを教え、より思いやりのある社会の一員にしてくれる。",
-       "point": "In conclusion, で始め、Introduction と同じ立場（I agree）をもう一度書く。Although … で反対意見に短く触れて答え、最後の文で Body 1・Body 2 の理由を1文にまとめている。新しい理由や例は書かない。"
+       "en": "In conclusion, I agree that secondary school students should do unpaid community work. This work can teach students useful skills and make them more caring members of society.",
+       "ja": "結論として、私は中等学校の生徒が無償の地域奉仕活動をするべきだという考えに賛成する。この活動は生徒に役立つスキルを教え、より思いやりのある社会の一員にしてくれる。",
+       "point": "In conclusion, で始め、Introduction と同じ立場（I agree）をもう一度書き、2文目で Body 1・Body 2 の理由を1文にまとめている。新しい理由・例・反対意見は書かない（反対意見は Body 2 で触れ済み）。"
       }
      ],
      "keyLanguage": [
@@ -2105,7 +2105,7 @@ window.DRILL.days["2026-11-25"] = {
       [
        "Although some people say that …, …",
        "〜と言う人もいるが",
-       "反対意見に短く触れてから自分の意見に戻る"
+       "反対意見に短く触れてから自分の意見に戻る（Body 2 の最後に1文だけ）"
       ]
      ],
      "tips": [
@@ -2130,17 +2130,16 @@ window.DRILL.days["2026-11-25"] = {
       ],
       [
        "Conclusion で新しい理由を書く",
-       "Conclusion は立場の繰り返しと理由のまとめだけ。新しい情報は Body に入れる。"
+       "Conclusion は立場の繰り返しと理由のまとめだけ。新しい情報（反対意見への言及も含む）は Body に入れる。"
       ]
      ],
      "plan": [
-      "【0. 準備5分】問題文の主張（全中高生に無償の地域奉仕を義務づける）に「強く賛成／部分的に賛成／反対」のどれかを決める。迷ったら理由を2つ書きやすい側を選ぶ。",
-      "【1. Introduction（2文・約40語）】1文目：問題文を言い換えて話題を紹介（required → compulsory / expected、unpaid community work → volunteering）。2文目：自分の立場をはっきり書く（I strongly agree that … / I partly agree that …）。",
-      "【2. Body 1（4〜5文・約70語）】Topic sentence：The main reason for my view is that …（理由1）→ 説明：なぜそう言えるか → 具体例：For example / When students … → 締め：だから重要だ、と主張に戻す。",
-      "【3. Body 2（4〜5文・約60語）】Topic sentence：Another benefit is that …（理由2）→ 説明 → 例 → 結果（By … , they are more likely to …）。理由1と内容が重ならないようにする（スキル面／社会面など観点を分ける）。",
-      "【4. Body 3＝反論と再反論（4文・約60語）】Admittedly, some people argue that …（反対意見）→ This concern is understandable.（認める）→ However, …（解決策・反論）→ In this way, …（自分の立場に戻す）。これを入れると「To what extent」に深く答えられる。",
-      "【5. Conclusion（2文・約40語）】In conclusion, … で立場を繰り返し（言い換えて）、理由2つを1文で要約する。新しい理由や例は書かない。",
-      "【6. 見直し3分】立場が最初と最後で一致しているか、各段落の1文目で内容がわかるか、250語以上か、三単現の s・冠詞・複数形のミスがないかを確認。"
+      "【0. 準備5分（今日の短縮版は3分）】問題文の主張（全中高生に無償の地域奉仕を義務づける）に「強く賛成／部分的に賛成／反対」のどれかを決める。迷ったら理由を2つ書きやすい側を選ぶ。",
+      "【1. Introduction（2文・約45語）】1文目：問題文を言い換えて話題を紹介（all secondary school students → every student at secondary school、unpaid → without pay）。2文目：I agree with this idea because … で立場をはっきり書き、Body で書く理由2つを予告する。",
+      "【2. Body 1（4文・約90語）】Topic sentence：Firstly, …（理由1）→ 具体例：For example, if students …, they have to … → 説明：These … skills will be useful …（なぜ役立つか）→ 自分の学校の体験を1文。",
+      "【3. Body 2（5文・約100語）】Topic sentence：Secondly, …（理由2）→ 説明 → 例（However, when they …）→ 結果（As a result, …）→ 最後に反対意見に1文だけ触れて答える（Although some people say that …, …）。理由1と内容が重ならないようにする（スキル面／社会面など観点を分ける）。",
+            "【4. Conclusion（2文・約30語）】In conclusion, … で立場を繰り返し、理由2つを1文で要約する。新しい理由・例・反対意見は書かない（反対意見は Body 2 で触れておく）。",
+      "【5. 見直し3分】立場が最初と最後で一致しているか、各段落の1文目で内容がわかるか、語数（本番は250語以上・今日の短縮版は約200語）、三単現の s・冠詞・複数形のミスがないかを確認。"
      ],
      "phrases": [
       [
@@ -2195,12 +2194,12 @@ window.DRILL.days["2026-11-25"] = {
      "checklist": [
       "【課題への対応】Introduction と Conclusion で立場（agree / disagree の程度）を明確に書いた",
       "【課題への対応】理由ごとに具体例・説明を入れ、問題文のテーマから外れなかった",
-      "【課題への対応】反対意見を1つ紹介し、それに答えた（Admittedly … However …）",
-      "【一貫性とまとまり】4〜5段落構成で、各 Body の1文目がその段落の要点になっている",
-      "【一貫性とまとまり】Another / However / In this way などのつなぎ語を適切に使った（使いすぎない）",
+      "【課題への対応】Body 2 の中で反対意見に1文だけ触れ、それに答えた（Although some people say that …, …）",
+      "【一貫性とまとまり】4段落構成（Introduction / Body 1 / Body 2 / Conclusion）で、各 Body の1文目がその段落の要点になっている",
+      "【一貫性とまとまり】Firstly / Secondly / However / As a result などのつなぎ語を適切に使った（使いすぎない）",
       "【語彙】問題文の語を言い換えた（required → compulsory など）。同じ語を何度も繰り返していない",
       "【文法】複文（although, if, which など）を数回使い、時制と主語・動詞の一致に誤りがない",
-      "【語数】250語以上（目安270〜300語）を40分以内で書いた"
+      "【語数】今日の短縮版は22分で約200語を書いた（本番は40分で250語以上）"
      ]
     }
    ]
@@ -2578,13 +2577,13 @@ window.DRILL.days["2026-11-26"] = {
      "type": "select",
      "q": "Children's section",
      "a": 5,
-     "ex": "【正解】F\n【根拠】\"as you come in through the main entrance, it's on your left, in the corner\"（＝正面入口から入ると左側の角にあります。）\n【他の選択肢】A：左側だが壁の中ほどで角ではない（A は返却機）。／G：入口付近の角だが右側。\n【ポイント】入口に立って奥を向いたとき、左＝地図の左。in the corner（角）で F に決まる。"
+     "ex": "【正解】F\n【根拠】\"as you come in through the main entrance, it's on your left, in the corner\"（＝正面入口から入ると左側の角にあります。）\n【他の選択肢】A：左側だが壁の中ほどで角ではない（A は返却機）。／G：受付の左寄り（フロアの左半分の中ほど）で、壁際の角ではない。\n【ポイント】入口に立って奥を向いたとき、左＝地図の左。in the corner（角）で F に決まる。"
     },
     {
      "type": "select",
      "q": "Computers",
      "a": 4,
-     "ex": "【正解】E\n【根拠】\"they're along the right-hand wall, about halfway between the entrance and the lift.\"（＝右側の壁沿い、入口とエレベーターのほぼ中間にあります。）\n【他の選択肢】G：右側の入口近く。\"Some people expect …\" と誤解として紹介された場所。／D：右寄りだが壁沿いではなく、中ほどの位置。\n【ポイント】along the right-hand wall（右の壁沿い）と halfway between（中間）の2条件を満たすのは E だけ。Instead の後が正解。"
+     "ex": "【正解】E\n【根拠】\"they're along the right-hand wall, about halfway between the entrance and the lift.\"（＝右側の壁沿い、入口とエレベーターのほぼ中間にあります。）\n【他の選択肢】G：受付の左寄りで、右側の壁沿いではない。なお \"Some people expect …\" と誤解として紹介された入口右側の角は、今はカフェ（Café）。／D：右寄りだが壁沿いではなく、中ほどの位置。\n【ポイント】along the right-hand wall（右の壁沿い）と halfway between（中間）の2条件を満たすのは E だけ。Instead の後が正解。"
     },
     {
      "type": "select",
@@ -2784,8 +2783,8 @@ window.DRILL.days["2026-11-26"] = {
        "〜の理由はいくつかある"
       ],
       [
-       "First of all, … / Another reason is … / Finally, …",
-       "まず／もう一つの理由は／最後に"
+       "First, … / Second, … / Third, …",
+       "1つ目は／2つ目は／3つ目は"
       ],
       [
        "I feel motivated to …",
@@ -2799,7 +2798,7 @@ window.DRILL.days["2026-11-26"] = {
      "checklist": [
       "【流暢さと一貫性】カードの4つのポイントをすべて、順番どおりに話した",
       "【流暢さと一貫性】1分30秒以上、長い沈黙なしで話し続けた",
-      "【流暢さと一貫性】First of all / Another reason / Finally で理由を整理した",
+      "【流暢さと一貫性】First / Second / Third で理由を整理した",
       "【語彙】peaceful, motivated, concentrate など、場所や気持ちを表す具体的な語を使った",
       "【文法】現在形（習慣）・現在完了（Recently I've started）・未来（I'll keep）を使い分けた",
       "【文法】関係詞（which, where）や比較（much easier than）を入れた",
